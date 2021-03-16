@@ -1,34 +1,31 @@
 import React from 'react';
 import home1 from '../assets/home1.png';
-import styled from 'styled-components';
+// import styled from 'styled-components';
+import { AboutWrapper, Description, Image, Hide } from '../styles';
 
 const About = () => {
     return (
         <AboutWrapper>
-            <div className="description">
+            <Description>
                 <div className="title">
-                    <div className="hide">
+                    <Hide>
                         <h2>We work to make</h2>
-                    </div>
-                    <div className="hide">
+                    </Hide>
+                    <Hide>
                         <h2>yours <span>dreams</span> come</h2>
-                    </div>
-                    <div className="hide">
+                    </Hide>
+                    <Hide>
                         <h2>true</h2>
-                    </div>
+                    </Hide>
                 </div>
                 <p>Contact us for any photography idea that you have.</p>
                 <button>Contact Us</button>
-            </div>
-            <div className="image">
+            </Description>
+            <Image>
                 <img src={home1} alt="cameraman" />
-            </div>
+            </Image>
         </AboutWrapper>
     )
 }
-
-const AboutWrapper = styled.div`
-
-`
 
 export default About;
