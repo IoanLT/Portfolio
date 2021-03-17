@@ -9,8 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         background: #1b1b1b;
-        /* font-family: 'Roboto', sans-serif; */
-        /* font-family: 'Nunito', sans-serif; */        
+        font-family: 'Montserrat', sans-serif;              
     }
 
     button {
