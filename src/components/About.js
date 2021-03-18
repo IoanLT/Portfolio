@@ -2,22 +2,35 @@ import React from 'react';
 import home1 from '../assets/home1.png';
 // import styled from 'styled-components';
 import { AboutWrapper, Description, Image, Hide } from '../styles';
+import { motion } from 'framer-motion';
 
 const About = () => {
+
+
     return (
         <AboutWrapper>
             <Description>
-                <div className="title">
+                <motion.div 
+                   
+                >
                     <Hide>
-                        <h2>We work to make</h2>
+                        <motion.h2 
+                           
+                        >
+                            We work to make
+                        </motion.h2>
                     </Hide>
                     <Hide>
-                        <h2>yours <span>dreams</span> come</h2>
+                        <motion.h2>
+                            your <span>dreams</span> come
+                        </motion.h2>
                     </Hide>
                     <Hide>
-                        <h2>true</h2>
+                        <motion.h2>
+                            true
+                        </motion.h2>
                     </Hide>
-                </div>
+                </motion.div>
                 <p>Contact us for any photography idea that you have.</p>
                 <button>Contact Us</button>
             </Description>

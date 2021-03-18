@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import { MovieState } from '../movieState';
+// Animations
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
 
 const MovieDetail = () => {
     const history = useHistory();
@@ -18,7 +21,12 @@ const MovieDetail = () => {
     }, [movies, url]);
 
     return (
-        <>
+        <motion.div
+            variants={pageAnimation}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+        >
             {movie && (
                 <Details>
                     <Headline>
@@ -27,7 +35,7 @@ const MovieDetail = () => {
                     </Headline>            
                 </Details>
             )}
-        </>
+        </motion.div>
         
     )
 }
