@@ -1,5 +1,6 @@
 // Import global style
 import GlobalStyle from "./components/GlobalStyle";
+// Import components
 import Header from "./components/Header";
 // Import pages
 import AboutUs from "./pages/AboutUs";
@@ -15,13 +16,14 @@ import { AnimatePresence } from 'framer-motion';
 function App() {
 
   const location = useLocation();
+  console.log(location);
 
   return (
     <div className="App">
       <GlobalStyle />
       <Header />
       <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.pathname}>
+        <Switch location={location} key={location.key}>
           <Route exact path="/" render={(props) => <AboutUs {...props} />} />
           <Route exact path="/our-work" render={(props) => <OurWork {...props} />} />
           <Route exact path="/work/:id" render={(props) => <MovieDetail {...props} />} />

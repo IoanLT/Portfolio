@@ -16,7 +16,7 @@ const MovieDetail = () => {
 
     useEffect(() => {
         const currentMovie = movies.find(movieState => movieState.url === url);
-        console.log(currentMovie);
+        // console.log(currentMovie);
         setMovie(currentMovie);
     }, [movies, url]);
 
