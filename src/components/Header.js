@@ -1,57 +1,35 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import Burger from './Burger';
 
-const Header = () => {
+const Header = ({ openMenu, setOpenMenu, displayMenu, setDisplayMenu }) => {
     return (
-        <Navbar>
-            <h1><Link id="logo" to="/">Capture</Link></h1>
-            <ul>
-                <li>
-                    <Link to="/">About Us</Link>
-                </li>
-                <li>
-                    <Link to="/our-work">Our Work</Link>
-                </li>
-                <li>
-                    <Link to="/contact-us">Contact Us</Link>
-                </li>
-            </ul>
-        </Navbar>
+        <HeaderNav>	
+            
+			<Burger
+				openMenu={openMenu}
+				setOpenMenu={setOpenMenu}
+                displayMenu={displayMenu}
+                setDisplayMenu={setDisplayMenu}				
+			/>
+		</HeaderNav>
     )
 }
 
-const Navbar = styled.nav`
-    /* min-height: 10vh; */
-    height: 80px;
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 10rem;
-    /* background: #282828; */
+const HeaderNav = styled.nav`
+	/* position: absolute; */
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 0 40px;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	/* justify-content: space-between; */
+	justify-content: flex-end;
+	align-items: center;
     background: transparent;
-
-    a {
-        color: #fff;
-        text-decoration: none;        
-    }
-
-    ul {
-        display: flex; 
-        list-style: none;
-    }
-
-    li {
-        padding-left: 10rem;
-        position: relative;
-    }
-
-    #logo {
-        font-size: 1.5rem;
-        font-family: "Lobster", cursive;
-        font-weight: lighter;
-    }
-`
+    z-index: 10;
+`;
 
 export default Header;

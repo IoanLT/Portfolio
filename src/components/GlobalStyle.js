@@ -54,6 +54,36 @@ const GlobalStyle = createGlobalStyle`
         font-weight: bold;
         color: #23d997;
     }
+
+    /* Styles for the open / hidden navigation menu */
+    .open-menu,
+    .hidden-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 400px; 
+        position: fixed;         
+        top: 0;             
+        right: 0; 
+        height: 100%;    
+        overflow: hidden;   
+        /* max-height: 100vh;      */
+        transition: all 0.7s ease;
+        transform: translateX(0);     
+        background: #fff;   
+        /* background: #f2f4f5; */
+        /* background: linear-gradient(to top, hsl(48, 100%, 88%), hsl(44, 92%, 63%));    */
+
+        @media (max-width: 500px) {        
+            width: 100%;
+        }
+    }
+
+    .hidden-menu {    
+        transform: translateX(100%);      
+    }
+    
+
 `
 
 export default GlobalStyle;

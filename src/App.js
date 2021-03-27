@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 // Import global style
 import GlobalStyle from "./components/GlobalStyle";
 // Import components
@@ -14,6 +15,8 @@ import { AnimatePresence } from 'framer-motion';
 
 
 function App() {
+  const [openMenu, setOpenMenu] = useState(false);
+  const [displayMenu, setDisplayMenu] = useState(false);  
 
   const location = useLocation();
   console.log(location);
@@ -21,7 +24,12 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Header />
+      <Header 
+        openMenu={openMenu} 
+        setOpenMenu={setOpenMenu}
+        displayMenu={displayMenu}
+        setDisplayMenu={setDisplayMenu}
+      />
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
           <Route exact path="/" render={(props) => <AboutUs {...props} />} />

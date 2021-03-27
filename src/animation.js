@@ -88,7 +88,53 @@ export const slider = {
     }
 }
 
+// Burger menu anuimations
+export const menuAnimation = {
+    hidden: {
+        opacity: 0,
+        y: 300
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.25,
+            ease: 'easeInOut',
+            when: "beforeChildren", 
+            staggerChildren: 0.25
+        }
+    },
+    exit: {
+        opacity: 0,
+        y: 300,
+        transition: {
+            duration: 1
+        }
+    }
+};
 
+export const itemAnimation = {
+    hidden: {  x: 300 },
+    show: {
+        x: 0,
+        transition: { 
+            duration: 0.4,             
+            ease: "easeOut"
+        }
+    }
+};
+
+export const contactAnimation = {
+    hidden: {  x: 300 },
+    show: {
+        x: 0,
+        transition: { 
+            delay: 1.5,
+            duration: 0.4,             
+            ease: "easeOut"
+        }
+    }
+};
 
 
 
