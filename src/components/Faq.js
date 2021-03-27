@@ -1,43 +1,40 @@
 import React from 'react';
 import styled from 'styled-components';
 import { AboutWrapper } from '../styles';
+import { AnimateSharedLayout } from 'framer-motion';
+import Accordion from './Accordion';
 
 const Faq = () => {
     return (
-        <FaqWrapper>
+        <FaqWrapper>            
             <h2>Any questions <span>FAQ</span></h2>
-            <div className="question">
-                <h4>How do I start?</h4>
-                <div className="answer">
-                    <p>lorem ipsum dolor sit amet</p>
-                    <p>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.</p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>Daily schedule</h4>
-                <div className="answer">
-                    <p>lorem ipsum dolor sit amet</p>
-                    <p>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.</p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>Different payments</h4>
-                <div className="answer">
-                    <p>lorem ipsum dolor sit amet</p>
-                    <p>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.</p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>What products do you offer?</h4>
-                <div className="answer">
-                    <p>lorem ipsum dolor sit amet</p>
-                    <p>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.</p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
+
+            <AnimateSharedLayout>
+                <Accordion title="How do I start?">
+                    <div className="question">                    
+                        <div className="answer">
+                            <p>lorem ipsum dolor sit amet</p>
+                            <p>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.</p>
+                        </div>                    
+                    </div>
+                </Accordion>
+                <Accordion title="Daily schedule">
+                    <div className="question">                   
+                        <div className="answer">
+                            <p>lorem ipsum dolor sit amet</p>
+                            <p>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.</p>
+                        </div>                    
+                    </div>
+                </Accordion>
+                <Accordion title="Different payments">
+                    <div className="question">                    
+                        <div className="answer">
+                            <p>lorem ipsum dolor sit amet</p>
+                            <p>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet.</p>
+                        </div>                    
+                    </div>
+                </Accordion>  
+            </AnimateSharedLayout>          
         </FaqWrapper>
     )
 };

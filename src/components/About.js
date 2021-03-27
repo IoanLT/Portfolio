@@ -4,6 +4,8 @@ import home1 from '../assets/home1.png';
 import { AboutWrapper, Description, Image, Hide } from '../styles';
 import { motion } from 'framer-motion';
 import { titleAnimation, textFade, photoAnimation } from '../animation';
+import Wave from './Wave';
+
 
 const About = () => {
 
@@ -38,6 +40,7 @@ const About = () => {
             <Image>
                 <motion.img variants={photoAnimation} src={home1} alt="cameraman" />
             </Image>
+            <Wave />
         </AboutWrapper>
     )
 }

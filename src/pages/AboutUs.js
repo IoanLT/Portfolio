@@ -16,7 +16,7 @@ const AboutUs = () => {
             exit="exit"
         >
             <About />
-            <Services />
+            <Services />            
             <Faq />
         </motion.div>
     )

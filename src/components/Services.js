@@ -5,13 +5,24 @@ import diaphragm from '../assets/diaphragm.svg';
 import money from '../assets/money.svg';
 import teamwork from '../assets/teamwork.svg';
 import home2 from '../assets/home2.png';
+
 import styled from 'styled-components';
+import { textFade } from '../animation';
 // Import styles
 import { AboutWrapper, Description, Image } from '../styles';
+// import custom hook
+import { useScroll } from './useScroll';
 
 const Services = () => {
+    const [element, controls] = useScroll();
+
     return (
-        <ServicesWrapper>
+        <ServicesWrapper
+            ref={element}
+            variants={textFade}
+            animate={controls}
+            initial="hidden"
+        >
             <ServiceDescription>
                 <Cards>  
                     <h2>High <span>quality</span> services</h2>

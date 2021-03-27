@@ -6,7 +6,7 @@ import theracer from '../assets/theracer-small.png';
 import goodtimes from '../assets/goodtimes-small.png';
 // Animations
 import { motion } from 'framer-motion';
-import { pageAnimation } from '../animation';
+import { pageAnimation, textFade, photoAnimation, lineAnimation, slider } from '../animation';
 
 const OurWork = () => {
     return (
@@ -16,11 +16,20 @@ const OurWork = () => {
             animate="show"
             exit="exit"
         >
+            {/* <Frame1 variants={slider}></Frame1>
+            <Frame2 variants={slider}></Frame2>
+            <Frame3 variants={slider}></Frame3>
+            <Frame4 variants={slider}></Frame4> */}
+
             <Movie>
-                <h2>The Athlete</h2>
-                <div className="line"></div>
+                <motion.h2 variants={textFade}>
+                    The Athlete
+                </motion.h2>
+                <motion.div variants={lineAnimation} className="line"></motion.div>
                 <Link to="/work/the-athlete">
-                    <img src={athlete} alt="boxer" />
+                    <Hide>
+                        <motion.img variants={photoAnimation} src={athlete} alt="boxer" />
+                    </Hide>                    
                 </Link>   
             </Movie>
             <Movie>
@@ -56,7 +65,7 @@ const Movie = styled.div`
 
     .line {
         height: 0.5rem;
-        background: #ccc;
+        background: #23d997;
         margin-bottom: 3rem;
     }
 
@@ -65,6 +74,37 @@ const Movie = styled.div`
         height: 70vh;
         object-fit: cover;
     }
+
+    h2 {
+        color: #fff;
+    }
 `
+
+const Hide = styled.div`
+    overflow: hidden;
+`
+
+// Frame animations
+// const Frame1 = styled(motion.div)`
+//     position: fixed;
+//     left: 0;
+//     top: 80px;
+//     width: 100%;
+//     height: 100vh;
+//     background: #fffebf;
+//     z-index: 2;
+// `
+
+// const Frame2 = styled(Frame1)`
+//     background: #ff8efb;
+// `
+
+// const Frame3 = styled(Frame1)`
+//     background: #8ed2ff;
+// `
+
+// const Frame4 = styled(Frame1)`
+//     background: #8effa0;
+// `
 
 export default OurWork;
