@@ -93,6 +93,7 @@ export const menuAnimation = {
     hidden: {
         opacity: 0,
         y: 300
+        // y: "100%"
     },
     show: {
         opacity: 1,
@@ -114,10 +115,11 @@ export const menuAnimation = {
 };
 
 export const itemAnimation = {
-    hidden: {  x: 300 },
+    hidden: {  y: 300 },
     show: {
-        x: 0,
+        y: 0,
         transition: { 
+            // delay: 1,
             duration: 0.4,             
             ease: "easeOut"
         }

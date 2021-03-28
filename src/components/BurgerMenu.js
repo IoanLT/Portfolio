@@ -11,7 +11,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { menuAnimation, itemAnimation, contactAnimation } from '../animation';
 
 
-const BurgerMenu = ({ displayMenu }) => {
+const BurgerMenu = ({ displayMenu, setDisplayMenu, openMenu, setOpenMenu }) => {
 
     const controls = useAnimation();
     const [ ref, inView ] = useInView({ threshold: 0.5 });
@@ -25,6 +25,12 @@ const BurgerMenu = ({ displayMenu }) => {
         }
     }, [controls, inView]);
 
+    // This method will close the menu and bring the burger to the initial state
+    const handleMenu = () => {
+        setDisplayMenu(false);
+        setOpenMenu(false);
+    }
+
     return (
         
         <div className={displayMenu ? 'open-menu' : 'hidden-menu'}>
@@ -37,6 +43,7 @@ const BurgerMenu = ({ displayMenu }) => {
             >
                 <MenuItems> 
                     <ScrollLink 
+                        onClick={handleMenu}
                         to="home"
                         activeClass="active"                        
                         spy={true}
@@ -46,8 +53,19 @@ const BurgerMenu = ({ displayMenu }) => {
                     >
                         <ListItem variants={itemAnimation}>Home</ListItem>      
                     </ScrollLink>                   
+
+                    <ScrollLink
+                        onClick={handleMenu}
+                        to="about"
+                        activeClass="active"                        
+                        spy={true}
+                        smooth={true}
+                        // offset={-80}
+                        duration={1000}
+                    >
+                        <ListItem variants={itemAnimation}>About</ListItem>
+                    </ScrollLink>                   
                                        
-                    <ListItem variants={itemAnimation}>About</ListItem>                   
                     <ListItem variants={itemAnimation}>Projects</ListItem>                                      
                     <ListItem variants={itemAnimation}>Contact</ListItem>                 
                 </MenuItems>
@@ -141,6 +159,7 @@ const Contact = styled(motion.div)`
             color: hsl(209, 34%, 30%);
             font-weight: 700;
             font-size: 1.1rem;
+            padding: 0;
         }    
     }
     .social-media {

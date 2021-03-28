@@ -1,13 +1,13 @@
 import React from 'react';
 // Page components
-import About from '../components/About';
+import Hero from '../components/Hero';
 import Faq from '../components/Faq';
-import Services from '../components/Services';
+import About from '../components/About';
 // Animations
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation';
 
-const AboutUs = () => {
+const LandingPage = () => {
     return (
         <motion.div 
             variants={pageAnimation}
@@ -15,11 +15,11 @@ const AboutUs = () => {
             animate="show"
             exit="exit"
         >
-            <About />
-            <Services />            
+            <Hero />
+            <About />            
             <Faq />
         </motion.div>
     )
 }
 
-export default AboutUs;
+export default LandingPage;

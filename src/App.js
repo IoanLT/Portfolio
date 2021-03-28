@@ -4,7 +4,7 @@ import GlobalStyle from "./components/GlobalStyle";
 // Import components
 import Header from "./components/Header";
 // Import pages
-import AboutUs from "./pages/AboutUs";
+import LandingPage from "./pages/LandingPage";
 import OurWork from "./pages/OurWork";
 import ContactUs from "./pages/ContactUs";
 import MovieDetail from "./pages/MovieDetail";
@@ -32,7 +32,7 @@ function App() {
       />
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
-          <Route exact path="/" render={(props) => <AboutUs {...props} />} />
+          <Route exact path="/" render={(props) => <LandingPage {...props} />} />
           <Route exact path="/our-work" render={(props) => <OurWork {...props} />} />
           <Route exact path="/work/:id" render={(props) => <MovieDetail {...props} />} />
           <Route exact path="/contact-us" render={(props) => <ContactUs {...props} />} /> 

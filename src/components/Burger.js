@@ -16,10 +16,10 @@ const Burger = ({ openMenu, setOpenMenu, displayMenu, setDisplayMenu }) => {
 	};
 
 	// This method will change the colour of the burger on scroll
-	const changeBackground = () =>
-		window.scrollY >= 727 ? setNavbar(true) : setNavbar(false) || navbar;
+	// const changeBackground = () =>
+	// 	window.scrollY >= 727 ? setNavbar(true) : setNavbar(false) || navbar;
 
-	window.addEventListener("scroll", changeBackground);
+	// window.addEventListener("scroll", changeBackground);
 
     return (
 		<>
@@ -28,7 +28,12 @@ const Burger = ({ openMenu, setOpenMenu, displayMenu, setDisplayMenu }) => {
 				<div />
 				<div />
 			</StyledBurger>
-			<BurgerMenu displayMenu={displayMenu} setDisplayMenu={setDisplayMenu} />	
+			<BurgerMenu 
+				openMenu={openMenu} 
+				setOpenMenu={setOpenMenu}
+				displayMenu={displayMenu} 
+				setDisplayMenu={setDisplayMenu} 
+			/>	
 		</>
         
     )
@@ -64,20 +69,20 @@ const StyledBurger = styled.div`
 		:first-child {			
 			width: ${({ openMenu }) =>	openMenu ? "33px" : "20px"};
 			transform: ${({ openMenu }) => openMenu ? "rotate(45deg)" : "rotate(0)"};
-			background: ${({ openMenu }) => window.scrollY >= 727 || openMenu ? "#000" : "#fff"};
+			/* background: ${({ openMenu }) => window.scrollY >= 727 || openMenu ? "#000" : "#fff"}; */
 		}
 
 		:nth-child(2) {
 			width: 30px;
 			opacity: ${({ openMenu }) => (openMenu ? "0" : "1")};
 			transform: ${({ openMenu }) =>	openMenu ? "translateX(20px)" : "translateX(0)"};
-			background: ${({ openMenu }) => window.scrollY >= 727 || openMenu ? "#000" : "#fff"};
+			/* background: ${({ openMenu }) => window.scrollY >= 727 || openMenu ? "#000" : "#fff"}; */
 		}
 
 		:nth-child(3) {
 			width: ${({ openMenu }) =>	openMenu ? "33px" : "40px"};
 			transform: ${({ openMenu }) =>	openMenu ? "rotate(-45deg)" : "rotate(0)"};
-			background: ${({ openMenu }) => window.scrollY >= 727 || openMenu ? "#000" : "#fff"};
+			/* background: ${({ openMenu }) => window.scrollY >= 727 || openMenu ? "#000" : "#fff"}; */
 		}
 	}
 `;
