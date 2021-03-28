@@ -16,7 +16,7 @@ const Header = ({ openMenu, setOpenMenu, displayMenu, setDisplayMenu }) => {
     )
 }
 
-const HeaderNav = styled.nav`
+const HeaderNav = styled.header`
 	/* position: absolute; */
 	position: fixed;
 	top: 0;

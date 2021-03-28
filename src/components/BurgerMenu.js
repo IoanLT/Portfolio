@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
@@ -34,8 +35,18 @@ const BurgerMenu = ({ displayMenu }) => {
                 animate={controls}
                 exit="exit"
             >
-                <MenuItems>                    
-                    <ListItem variants={itemAnimation}>Home</ListItem>                   
+                <MenuItems> 
+                    <ScrollLink 
+                        to="home"
+                        activeClass="active"                        
+                        spy={true}
+                        smooth={true}
+                        // offset={-80}
+                        duration={1000}
+                    >
+                        <ListItem variants={itemAnimation}>Home</ListItem>      
+                    </ScrollLink>                   
+                                       
                     <ListItem variants={itemAnimation}>About</ListItem>                   
                     <ListItem variants={itemAnimation}>Projects</ListItem>                                      
                     <ListItem variants={itemAnimation}>Contact</ListItem>                 
@@ -72,7 +83,7 @@ const BurgerMenu = ({ displayMenu }) => {
     )
 }
 
-const MenuWrapper = styled(motion.div)`
+const MenuWrapper = styled(motion.nav)`
     height: 80%;
     width: 90%;
     display: flex;

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
+
 const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
@@ -28,9 +29,18 @@ const GlobalStyle = createGlobalStyle`
         }        
     }
 
-    h2 {
+
+    h1, h2 {
         font-weight: lighter;
         font-size: 4rem;
+        font-family: 'Open Sans', sans-serif;
+        /* color: hsl(238, 94%, 81%); */
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+        /* color: #fff; */
     }
 
     h3 {

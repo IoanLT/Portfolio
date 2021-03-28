@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const AboutWrapper = styled(motion.div)`
-    min-height: 90vh;
+    height: 100vh;
     display: flex;    
     align-items: center;
     justify-content: space-around;
     padding: 5rem 10rem;
-    color: #fff;
+    color: #fff;    
 `
 
 export const Description = styled.div`
@@ -31,5 +31,9 @@ export const Image = styled.div`
 `
 
 export const Hide = styled.div`    
-    overflow: hidden;    
+    overflow: hidden; 
+/* 
+    :first-child {
+        margin-bottom: 30px;
+    }  */
 `
