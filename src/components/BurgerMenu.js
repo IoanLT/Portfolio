@@ -153,11 +153,11 @@ const Contact = styled(motion.div)`
         padding: 20px 0; 
 
         :first-child {            
-            color: hsl(42, 15%, 13%);
+            color: #000;
         }
 
         p {            
-            color: hsl(42, 15%, 13%);
+            color: #000;
             font-weight: 700;
             font-size: 1.1rem;
             padding: 0 20px;
@@ -171,7 +171,7 @@ const Contact = styled(motion.div)`
         justify-content: space-around; 
 
         a {
-            color: hsl(42, 15%, 13%);
+            color: #000;
         }       
     }
 `

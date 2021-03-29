@@ -31,10 +31,14 @@ const About = () => {
                         <h2>About me</h2>
                     </AboutText>
                     <p>I’m a London based web developer who loves comunicating ideas through code 
-                        to create beautiful layouts and a pleasant user experience.                    
+                        to create beautiful layouts for a pleasant user experience.                    
                     </p>
                     <p>
                         I'm passionate about UX/UI design, creating user interactions and creative animations.
+                    </p>                   
+                    <p>
+                        In my spare time I enjoy reading and learning about the latest trends in web development / design, 
+                        as well as traveling with my girlfriend and dog in our campervan.
                     </p>                   
                 </AboutDescription>              
                 
@@ -89,31 +93,34 @@ const About = () => {
 
 const AboutSection = styled(motion.section)`
     height: 100vh;
-    width: 100vw;    
-    display: flex;
-    /* flex-direction: column;   */
-    /* flex-wrap: wrap;   */
+    width: 100%;    
+    display: flex;   
     align-items: center;
     justify-content: center;    
     padding: 0 5%;
-    color: #fff;   
-    background-color: #000;
-
-    @media (max-width: 1024px) {
-        flex-direction: column;
-    }
+    color: #fff; 
+    background-color: #09070B;    
 `;
 
 const AboutWrapper = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 const AboutDescription = styled(motion.div)` 
     display: flex; 
     flex-direction: column;    
     width: 40%;
+
+    @media (max-width: 1024px) {
+        margin: 50px 0;
+    }
     
 `
 
@@ -123,7 +130,7 @@ const AboutText = styled(motion.div)`
     align-items: center;
     overflow: hidden;
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     border-left: 10px solid hsl(360, 64%, 55%);
 
     h2 {
@@ -136,11 +143,15 @@ const AboutText = styled(motion.div)`
 
 const Skills = styled(motion.div)`
     width: 40%;
+
+    @media (max-width: 1024px) {
+        margin: 50px 0;
+    }
 `
 
 const SkillSet = styled(motion.ul)`
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 
     div {
         padding-right: 10%;

@@ -16,11 +16,11 @@ const GlobalStyle = createGlobalStyle`
 
     button {
         font-weight: bold;
-        font-size: 1.1.rem;
+        font-size: 1rem;
         cursor: pointer;
         padding: 1rem 2rem;
         margin: 30px 0;
-        border: 3px solid hsl(360, 64%, 55%);
+        border: 1px solid hsl(360, 64%, 55%);
         background: transparent;
         color: #fff;
         transition: all 0.5s ease;        
@@ -35,10 +35,10 @@ const GlobalStyle = createGlobalStyle`
         img {           
             padding-left: 20px; 
 
-            &:hover {
+            /* &:hover {
                 transform: translateX(10px);
                 transition: all 0.3s ease-in-out;
-            }           
+            }            */
         }        
     }
 

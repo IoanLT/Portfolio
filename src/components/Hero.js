@@ -64,7 +64,7 @@ const Hero = () => {
 
 const HeroWrapper = styled(motion.div)`
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;  
     flex-wrap: wrap;  
     align-items: center;
