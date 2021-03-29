@@ -66,12 +66,10 @@ const GlobalStyle = createGlobalStyle`
         font-size: 2rem;       
     }
 
-    p {
-        font-family: 'Roboto', sans-serif;
-        padding: 3rem 0;
-        color: #ccc;
-        font-size: 1.4rem;
+    p {        
+        font-size: 1rem;
         line-height: 150%;
+        margin-bottom: 20px;
     }
 
     /* span {

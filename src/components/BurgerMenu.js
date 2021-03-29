@@ -77,7 +77,7 @@ const BurgerMenu = ({ displayMenu, setDisplayMenu, openMenu, setOpenMenu }) => {
                     </div>
                     <div className="social-media">
                         <a                             
-                            style={{ textDecoration: "none", color: "hsl(209, 34%, 30%)" }}
+                            // style={{ textDecoration: "none", color: "color: #000;" }}
                             href="https://github.com/IoanLT"
                             target="_blank"
                             rel="noreferrer"
@@ -85,7 +85,7 @@ const BurgerMenu = ({ displayMenu, setDisplayMenu, openMenu, setOpenMenu }) => {
                             <FontAwesomeIcon icon={faGithub} size="2x" />
                         </a>
                         <a 
-                            style={{ textDecoration: "none", color: "hsl(209, 34%, 30%)" }}
+                            // style={{ textDecoration: "none", color: "color: #000;" }}
                             href="https://www.linkedin.com/in/ioantranole/"
                             target="_blank"
                             rel="noreferrer"
@@ -124,7 +124,8 @@ const ListItem = styled(motion.li)`
     font-size: 1.8rem;
     font-weight: 700;
     cursor: pointer;
-    color: hsl(209, 61%, 16%);
+    /* color: hsl(209, 61%, 16%); */
+    color: hsl(360, 64%, 55%);
 
     /* &:hover {
       cursor: pointer;
@@ -142,31 +143,36 @@ const Contact = styled(motion.div)`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
 
     .contact-mobile {
-        width: 170px;
+        width: 200px;
         display: flex;  
         justify-content: space-around;
         align-items: center; 
         padding: 20px 0; 
 
-        :first-child {
-            color: hsl(209, 34%, 30%);
+        :first-child {            
+            color: hsl(42, 15%, 13%);
         }
 
-        p {
-            color: hsl(209, 34%, 30%);
+        p {            
+            color: hsl(42, 15%, 13%);
             font-weight: 700;
             font-size: 1.1rem;
-            padding: 0;
+            padding: 0 20px;
+            margin: 0;
         }    
     }
     .social-media {
         width: 100px;
         padding: 20px 0;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-around; 
+
+        a {
+            color: hsl(42, 15%, 13%);
+        }       
     }
 `
 

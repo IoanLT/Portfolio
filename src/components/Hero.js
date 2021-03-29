@@ -13,7 +13,7 @@ import bannerImage from '../assets/background2.png';
 const Hero = () => {
 
     return (
-        <AboutWrapper id="home">
+        <HeroWrapper id="home">
             <Description>
                 <motion.div>
                     <Hide>
@@ -32,15 +32,12 @@ const Hero = () => {
                         </motion.h2>
                     </Hide>
                 </motion.div>
-                {/* <motion.p variants={textFade}>
-                    Contact us for any photography idea that you have.
-                </motion.p> */}
+               
                 <ScrollLink                    
                         to="about"
                         activeClass="active"                        
                         spy={true}
-                        smooth={true}
-                        // offset={-80}
+                        smooth={true}                        
                         duration={1000}
                 >
                     <motion.button variants={textFade}>
@@ -49,22 +46,23 @@ const Hero = () => {
                     </motion.button>
                 </ScrollLink>
             </Description>
-            <PortfolioWrapper 
+
+            <Portfolio 
                 variants={portfolioAnimation}
                 initial="hidden"
                 animate="show"
             >               
                 <motion.h1>Portfolio</motion.h1>
-            </PortfolioWrapper>
+            </Portfolio>
             {/* <Image>
                 <motion.img variants={photoAnimation} src={home1} alt="cameraman" />
             </Image> */}
             {/* <Wave /> */}
-        </AboutWrapper>
+        </HeroWrapper>
     )
 }
 
-const AboutWrapper = styled(motion.div)`
+const HeroWrapper = styled(motion.div)`
     height: 100vh;
     width: 100vw;
     display: flex;  
@@ -83,13 +81,17 @@ const AboutWrapper = styled(motion.div)`
 const Description = styled.div`
     width: 50%;
     /* padding-right: 5rem; */
+    h1 {
+        font-size: 2rem;
+        /* color: hsl(360, 64%, 55%); */
+    }
 
     h2 {
         font-weight: lighter;
     }
 `
 
-const PortfolioWrapper = styled(motion.div)`
+export const Portfolio = styled(motion.div)`
     overflow: hidden;
     text-align: left;
     width: 50%;
@@ -100,6 +102,10 @@ const PortfolioWrapper = styled(motion.div)`
         color: hsl(360, 64%, 55%);
         padding-left: 10%;
         margin: 0;
+
+        @media (max-width: 1440px) {
+            font-size: 5rem;
+        }
     }
 `
 

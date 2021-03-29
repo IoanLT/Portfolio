@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 
-export const AboutWrapper = styled(motion.div)`
+export const SectionWrapper = styled(motion.div)`
     height: 100vh;
     display: flex;    
     align-items: center;

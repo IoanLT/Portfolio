@@ -1,15 +1,16 @@
 import React from 'react';
 // Import icons
-import clock from '../assets/clock.svg';
-import diaphragm from '../assets/diaphragm.svg';
-import money from '../assets/money.svg';
-import teamwork from '../assets/teamwork.svg';
-import home2 from '../assets/home2.png';
-
+// import clock from '../assets/clock.svg';
+// import diaphragm from '../assets/diaphragm.svg';
+// import money from '../assets/money.svg';
+// import teamwork from '../assets/teamwork.svg';
+// import home2 from '../assets/home2.png';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { textFade } from '../animation';
-// Import styles
-import { AboutWrapper, Description, Image } from '../styles';
+
+import line from '../assets/Line 54.svg';
+
 // import custom hook
 import { useScroll } from './useScroll';
 
@@ -17,72 +18,152 @@ const About = () => {
     const [element, controls] = useScroll();
 
     return (
-        <ServicesWrapper
+        <AboutSection
             id="about"
             ref={element}
             variants={textFade}
             animate={controls}
             initial="hidden"
         >
-            <ServiceDescription>                              
-
-                    <Card>
-                        <div className="icon">
-                            <img src={money} alt="money" />
-                            <h3>Affordable</h3>
-                        </div>
-                        <p>lorem ipsum dolor sit amet</p>
-                    </Card>            
+            <AboutWrapper>
+                <AboutDescription>
+                    <AboutText>                              
+                        <h2>About me</h2>
+                    </AboutText>
+                    <p>I’m a London based web developer who loves comunicating ideas through code 
+                        to create beautiful layouts and a pleasant user experience.                    
+                    </p>
+                    <p>
+                        I'm passionate about UX/UI design, creating user interactions and creative animations.
+                    </p>                   
+                </AboutDescription>              
                 
-            </ServiceDescription>              
-            
-            {/* <Image>
-                <img src={home2} alt="camera" /> 
-            </Image>                    */}
-        </ServicesWrapper>
+                <Skills>
+                    <AboutText>                              
+                        <h2>Skills</h2>
+                    </AboutText>
+                    <SkillSet>
+                        <div>
+                            <li>                            
+                                <img src={line} alt="line" />                             
+                                <p>HTML/CSS</p>                         
+                            </li>
+                            <li>                            
+                                <img src={line} alt="line" />                             
+                                <p>JavaScript</p>                         
+                            </li>
+                            <li>                            
+                                <img src={line} alt="line" />                             
+                                <p>React</p>                         
+                            </li>
+                            <li>                            
+                                <img src={line} alt="line" />                             
+                                <p>Animations</p>                         
+                            </li>                        
+                            
+                        </div>
+                        <div>
+                            <li>                            
+                                <img src={line} alt="line" />                             
+                                <p>Wireframing</p>                         
+                            </li>
+                            <li>                            
+                                <img src={line} alt="line" />                             
+                                <p>User experience</p>                         
+                            </li>
+                            <li>                            
+                                <img src={line} alt="line" />                             
+                                <p>UI Design</p>                         
+                            </li>
+                            <li>                            
+                                <img src={line} alt="line" />                             
+                                <p>Responsive Design</p>                         
+                            </li>                            
+                        </div>
+                    </SkillSet>
+                </Skills>
+            </AboutWrapper>            
+        </AboutSection>
     )
 }
 
-const ServicesWrapper = styled(AboutWrapper)`
+const AboutSection = styled(motion.section)`
     height: 100vh;
-    width: 100vw;
-    display: flex;  
-    flex-wrap: wrap;  
+    width: 100vw;    
+    display: flex;
+    /* flex-direction: column;   */
+    /* flex-wrap: wrap;   */
     align-items: center;
-    justify-content: space-around;    
+    justify-content: center;    
     padding: 0 5%;
-    color: #fff;     
-    
+    color: #fff;   
+    background-color: #000;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
 `;
 
-const ServiceDescription = styled(Description)` 
-    display: flex; 
-    flex-direction: column;  
-    padding-right: 0;
-    padding-left: 5rem;
-    align-items: flex-end;    
-
-    h2 {
-        padding-bottom: 5rem;        
-    }
+const AboutWrapper = styled.div`
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 `
 
-// const Cards = styled.div`
-//     display: flex;  
-//     justify-content: flex-end;    
-//     flex-wrap: wrap;
-// `
+const AboutDescription = styled(motion.div)` 
+    display: flex; 
+    flex-direction: column;    
+    width: 40%;
+    
+`
 
-const Card = styled.div`
-    flex-basis: 20rem;
+const AboutText = styled(motion.div)`    
+    /* width: 300px; */    
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-align: left;
+    margin-bottom: 30px;
+    border-left: 10px solid hsl(360, 64%, 55%);
 
-    .icon {
-        display: flex;
-        align-items: center;
+    h2 {
+        font-size: 3rem;
+        color: hsl(360, 64%, 55%);
+        padding-left: 10%;
+        margin: 0;
+    }    
+`
 
-        h3 {
-            margin-left: 1rem;            
-            padding: 1rem;
+const Skills = styled(motion.div)`
+    width: 40%;
+`
+
+const SkillSet = styled(motion.ul)`
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+        padding-right: 10%;
+    }
+
+    li {
+        font-weight: bold;
+        list-style: none;
+        padding: 10px 0;
+        overflow: hidden;
+        display: flex; 
+        align-items: center;        
+
+        img {
+            width: 50px;
+            height: 50px;
+            object-fit: center;            
+            margin-right: 15px;
+        }
+        
+        p {
+            margin: 0;
+            padding: 0;
         }
     }
 `

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AboutWrapper } from '../styles';
+import { SectionWrapper } from '../styles';
 import { AnimateSharedLayout } from 'framer-motion';
 import Accordion from './Accordion';
 
@@ -39,8 +39,14 @@ const Faq = () => {
     )
 };
 
-const FaqWrapper = styled(AboutWrapper)`
-    display: block;    
+const FaqWrapper = styled(SectionWrapper)`     
+    height: 100vh;
+    display: flex;    
+    align-items: center;
+    justify-content: space-around;
+    padding: 5rem 10rem;
+    color: #fff; 
+    display: block;  
 
     span {
         display: block;        
