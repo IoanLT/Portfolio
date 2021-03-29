@@ -24,33 +24,7 @@ const About = () => {
             animate={controls}
             initial="hidden"
         >
-            <ServiceDescription>
-                <Cards>  
-                    <h2>High <span>quality</span> services</h2>
-
-                    <Card>
-                        <div className="icon">
-                            <img src={clock} alt="clock" />
-                            <h3>Efficient</h3>
-                        </div>
-                        <p>lorem ipsum dolor sit amet</p>
-                    </Card>
-
-                    <Card>
-                        <div className="icon">
-                            <img src={teamwork} alt="teamwork" />
-                            <h3>Teamwork</h3>
-                        </div>
-                        <p>lorem ipsum dolor sit amet</p>
-                    </Card>  
-
-                    <Card>
-                        <div className="icon">
-                            <img src={diaphragm} alt="diaphragm" />
-                            <h3>Diaphragm</h3>
-                        </div>
-                        <p>lorem ipsum dolor sit amet</p>
-                    </Card>  
+            <ServiceDescription>                              
 
                     <Card>
                         <div className="icon">
@@ -59,23 +33,26 @@ const About = () => {
                         </div>
                         <p>lorem ipsum dolor sit amet</p>
                     </Card>            
-                </Cards>
+                
             </ServiceDescription>              
             
-            <Image>
+            {/* <Image>
                 <img src={home2} alt="camera" /> 
-            </Image>                   
+            </Image>                    */}
         </ServicesWrapper>
     )
 }
 
 const ServicesWrapper = styled(AboutWrapper)`
-    flex-direction: row-reverse;
-
-    p {
-        width: 70%;
-        padding: 2rem 0 4rem 0;
-    }
+    height: 100vh;
+    width: 100vw;
+    display: flex;  
+    flex-wrap: wrap;  
+    align-items: center;
+    justify-content: space-around;    
+    padding: 0 5%;
+    color: #fff;     
+    
 `;
 
 const ServiceDescription = styled(Description)` 
@@ -90,11 +67,11 @@ const ServiceDescription = styled(Description)`
     }
 `
 
-const Cards = styled.div`
-    display: flex;  
-    /* justify-content: flex-end;     */
-    flex-wrap: wrap;
-`
+// const Cards = styled.div`
+//     display: flex;  
+//     justify-content: flex-end;    
+//     flex-wrap: wrap;
+// `
 
 const Card = styled.div`
     flex-basis: 20rem;

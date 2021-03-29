@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
     }
 
     body {
@@ -18,32 +19,45 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.1.rem;
         cursor: pointer;
         padding: 1rem 2rem;
-        border: 3px solid #23d997;
+        margin: 30px 0;
+        border: 3px solid hsl(360, 64%, 55%);
         background: transparent;
         color: #fff;
-        transition: all 0.5s ease;
+        transition: all 0.5s ease;        
 
         &:hover {
-            background-color: #23d997;
+            background-color: hsl(360, 64%, 55%);
             color: #fff;
+            transform: translateX(10px);
+            transition: all 0.3s ease-in-out;
+        }
+
+        img {           
+            padding-left: 20px; 
+
+            &:hover {
+                transform: translateX(10px);
+                transition: all 0.3s ease-in-out;
+            }           
         }        
     }
 
 
     h1, h2 {
         font-weight: lighter;
-        font-size: 4rem;
+        font-size: 3rem;
         font-family: 'Open Sans', sans-serif;
         /* color: hsl(238, 94%, 81%); */
     }
 
     h1 {
-        font-size: 3rem;
+        /* font-size: 3rem; */
         margin-bottom: 30px;
         /* color: #fff; */
     }
 
     h3 {
+        font-size: 2.5rem;
         color: #fff;
     }
 
@@ -60,10 +74,10 @@ const GlobalStyle = createGlobalStyle`
         line-height: 150%;
     }
 
-    span {
+    /* span {
         font-weight: bold;
         color: #23d997;
-    }
+    } */
 
     /* Styles for the open / hidden navigation menu */
     .open-menu,
@@ -92,7 +106,6 @@ const GlobalStyle = createGlobalStyle`
     .hidden-menu {    
         transform: translateX(100%);      
     }
-    
 
 `
 

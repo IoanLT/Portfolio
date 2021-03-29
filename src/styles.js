@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+
 export const AboutWrapper = styled(motion.div)`
     height: 100vh;
     display: flex;    
     align-items: center;
     justify-content: space-around;
     padding: 5rem 10rem;
-    color: #fff;    
+    color: #fff;  
+   
 `
 
 export const Description = styled.div`

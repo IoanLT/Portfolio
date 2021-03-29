@@ -9,7 +9,8 @@ import { pageAnimation } from '../animation';
 
 const LandingPage = () => {
     return (
-        <motion.div 
+        <motion.main 
+            className="main-wrapper"
             variants={pageAnimation}
             initial="hidden"
             animate="show"
@@ -18,7 +19,7 @@ const LandingPage = () => {
             <Hero />
             <About />            
             <Faq />
-        </motion.div>
+        </motion.main>
     )
 }
 
