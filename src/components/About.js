@@ -99,7 +99,11 @@ const AboutSection = styled(motion.section)`
     justify-content: center;    
     padding: 0 5%;
     color: #fff; 
-    background-color: #09070B;    
+    background-color: #09070B; 
+
+    @media (max-width: 1024px) {
+        height: 100%;
+    }   
 `;
 
 const AboutWrapper = styled.div`
@@ -119,7 +123,12 @@ const AboutDescription = styled(motion.div)`
     width: 40%;
 
     @media (max-width: 1024px) {
-        margin: 50px 0;
+        margin-top: 100px;
+        width: 70%;
+    }
+    @media (max-width: 500px) {  
+        margin-top: 100px;      
+        width: 90%;
     }
     
 `
@@ -130,7 +139,7 @@ const AboutText = styled(motion.div)`
     align-items: center;
     overflow: hidden;
     text-align: left;
-    margin-bottom: 50px;
+    margin: 50px 0;
     border-left: 10px solid hsl(360, 64%, 55%);
 
     h2 {
@@ -145,16 +154,26 @@ const Skills = styled(motion.div)`
     width: 40%;
 
     @media (max-width: 1024px) {
-        margin: 50px 0;
+        margin-bottom: 100px;
+        width: 70%;
+    }
+    @media (max-width: 500px) {        
+        width: 90%;
     }
 `
 
 const SkillSet = styled(motion.ul)`
     display: flex;
+    justify-content: space-between;
     /* flex-wrap: wrap; */
 
+    @media (max-width: 500px) {        
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
     div {
-        padding-right: 10%;
+        padding-right: 10%;        
     }
 
     li {

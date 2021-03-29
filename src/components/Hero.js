@@ -53,10 +53,7 @@ const Hero = () => {
                 animate="show"
             >               
                 <motion.h1>Portfolio</motion.h1>
-            </Portfolio>
-            {/* <Image>
-                <motion.img variants={photoAnimation} src={home1} alt="cameraman" />
-            </Image> */}
+            </Portfolio>           
             {/* <Wave /> */}
         </HeroWrapper>
     )
@@ -68,26 +65,48 @@ const HeroWrapper = styled(motion.div)`
     display: flex;  
     flex-wrap: wrap;  
     align-items: center;
-    justify-content: space-around;
-    /* padding: 5rem 10rem; */
+    justify-content: space-around;    
     padding: 0 5%;
     color: #fff;    
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(${bannerImage});  
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;  
+    background-size: cover; 
+
+    @media (max-width: 1024px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    } 
 `
 
 const Description = styled.div`
     width: 50%;
-    /* padding-right: 5rem; */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+
+    @media (max-width: 1024px) {
+        width: auto;
+    }
+    @media (max-width: 500px) {               
+        width: 100%;               
+    }
+    
     h1 {
         font-size: 2rem;
-        /* color: hsl(360, 64%, 55%); */
+        
+        @media (max-width: 500px) {               
+            font-size: 1.5rem;               
+        }
     }
 
     h2 {
         font-weight: lighter;
+
+        @media (max-width: 500px) {               
+            font-size: 2.5rem;               
+        }
     }
 `
 
@@ -97,6 +116,15 @@ export const Portfolio = styled(motion.div)`
     width: 50%;
     border-left: 10px solid hsl(360, 64%, 55%);
 
+    @media (max-width: 1024px) {        
+        margin-bottom: 50px;        
+        width: 444px;
+        overflow: none;        
+    }
+    @media (max-width: 500px) {               
+        width: 100%;               
+    }
+
     h1 {
         font-size: 6rem;
         color: hsl(360, 64%, 55%);
@@ -105,6 +133,12 @@ export const Portfolio = styled(motion.div)`
 
         @media (max-width: 1440px) {
             font-size: 5rem;
+        }
+        @media (max-width: 1024px) {
+            font-size: 4rem;            
+        }
+        @media (max-width: 500px) {               
+            font-size: 3rem;               
         }
     }
 `
