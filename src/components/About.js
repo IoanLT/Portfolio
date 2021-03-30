@@ -7,7 +7,7 @@ import React from 'react';
 // import home2 from '../assets/home2.png';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import { textFade } from '../animation';
+import { aboutAnimation, titleAnimation, menuAnimation, skills, skillsAnimation } from '../animation';
 
 import line from '../assets/Line 54.svg';
 
@@ -18,72 +18,88 @@ const About = () => {
     const [element, controls] = useScroll();
 
     return (
-        <AboutSection
-            id="about"
-            ref={element}
-            variants={textFade}
-            animate={controls}
-            initial="hidden"
-        >
+        <AboutSection id="about" ref={element}>
             <AboutWrapper>
-                <AboutDescription>
-                    <AboutText>                              
+                <AboutDescription 
+                    ref={element}
+                    variants={menuAnimation}
+                    animate={controls}
+                    initial="hidden"
+                    // exit="exit"
+                >
+                    <AboutText variants={titleAnimation}>                              
                         <h2>About me</h2>
                     </AboutText>
-                    <p>I’m a London based web developer who loves comunicating ideas through code 
+                    <motion.p variants={titleAnimation}>I’m a London based web developer who loves comunicating ideas through code 
                         to create beautiful layouts for a pleasant user experience.                    
-                    </p>
-                    <p>
+                    </motion.p>
+                    <motion.p variants={titleAnimation}>
                         I'm passionate about UX/UI design, creating user interactions and creative animations.
-                    </p>                   
-                    <p>
+                    </motion.p>                   
+                    <motion.p variants={titleAnimation}>
                         In my spare time I enjoy reading and learning about the latest trends in web development / design, 
                         as well as traveling with my girlfriend and dog in our campervan.
-                    </p>                   
+                    </motion.p>                   
                 </AboutDescription>              
                 
-                <Skills>
-                    <AboutText>                              
+                <Skills
+                    ref={element}
+                    variants={menuAnimation}
+                    animate={controls}
+                    initial="hidden"
+                >
+                    <AboutText variants={titleAnimation}>                              
                         <h2>Skills</h2>
                     </AboutText>
                     <SkillSet>
-                        <div>
-                            <li>                            
+                        <motion.div
+                            ref={element}
+                            variants={aboutAnimation}
+                            animate={controls}
+                            initial="hidden"
+                        >
+                            <motion.li variants={skillsAnimation}>                            
                                 <img src={line} alt="line" />                             
                                 <p>HTML/CSS</p>                         
-                            </li>
-                            <li>                            
+                            </motion.li>
+                            <motion.li variants={skillsAnimation}>                            
                                 <img src={line} alt="line" />                             
                                 <p>JavaScript</p>                         
-                            </li>
-                            <li>                            
+                            </motion.li>
+                            <motion.li variants={skillsAnimation}>                            
                                 <img src={line} alt="line" />                             
                                 <p>React</p>                         
-                            </li>
-                            <li>                            
+                            </motion.li>
+                            <motion.li variants={skillsAnimation}>                            
                                 <img src={line} alt="line" />                             
                                 <p>Animations</p>                         
-                            </li>                        
+                            </motion.li>                        
                             
-                        </div>
-                        <div>
-                            <li>                            
+                        </motion.div>
+
+                        <motion.div
+                            ref={element}
+                            variants={skills}
+                            animate={controls}
+                            initial="hidden"                                                      
+                        >
+                            <motion.li variants={skillsAnimation}>                            
                                 <img src={line} alt="line" />                             
                                 <p>Wireframing</p>                         
-                            </li>
-                            <li>                            
+                            </motion.li>
+                            <motion.li variants={skillsAnimation}>                            
                                 <img src={line} alt="line" />                             
                                 <p>User experience</p>                         
-                            </li>
-                            <li>                            
+                            </motion.li>
+                            <motion.li variants={skillsAnimation}>                            
                                 <img src={line} alt="line" />                             
                                 <p>UI Design</p>                         
-                            </li>
-                            <li>                            
+                            </motion.li>
+                            <motion.li variants={skillsAnimation}>                            
                                 <img src={line} alt="line" />                             
                                 <p>Responsive Design</p>                         
-                            </li>                            
-                        </div>
+                            </motion.li>                            
+                        </motion.div>
                     </SkillSet>
                 </Skills>
             </AboutWrapper>            
@@ -99,17 +115,17 @@ const AboutSection = styled(motion.section)`
     justify-content: center;    
     padding: 0 5%;
     color: #fff; 
-    background-color: #09070B; 
+    /* background-color: #09070B;  */
 
     @media (max-width: 1024px) {
         height: 100%;
     }   
 `;
 
-const AboutWrapper = styled.div`
+const AboutWrapper = styled(motion.div)`
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-between;    
 
     @media (max-width: 1024px) {
         flex-direction: column;
@@ -121,6 +137,7 @@ const AboutDescription = styled(motion.div)`
     display: flex; 
     flex-direction: column;    
     width: 40%;
+    overflow: hidden;
 
     @media (max-width: 1024px) {
         margin-top: 100px;
@@ -152,6 +169,7 @@ const AboutText = styled(motion.div)`
 
 const Skills = styled(motion.div)`
     width: 40%;
+    overflow: hidden;
 
     @media (max-width: 1024px) {
         margin-bottom: 100px;

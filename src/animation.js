@@ -35,7 +35,7 @@ export const titleAnimation = {
     }
 }
 
-// Text animation
+// Text animation on Hero section
 export const textFade = {
     hidden: { opacity: 0 },
     show: {
@@ -46,6 +46,59 @@ export const textFade = {
         }
     }
 }
+
+// Text animation on About and skills sections
+export const aboutAnimation = {
+    hidden: {
+        opacity: 0,
+        y: 300
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            ease: 'easeInOut',
+            when: "beforeChildren", 
+            staggerChildren: 0.25
+        }
+    }    
+};
+
+export const skills = {
+    hidden: {
+        opacity: 0,
+        y: 300
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 1,
+            duration: 1,
+            ease: 'easeInOut',
+            when: "beforeChildren", 
+            staggerChildren: 0.25
+        }
+    }    
+};
+
+// Text animation on Skills section
+export const skillsAnimation = {
+    hidden: {
+        opacity: 0,
+        x: 300
+    },
+    show: {
+        opacity: 1,
+        x: 0,
+        transition: {            
+            duration: 1,
+            ease: 'easeInOut',            
+        }
+    }    
+};
+
 
 // Photo animation
 export const photoAnimation = {
@@ -118,8 +171,7 @@ export const itemAnimation = {
     hidden: {  y: 300 },
     show: {
         y: 0,
-        transition: { 
-            // delay: 1,
+        transition: {            
             duration: 0.4,             
             ease: "easeOut"
         }
@@ -152,6 +204,8 @@ export const portfolioAnimation = {
         }
     }
 }
+
+
 
 
 
