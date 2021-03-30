@@ -29,7 +29,7 @@ const About = () => {
                         I'm passionate about UX/UI design, creating user interactions and creative animations.
                     </motion.p>                   
                     <motion.p variants={titleAnimation}>
-                        In my spare time I enjoy reading and learning about the latest trends in web development / design, 
+                        In my spare time I enjoy reading and learning about the latest trends in web development and design, 
                         as well as traveling with my girlfriend and dog in our campervan.
                     </motion.p>                   
                 </AboutDescription>              

@@ -65,7 +65,7 @@ const Movie = styled.div`
 
     .line {
         height: 0.5rem;
-        background: #23d997;
+        background: hsl(360, 64%, 55%);
         margin-bottom: 3rem;
     }
 

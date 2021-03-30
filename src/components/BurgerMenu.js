@@ -31,6 +31,13 @@ const BurgerMenu = ({ displayMenu, setDisplayMenu, openMenu, setOpenMenu }) => {
         setOpenMenu(false);
     }
 
+    // This method does the same job as the one above but will also scroll to the top of the page
+    const handleHomeMenu = () => {
+        setDisplayMenu(false);
+        setOpenMenu(false);
+        window.scrollTo(0, 0);
+    }
+
     return (
         
         <div className={displayMenu ? 'open-menu' : 'hidden-menu'}>
@@ -42,9 +49,9 @@ const BurgerMenu = ({ displayMenu, setDisplayMenu, openMenu, setOpenMenu }) => {
                 exit="exit"
             >
                 <MenuItems> 
-                    <Link 
-                        onClick={handleMenu}
-                        to="/"                        
+                    <Link                         
+                        to="/"   
+                        onClick={handleHomeMenu}                     
                     >
                         <ListItem variants={itemAnimation}>Home</ListItem>      
                     </Link>                   
