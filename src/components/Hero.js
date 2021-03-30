@@ -2,7 +2,7 @@ import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 // import home1 from '../assets/home1.png';
 import styled from 'styled-components';
-import { Image, Hide } from '../styles';
+import { Hide } from '../styles';
 import { motion } from 'framer-motion';
 import { titleAnimation, textFade, portfolioAnimation } from '../animation';
 // import Wave from './Wave';
@@ -33,18 +33,18 @@ const Hero = () => {
                     </Hide>
                 </motion.div>
                
-                <ScrollLink                    
+                <motion.button variants={textFade}>
+                    <ScrollLink                    
                         to="about"
                         activeClass="active"                        
                         spy={true}
                         smooth={true}                        
                         duration={1000}
-                >
-                    <motion.button variants={textFade}>
+                    >                    
                         Find out more
-                        <img src={arrowRight} alt="arrow-right" />
-                    </motion.button>
-                </ScrollLink>
+                        <img src={arrowRight} alt="arrow-right" />                    
+                    </ScrollLink>
+                </motion.button>
             </Description>
 
             <Portfolio 
@@ -108,7 +108,9 @@ const Description = styled.div`
         }
     }
 
-    a {
+    button {
+        width: 250px;
+
         @media (max-width: 500px) {               
            margin-top: 50px;
            align-self: center;              
