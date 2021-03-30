@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 30px 0;
         border: 1px solid hsl(360, 64%, 55%);
         background: transparent;
+        outline: none;
         color: #fff;
         transition: all 0.5s ease;        
 

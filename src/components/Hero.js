@@ -81,16 +81,15 @@ const HeroWrapper = styled(motion.div)`
 `
 
 const Description = styled.div`
-    width: 50%;
-    /* display: flex;
+    width: 50%;   
+    display: flex; 
     flex-direction: column;
-    align-items: center; */
 
     @media (max-width: 1024px) {
         width: auto;
     }
     @media (max-width: 500px) {               
-        width: 100%;               
+        width: 90%;               
     }
     
     h1 {
@@ -108,6 +107,13 @@ const Description = styled.div`
             font-size: 2.5rem;               
         }
     }
+
+    a {
+        @media (max-width: 500px) {               
+           margin-top: 50px;
+           align-self: center;              
+        }
+    }
 `
 
 export const Portfolio = styled(motion.div)`
@@ -122,7 +128,7 @@ export const Portfolio = styled(motion.div)`
         overflow: none;        
     }
     @media (max-width: 500px) {               
-        width: 100%;               
+        width: 90%;               
     }
 
     h1 {
