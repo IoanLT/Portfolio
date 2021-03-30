@@ -1,17 +1,9 @@
 import React from 'react';
-// Import icons
-// import clock from '../assets/clock.svg';
-// import diaphragm from '../assets/diaphragm.svg';
-// import money from '../assets/money.svg';
-// import teamwork from '../assets/teamwork.svg';
-// import home2 from '../assets/home2.png';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { aboutAnimation, titleAnimation, menuAnimation, skills, skillsAnimation } from '../animation';
-
 import line from '../assets/Line 54.svg';
-
-// import custom hook
+// import custom scroll hook
 import { useScroll } from './useScroll';
 
 const About = () => {
@@ -27,9 +19,9 @@ const About = () => {
                     initial="hidden"
                     // exit="exit"
                 >
-                    <AboutText variants={titleAnimation}>                              
+                    <AboutHeader variants={titleAnimation}>                              
                         <h2>About me</h2>
-                    </AboutText>
+                    </AboutHeader>
                     <motion.p variants={titleAnimation}>I’m a London based web developer who loves comunicating ideas through code 
                         to create beautiful layouts for a pleasant user experience.                    
                     </motion.p>
@@ -48,9 +40,9 @@ const About = () => {
                     animate={controls}
                     initial="hidden"
                 >
-                    <AboutText variants={titleAnimation}>                              
+                    <AboutHeader variants={titleAnimation}>                              
                         <h2>Skills</h2>
-                    </AboutText>
+                    </AboutHeader>
                     <SkillSet>
                         <motion.div
                             ref={element}
@@ -150,8 +142,7 @@ const AboutDescription = styled(motion.div)`
     
 `
 
-const AboutText = styled(motion.div)`    
-    /* width: 300px; */    
+const AboutHeader = styled(motion.div)`      
     display: flex;
     align-items: center;
     overflow: hidden;

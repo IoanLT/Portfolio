@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Link as ScrollLink } from 'react-scroll';
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
@@ -42,31 +42,36 @@ const BurgerMenu = ({ displayMenu, setDisplayMenu, openMenu, setOpenMenu }) => {
                 exit="exit"
             >
                 <MenuItems> 
-                    <ScrollLink 
+                    <Link 
                         onClick={handleMenu}
-                        to="home"
-                        activeClass="active"                        
-                        spy={true}
-                        smooth={true}
-                        // offset={-80}
-                        duration={1000}
+                        to="/"                        
                     >
                         <ListItem variants={itemAnimation}>Home</ListItem>      
-                    </ScrollLink>                   
+                    </Link>                   
 
                     <ScrollLink
                         onClick={handleMenu}
                         to="about"
                         activeClass="active"                        
                         spy={true}
-                        smooth={true}
-                        // offset={-80}
+                        smooth={true}                        
                         duration={1000}
                     >
                         <ListItem variants={itemAnimation}>About</ListItem>
+                    </ScrollLink>  
+
+                    <ScrollLink
+                        onClick={handleMenu}
+                        to="projects"
+                        activeClass="active"                        
+                        spy={true}
+                        smooth={true}                        
+                        duration={1000}
+                    >
+                        <ListItem variants={itemAnimation}>Projects</ListItem>
                     </ScrollLink>                   
                                        
-                    <ListItem variants={itemAnimation}>Projects</ListItem>                                      
+                                                          
                     <ListItem variants={itemAnimation}>Contact</ListItem>                 
                 </MenuItems>
 
@@ -114,6 +119,10 @@ const MenuItems = styled(motion.ul)`
     /* text-align: left; */
     overflow: hidden;
     /* width: 80%; */
+
+    a {
+        text-decoration: none;
+    }
 `
 
 const ListItem = styled(motion.li)`

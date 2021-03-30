@@ -6,6 +6,7 @@ import About from '../components/About';
 // Animations
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation';
+import Projects from '../components/Projects';
 
 const LandingPage = () => {
     return (
@@ -17,7 +18,8 @@ const LandingPage = () => {
             exit="exit"
         >
             <Hero />
-            <About />            
+            <About /> 
+            <Projects />           
             <Faq />
         </motion.main>
     )

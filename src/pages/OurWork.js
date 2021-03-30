@@ -32,7 +32,7 @@ const OurWork = () => {
                     </Hide>                    
                 </Link>   
             </Movie>
-            <Movie>
+            {/* <Movie>
                 <h2>The Racer</h2>
                 <div className="line"></div>
                 <Link to="/work/the-racer">
@@ -45,7 +45,7 @@ const OurWork = () => {
                 <Link to="/work/good-times">
                     <img src={goodtimes} alt="lovers" />
                 </Link>   
-            </Movie>
+            </Movie> */}
         </Work>
     )
 }
