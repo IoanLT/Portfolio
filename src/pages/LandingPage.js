@@ -1,7 +1,7 @@
 import React from 'react';
 // Page components
 import Hero from '../components/Hero';
-import Faq from '../components/Faq';
+// import Faq from '../components/Faq';
 import About from '../components/About';
 // Animations
 import { motion } from 'framer-motion';
@@ -20,7 +20,7 @@ const LandingPage = () => {
             <Hero />
             <About /> 
             <Projects />           
-            <Faq />
+            {/* <Faq /> */}
         </motion.main>
     )
 }

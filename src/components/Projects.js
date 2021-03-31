@@ -22,7 +22,7 @@ const Projects = () => {
             <ProjectGrid>
                 <ProjectCard>
                     <img src={musicPlayer} alt="music app" />
-                    <h3>Chillhop Music Player</h3>
+                    <h3>Music Player</h3>
                     <p>
                         This is a personal project I really enjoyed working on.
                         For this project I used React hooks, Sass and styled components.
@@ -30,7 +30,7 @@ const Projects = () => {
                     
                     <button>    
                         <Link 
-                            to="/our-work"
+                            to="/music-player"
                             onClick={() => window.scrollTo(0, 0)}
                         >                    
                             Find out more
@@ -45,7 +45,7 @@ const Projects = () => {
                     <p>Authors is a socially aware and sustainable publishing house supporting suppressed voices worldwide.</p>                    
                     <button>    
                         <Link 
-                            to="/our-work"
+                            to="/music-player"
                             onClick={() => window.scrollTo(0, 0)}
                         >                    
                             Find out more
@@ -62,7 +62,7 @@ const Projects = () => {
                     </p>                    
                     <button>    
                         <Link 
-                            to="/our-work"
+                            to="/music-player"
                             onClick={() => window.scrollTo(0, 0)}
                         >                    
                             Find out more
@@ -73,14 +73,14 @@ const Projects = () => {
 
                 <ProjectCard>
                     <img src={janine} alt="janine" />
-                    <h3>Instabeauty by Janine</h3>
+                    <h3>Instabeauty</h3>
                     <p>
                         Creation of a brand new website for Instabeauty Studio to inform 
                         potential clients of the services offered in the studio.
                     </p>                    
                     <button>    
                         <Link 
-                            to="/our-work"
+                            to="/music-player"
                             onClick={() => window.scrollTo(0, 0)}
                         >                    
                             Find out more
@@ -100,7 +100,7 @@ const ProjectsSection = styled(motion.section)`
     flex-direction: column;   
     /* align-items: center; */
     justify-content: center;    
-    padding: 0 5%;
+    padding: 0 15%;
     color: #fff;     
 
     @media (max-width: 1024px) {
@@ -114,6 +114,7 @@ const ProjectHeader = styled(motion.div)`
     text-align: left;
     margin: 50px 0;
     border-left: 10px solid hsl(360, 64%, 55%);
+    
 
     h2 {
         font-size: 3rem;
@@ -125,12 +126,23 @@ const ProjectHeader = styled(motion.div)`
 
 const ProjectGrid = styled(motion.div)`
     display: grid;
+    align-items: center;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 2fr)); */
+    /* grid-template-rows: repeat(auto-fit, minmax(300px, 2fr)); */
+    overflow: hidden;    
+    /* padding: 0 10%; */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 10px 10px;
-    grid-template-areas:
+    gap: 20px 20px;
+    grid-auto-flow: dense;
+    /* grid-template-areas:
         ". ."
-        ". .";
+        ". ."; */
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 `
 
 const ProjectCard = styled(motion.div)`
@@ -139,14 +151,19 @@ const ProjectCard = styled(motion.div)`
     overflow: hidden;
     padding: 20px;
     /* background: hsl(360, 100%, 97%); */
-    border: 1px solid hsl(360, 64%, 55%);
+    /* border: 1px solid hsl(360, 64%, 55%); */
     border-radius: 10px;
+    max-width: 450px;
+    align-self: center;
+    justify-self: center;
+    /* height: 800px; */
 
     img {
         /* align-self: center; */
         width: 100%;
         height: 300px;
         object-fit: cover;
+        /* border: 1px solid #fff; */
     }
 
     h3 {
@@ -161,6 +178,7 @@ const ProjectCard = styled(motion.div)`
         img {
             width: auto;
             height: auto;
+            /* border: none; */
         }
     }
 

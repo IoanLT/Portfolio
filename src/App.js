@@ -5,14 +5,14 @@ import GlobalStyle from "./components/GlobalStyle";
 import Header from "./components/Header";
 // Import pages
 import LandingPage from "./pages/LandingPage";
-import OurWork from "./pages/OurWork";
-import ContactUs from "./pages/ContactUs";
-import MovieDetail from "./pages/MovieDetail";
+import MusicPlayer from "./pages/MusicPlayer";
+// import ContactUs from "./pages/ContactUs";
+// import MovieDetail from "./pages/MovieDetail";
 // Router
 import { Switch, Route, useLocation } from 'react-router-dom';
 // Animation
 import { AnimatePresence } from 'framer-motion';
-import MusicPlayer from "./pages/MusicPlayer";
+
 
 
 function App() {
@@ -34,8 +34,8 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
           <Route exact path="/" render={(props) => <LandingPage {...props} />} />
-          <Route exact path="/our-work" render={(props) => <OurWork {...props} />} />
-          <Route exact path="/work/:id" render={(props) => <MovieDetail {...props} />} />
+          <Route exact path="/music-player" render={(props) => <MusicPlayer {...props} />} />
+          {/* <Route exact path="/work/:id" render={(props) => <MovieDetail {...props} />} /> */}
           {/* <Route exact path="/contact-us" render={(props) => <ContactUs {...props} />} />  */}
           <Route exact path="/music-player" render={(props) => <MusicPlayer {...props} />} /> 
             
@@ -44,7 +44,7 @@ function App() {
           </Route> 
 
           <Route path="/our-work">
-            <OurWork />
+            <MusicPlayer />
           </Route> 
 
           <Route path="/work/:id">
