@@ -22,8 +22,8 @@ const About = () => {
                     <AboutHeader variants={titleAnimation}>                              
                         <h2>About me</h2>
                     </AboutHeader>
-                    <motion.p variants={titleAnimation}>I’m a London based web developer who loves comunicating ideas through code 
-                        to create beautiful layouts for a pleasant user experience.                    
+                    <motion.p variants={titleAnimation}>I’m a London based web developer who loves communicating ideas through code 
+                        to create beautiful layouts for an enjoyable user experience.                    
                     </motion.p>
                     <motion.p variants={titleAnimation}>
                         I'm passionate about UX/UI design, creating user interactions and creative animations.

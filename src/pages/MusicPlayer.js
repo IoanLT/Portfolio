@@ -10,16 +10,11 @@ import { pageAnimation, textFade, photoAnimation, lineAnimation, slider } from '
 import line from '../assets/Line 54.svg';
 // import custom scroll hook
 import { useScroll } from '../components/useScroll';
-// import Header from '../components/Header';
-// import Burger from '../components/Burger';
 
 const MusicPlayer = () => {
     const [element, controls] = useScroll();
 
-    return (
-        <>
-        {/* <Header /> */}
-        {/* <Burger /> */}
+    return (     
         <MusicMain
             ref={element}                    
             animate={controls}                    
@@ -43,8 +38,7 @@ const MusicPlayer = () => {
                 </Hide>           
             </Banner>
             
-        </MusicMain>
-        </>
+        </MusicMain>        
     )
 }
 
@@ -84,7 +78,7 @@ const Banner = styled.div`
 
 const Hide = styled.div`
     overflow: hidden;
-    padding: 5%;
+    padding: 0 15%;
 `
 
 // Frame animations

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import BurgerMenu from "./BurgerMenu";
 // import { useScroll } from './useScroll';
@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 
 
 const Burger = ({ openMenu, setOpenMenu, displayMenu, setDisplayMenu }) => {
-	const [navbar, setNavbar] = useState(false);
+	// const [navbar, setNavbar] = useState(false);
 	// const [element, controls] = useScroll();	
 
 	// This method will toggle the library to show or hide
@@ -17,7 +17,7 @@ const Burger = ({ openMenu, setOpenMenu, displayMenu, setDisplayMenu }) => {
 	};
 	
 	const location = useLocation();
-	console.log(location);
+	// console.log(location);
 
 	// This method will change the colour of the burger on scroll
 	// const changeBackground = () =>
@@ -27,7 +27,12 @@ const Burger = ({ openMenu, setOpenMenu, displayMenu, setDisplayMenu }) => {
 
     return (
 		<>
-			<StyledBurger location={location} key={location.key} openMenu={openMenu} onClick={toggleNavHandler}>
+			<StyledBurger 
+				location={location} 
+				key={location.key} 
+				openMenu={openMenu} 
+				onClick={toggleNavHandler}
+			>
 				<div />
 				<div />
 				<div />

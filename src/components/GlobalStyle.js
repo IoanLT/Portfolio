@@ -94,6 +94,7 @@ const GlobalStyle = createGlobalStyle`
         transition: all 0.7s ease;
         transform: translateX(0);     
         background: #fff;   
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7), 0 5px 15px rgba(0, 0, 0, 0.1);
         /* background: #f2f4f5; */
         /* background: linear-gradient(to top, hsl(48, 100%, 88%), hsl(44, 92%, 63%));    */
 
@@ -103,7 +104,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .hidden-menu {    
-        transform: translateX(100%);      
+        transform: translateX(100%); 
+        box-shadow: none;     
     }
 
 `
