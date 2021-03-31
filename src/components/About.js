@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { aboutAnimation, titleAnimation, menuAnimation, skills, skillsAnimation } from '../animation';
 import line from '../assets/Line 54.svg';
+import scrolldown from '../assets/scrolldown.png';
+
 // import custom scroll hook
 import { useScroll } from './useScroll';
 
@@ -11,102 +13,109 @@ const About = () => {
 
     return (
         <AboutSection id="about" ref={element}>
-            <AboutWrapper>
-                <AboutDescription 
-                    ref={element}
-                    variants={menuAnimation}
-                    animate={controls}
-                    initial="hidden"
-                    // exit="exit"
-                >
-                    <AboutHeader variants={titleAnimation}>                              
-                        <h2>About me</h2>
-                    </AboutHeader>
-                    <motion.p variants={titleAnimation}>I’m a London based web developer who loves communicating ideas through code 
-                        to create beautiful layouts for an enjoyable user experience.                    
-                    </motion.p>
-                    <motion.p variants={titleAnimation}>
-                        I'm passionate about UX/UI design, creating user interactions and creative animations.
-                    </motion.p>                   
-                    <motion.p variants={titleAnimation}>
-                        In my spare time I enjoy reading and learning about the latest trends in web development and design, 
-                        as well as traveling with my girlfriend and dog in our campervan.
-                    </motion.p>                   
-                </AboutDescription>              
-                
-                <Skills
-                    ref={element}
-                    variants={menuAnimation}
-                    animate={controls}
-                    initial="hidden"
-                >
-                    <AboutHeader variants={titleAnimation}>                              
-                        <h2>Skills</h2>
-                    </AboutHeader>
-                    <SkillSet>
-                        <motion.div
-                            ref={element}
-                            variants={aboutAnimation}
-                            animate={controls}
-                            initial="hidden"
-                        >
-                            <motion.li variants={skillsAnimation}>                            
-                                <img src={line} alt="line" />                             
-                                <p>HTML/CSS</p>                         
-                            </motion.li>
-                            <motion.li variants={skillsAnimation}>                            
-                                <img src={line} alt="line" />                             
-                                <p>JavaScript</p>                         
-                            </motion.li>
-                            <motion.li variants={skillsAnimation}>                            
-                                <img src={line} alt="line" />                             
-                                <p>React</p>                         
-                            </motion.li>
-                            <motion.li variants={skillsAnimation}>                            
-                                <img src={line} alt="line" />                             
-                                <p>Animations</p>                         
-                            </motion.li>                        
-                            
-                        </motion.div>
+            <div className="content-wrap">
+                <AboutWrapper>                                
+                    <AboutDescription 
+                        ref={element}
+                        variants={menuAnimation}
+                        animate={controls}
+                        initial="hidden"
+                        // exit="exit"
+                    >
+                        <AboutHeader variants={titleAnimation}>                              
+                            <h2>About me</h2>
+                        </AboutHeader>
+                        <motion.p variants={titleAnimation}>I’m a London based web developer who loves communicating ideas through code 
+                            to create beautiful layouts for an enjoyable user experience.                    
+                        </motion.p>
+                        <motion.p variants={titleAnimation}>
+                            I'm passionate about UX/UI design, creating user interactions and creative animations.
+                        </motion.p>                   
+                        <motion.p variants={titleAnimation}>
+                            In my spare time I enjoy reading and learning about the latest trends in web development and design, 
+                            as well as traveling with my girlfriend and dog in our campervan.
+                        </motion.p>                   
+                    </AboutDescription>              
+                    
+                    <Skills
+                        ref={element}
+                        variants={menuAnimation}
+                        animate={controls}
+                        initial="hidden"
+                    >
+                        <AboutHeader variants={titleAnimation}>                              
+                            <h2>Skills</h2>
+                        </AboutHeader>
+                        <SkillSet>
+                            <motion.div
+                                ref={element}
+                                variants={aboutAnimation}
+                                animate={controls}
+                                initial="hidden"
+                            >
+                                <motion.li variants={skillsAnimation}>                            
+                                    <img src={line} alt="line" />                             
+                                    <p>HTML/CSS</p>                         
+                                </motion.li>
+                                <motion.li variants={skillsAnimation}>                            
+                                    <img src={line} alt="line" />                             
+                                    <p>JavaScript</p>                         
+                                </motion.li>
+                                <motion.li variants={skillsAnimation}>                            
+                                    <img src={line} alt="line" />                             
+                                    <p>React</p>                         
+                                </motion.li>
+                                <motion.li variants={skillsAnimation}>                            
+                                    <img src={line} alt="line" />                             
+                                    <p>Animations</p>                         
+                                </motion.li>                        
+                                
+                            </motion.div>
 
-                        <motion.div
-                            ref={element}
-                            variants={skills}
-                            animate={controls}
-                            initial="hidden"                                                      
-                        >
-                            <motion.li variants={skillsAnimation}>                            
-                                <img src={line} alt="line" />                             
-                                <p>Wireframing</p>                         
-                            </motion.li>
-                            <motion.li variants={skillsAnimation}>                            
-                                <img src={line} alt="line" />                             
-                                <p>User experience</p>                         
-                            </motion.li>
-                            <motion.li variants={skillsAnimation}>                            
-                                <img src={line} alt="line" />                             
-                                <p>UI Design</p>                         
-                            </motion.li>
-                            <motion.li variants={skillsAnimation}>                            
-                                <img src={line} alt="line" />                             
-                                <p>Responsive Design</p>                         
-                            </motion.li>                            
-                        </motion.div>
-                    </SkillSet>
-                </Skills>
-            </AboutWrapper>            
+                            <motion.div
+                                ref={element}
+                                variants={skills}
+                                animate={controls}
+                                initial="hidden"                                                      
+                            >
+                                <motion.li variants={skillsAnimation}>                            
+                                    <img src={line} alt="line" />                             
+                                    <p>Wireframing</p>                         
+                                </motion.li>
+                                <motion.li variants={skillsAnimation}>                            
+                                    <img src={line} alt="line" />                             
+                                    <p>User experience</p>                         
+                                </motion.li>
+                                <motion.li variants={skillsAnimation}>                            
+                                    <img src={line} alt="line" />                             
+                                    <p>UI Design</p>                         
+                                </motion.li>
+                                <motion.li variants={skillsAnimation}>                            
+                                    <img src={line} alt="line" />                             
+                                    <p>Responsive Design</p>                         
+                                </motion.li>                            
+                            </motion.div>
+                        </SkillSet>
+                    </Skills>
+                </AboutWrapper>
+                <ScrollDown>
+                    <img src={scrolldown} alt="down arrow" />
+                    <p>Scrolldown</p>
+                </ScrollDown> 
+            </div>           
         </AboutSection>
     )
 }
 
 const AboutSection = styled(motion.section)`
     min-height: 100vh;
-    width: 100%;    
+    width: 100%;      
     display: flex;   
     align-items: center;
     justify-content: center;    
     padding: 0 5%;
     color: #fff; 
+    position: relative;
     /* background-color: #09070B;  */
 
     @media (max-width: 1024px) {
@@ -117,7 +126,7 @@ const AboutSection = styled(motion.section)`
 const AboutWrapper = styled(motion.div)`
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;    
+    justify-content: space-between;      
 
     @media (max-width: 1024px) {
         flex-direction: column;
@@ -135,7 +144,7 @@ const AboutDescription = styled(motion.div)`
         margin-top: 100px;
         width: 70%;
     }
-    @media (max-width: 500px) {  
+    @media (max-width: 768px) {  
         margin-top: 100px;      
         width: 90%;
     }
@@ -163,10 +172,10 @@ const Skills = styled(motion.div)`
     overflow: hidden;
 
     @media (max-width: 1024px) {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
         width: 70%;
     }
-    @media (max-width: 500px) {        
+    @media (max-width: 768px) {        
         width: 90%;
     }
 `
@@ -178,7 +187,7 @@ const SkillSet = styled(motion.ul)`
 
     @media (max-width: 500px) {        
         flex-direction: column;
-        margin-bottom: 100px;
+        /* margin-bottom: 100px; */
     }
 
     div {
@@ -204,6 +213,29 @@ const SkillSet = styled(motion.ul)`
             margin: 0;
             padding: 0;
         }
+    }
+`
+
+const ScrollDown = styled.div`    
+    height: 50px;
+    width: 100%; 
+    display: flex;       
+    align-items: center;    
+    margin: 50px 0 100px 0;
+
+    p {
+        letter-spacing: 4px;
+        padding-left: 50px;
+        margin: 0;
+        color: hsl(360, 64%, 55%);
+    }
+
+    @media (max-width: 1024px) {
+        /* margin-bottom: 50px; */
+        margin-left: 15%;
+    }
+    @media (max-width: 768px) {        
+        margin-left: 5%;
     }
 `
 
