@@ -70,10 +70,6 @@ const Banner = styled.div`
         /* height: 70vh; */
         object-fit: cover;
     }
-
-    h2 {
-        color: #fff;
-    }
 `
 
 const Hide = styled.div`
@@ -90,18 +86,6 @@ const Hide = styled.div`
 //     height: 100vh;
 //     background: #fffebf;
 //     z-index: 2;
-// `
-
-// const Frame2 = styled(Frame1)`
-//     background: #ff8efb;
-// `
-
-// const Frame3 = styled(Frame1)`
-//     background: #8ed2ff;
-// `
-
-// const Frame4 = styled(Frame1)`
-//     background: #8effa0;
 // `
 
 export default MusicPlayer;
