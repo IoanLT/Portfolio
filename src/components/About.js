@@ -117,6 +117,7 @@ const AboutSection = styled(motion.section)`
     padding: 0 5%;
     color: #fff; 
     position: relative;
+    margin-bottom: 100px;
     /* background-color: #09070B;  */
 
     @media (max-width: 1024px) {
@@ -229,7 +230,7 @@ const ScrollDown = styled.div`
     width: 100%; 
     display: flex;       
     align-items: center;    
-    margin: 50px 0 100px 0;
+    margin-top: 50px;
 
     p {
         letter-spacing: 4px;

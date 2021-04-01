@@ -5,7 +5,6 @@ import styled from 'styled-components';
 // import custom hook
 import { useScroll } from './useScroll';
 // import images
-import arrowRight from '../assets/Arrow-right-white.svg';
 import musicPlayer from '../assets/music-player-card.PNG';
 import jobPortal from '../assets/job-portal-card.PNG';
 import authxrs from '../assets/authxrs-card.PNG';
@@ -21,6 +20,12 @@ const Projects = () => {
             <ProjectHeader>
                 <h2>Projects</h2>
             </ProjectHeader> 
+            <p>
+                Here is a selection of projects that I have worked on while studying web development at Wild Code School.
+            </p>
+            <p>
+                Some of these include group projects and some of them are personal projects that I have worked on after completing the bootcamp.
+            </p>
             <ProjectGrid
                 ref={element}            
                 variants={menuAnimation}
@@ -127,18 +132,22 @@ const ProjectsSection = styled(motion.section)`
     min-height: 100vh;
     width: 100%;    
     display: flex;
-    flex-direction: column;   
-    /* align-items: center; */
+    flex-direction: column;    
     justify-content: center;    
-    padding: 0 10%;
-    color: #fff;     
+    padding: 0 5%;
+    color: #fff; 
+    margin-bottom: 100px; 
+
+    /* p {
+        width: 50%;
+    }    */
 
     @media (max-width: 1024px) {
         height: 100%;
     }   
     @media (max-width: 500px) {
         padding: 0 5%;
-    }   
+    }       
 `;
 
 const ProjectHeader = styled(motion.div)` 
@@ -146,8 +155,7 @@ const ProjectHeader = styled(motion.div)`
     overflow: hidden;
     text-align: left;
     margin: 50px 0;
-    border-left: 10px solid hsl(360, 64%, 55%);
-    
+    border-left: 10px solid hsl(360, 64%, 55%);    
 
     h2 {
         font-size: 3rem;
@@ -162,49 +170,40 @@ const ProjectHeader = styled(motion.div)`
 `
 
 const ProjectGrid = styled(motion.div)`
-    display: grid;
-    align-items: center;
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 2fr)); */
-    /* grid-template-rows: repeat(auto-fit, minmax(300px, 2fr)); */
-    overflow: hidden;    
-    /* padding: 0 10%; */
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px 20px;
+    display: grid;    
+    overflow: hidden;     
+    grid-template-columns: 1fr 1fr;    
+    grid-template-rows: 46% 46%;    
+    gap: 30px 30px;
     grid-auto-flow: dense;
-    /* grid-template-areas:
-        ". ."
-        ". ."; */
+    margin-top: 50px;
 
     @media (max-width: 1024px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 0.95fr 0.95fr 0.95fr 0.95fr;
     }
 `
 
-const ProjectCard = styled(motion.div)`
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding: 10px;
-    background: #fff;
-    /* border: 1px solid hsl(360, 64%, 55%); */
-    border-radius: 10px;
-    /* max-width: 450px; */
-    align-self: center;
-    justify-self: center;
-    /* height: 800px; */
+const ProjectCard = styled(motion.div)`    
+    overflow: hidden;    
+    border: 1px solid #fff; 
+       
 
-    img {
-        /* align-self: center; */
-        width: 100%;
-        /* height: 500px; */
-        object-fit: cover;
-        /* border: 1px solid #fff; */
+    img {                     
+        width: 100%;        
+        object-fit: cover;        
+        transition: transform 2s; 
+        opacity: 0.7;       
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.03);
+            transform-origin: 50% 50%;
+            opacity: 1;
+        }
     }
 
-    h3 {
-        /* color: #000; */
+    /* h3 {        
         font-size: 2rem;
         padding: 20px 0;
     }
@@ -214,15 +213,14 @@ const ProjectCard = styled(motion.div)`
 
         img {
             width: auto;
-            height: auto;
-            /* border: none; */
+            height: auto;            
         }
     }
 
     a {
         text-decoration: none;
         color: #fff;
-    }
+    } */
 `
 
 export default Projects;
