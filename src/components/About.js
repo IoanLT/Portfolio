@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+// import animations
 import { aboutAnimation, titleAnimation, menuAnimation, skills, skillsAnimation } from '../animation';
 import line from '../assets/Line 54.svg';
 import scrolldown from '../assets/scrolldown.png';
@@ -164,6 +165,13 @@ const AboutHeader = styled(motion.div)`
         color: hsl(360, 64%, 55%);
         padding-left: 10%;
         margin: 0;
+
+        @media (max-width: 768px) {  
+            font-size: 2.5rem;
+        }
+        @media (max-width: 500px) {  
+            font-size: 2rem;
+        }
     }    
 `
 

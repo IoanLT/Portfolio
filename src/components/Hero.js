@@ -141,17 +141,12 @@ export const Portfolio = styled(motion.div)`
 
     h1 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 5.5rem;
-        font-weight: 600;
-        letter-spacing: 5px;
+        font-size: 5rem;
+        font-weight: 600;       
         color: hsl(360, 64%, 55%);
         padding-left: 10%;
         margin: 0;
-
-        @media (max-width: 1440px) {
-            font-size: 5rem;
-            letter-spacing: 2px;
-        }
+        
         @media (max-width: 1024px) {
             font-size: 4rem;                        
         }
