@@ -10,8 +10,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: #09070B;
-        font-family: 'Montserrat', sans-serif;              
+        background: #09070B;                      
     }
 
     button {
@@ -71,6 +70,10 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1rem;
         line-height: 150%;
         margin-bottom: 20px;
+
+        @media (max-width: 500px) {
+            font-size: 14px;                
+        }
     }
 
     /* span {

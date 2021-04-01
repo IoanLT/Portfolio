@@ -33,30 +33,81 @@ const MusicPlayer = () => {
                     Chillhop Music Player
                 </motion.h2>
                 <motion.div variants={lineAnimation} className="line"></motion.div>                
-                <Hide>
+                <Devices>
                     <motion.img variants={photoAnimation} src={musicDevices} alt="music player" />
-                </Hide>           
+                </Devices>           
             </Banner>
+
+            <Concept>
+                <div className="concept-heading">
+                    <img src={line} alt="line" />
+                    <h3>Concept</h3>
+                </div>
+                <div className="concept-text">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.                        
+                    </p>
+                </div>
+            </Concept>
+
+            <Development>
+                <div className="development-heading">
+                    <img src={line} alt="line" />
+                    <h3>Development</h3>
+                </div>
+                <div className="development-text">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.                        
+                    </p>
+                </div>
+            </Development>
             
         </MusicMain>        
     )
 }
 
-const MusicMain = styled(motion.div)`
+const MusicMain = styled(motion.section)`
     min-height: 100vh;
     width: 100%;
     overflow: hidden;
     background: #fff;
-    padding: 0 5%;   
+    padding: 0 20%;   
+
+    @media (max-width: 1024px) {
+        padding: 0 15%;
+    }
+    @media (max-width: 500px) {
+        padding: 0 10%;
+    }
 `
 
 const Banner = styled.div`
     padding-bottom: 10rem;
 
     h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 2.5rem;
         margin-top: 100px;
         padding: 1rem 0;   
-        color: #000;     
+        color: #000;   
+
+        @media (max-width: 1024px) {
+            font-size: 2rem;
+        }
+        @media (max-width: 500px) {
+            font-size: 1.5rem;
+        }  
     }
 
     .line {
@@ -66,15 +117,92 @@ const Banner = styled.div`
     }
 
     img {
-        width: 100%;
-        /* height: 70vh; */
+        width: 100%;        
         object-fit: cover;
     }
 `
 
-const Hide = styled.div`
+const Devices = styled.div`
     overflow: hidden;
-    padding: 0 15%;
+    /* padding: 0 15%; */
+`
+
+const Concept = styled(motion.div)`
+    /* padding: 0 15%; */
+    display: flex;
+    flex-direction: column;    
+    margin-bottom: 100px;
+    width: 100%;
+    flex-wrap: wrap;    
+
+    .concept-heading {
+        display: flex;
+        align-items: center;
+        padding-right: 50px;
+        margin-bottom: 30px;
+        /* min-width: 450px; */
+        width: 40%;
+
+        img {
+            width: 50px;
+            height: 2px;
+        }
+
+        h3 {
+            font-size: 2.2rem;
+            padding-left: 40px;
+            color: #000; 
+
+            @media (max-width: 1024px) {
+                font-size: 1.8rem;
+                padding-left: 30px;
+            }
+            @media (max-width: 500px) {
+                font-size: 1.3rem;
+                padding-left: 20px;
+            }           
+        }
+    }
+
+    .concept-text {
+        width: 100%;
+    }    
+`
+
+const Development = styled(Concept)`
+
+    .development-heading {
+        display: flex;
+        align-items: center;
+        padding-right: 50px;
+        margin-bottom: 30px;
+        /* min-width: 450px; */
+        width: 40%;
+
+        img {
+            width: 50px;
+            height: 2px;
+        }
+
+        h3 {
+            font-size: 2.2rem;
+            padding-left: 40px;
+            color: #000;   
+
+            @media (max-width: 1024px) {
+                font-size: 1.8rem;
+                padding-left: 30px;
+            }
+            @media (max-width: 500px) {
+                font-size: 1.3rem;
+                padding-left: 20px;
+            }         
+        }
+    }
+
+    .development-text {
+        width: 100%;
+    }
 `
 
 // Frame animations

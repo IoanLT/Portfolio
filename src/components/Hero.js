@@ -88,23 +88,29 @@ const Description = styled.div`
     @media (max-width: 1024px) {
         width: auto;
     }
-    @media (max-width: 500px) {               
+    @media (max-width: 520px) {               
         width: 90%;               
     }
     
     h1 {
         font-size: 2rem;
         
-        @media (max-width: 500px) {               
+        @media (max-width: 520px) {               
             font-size: 1.5rem;               
+        }
+        @media (max-width: 375px) {               
+            font-size: 1.2rem;               
         }
     }
 
     h2 {
         font-weight: lighter;
 
-        @media (max-width: 500px) {               
+        @media (max-width: 520px) {               
             font-size: 2.5rem;               
+        }
+        @media (max-width: 375px) {               
+            font-size: 2rem;               
         }
     }
 
@@ -113,7 +119,7 @@ const Description = styled.div`
 
         @media (max-width: 500px) {               
            margin-top: 50px;
-           align-self: center;              
+           /* align-self: center;               */
         }
     }
 `
@@ -129,24 +135,34 @@ export const Portfolio = styled(motion.div)`
         width: 444px;
         overflow: none;        
     }
-    @media (max-width: 500px) {               
+    @media (max-width: 520px) {               
         width: 90%;               
     }
 
     h1 {
-        font-size: 6rem;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 5.5rem;
+        font-weight: 600;
+        letter-spacing: 5px;
         color: hsl(360, 64%, 55%);
         padding-left: 10%;
         margin: 0;
 
         @media (max-width: 1440px) {
             font-size: 5rem;
+            letter-spacing: 2px;
         }
         @media (max-width: 1024px) {
-            font-size: 4rem;            
+            font-size: 4rem;                        
         }
-        @media (max-width: 500px) {               
+        @media (max-width: 768px) {
+            font-size: 3.5rem;                        
+        }
+        @media (max-width: 520px) {               
             font-size: 3rem;               
+        }
+        @media (max-width: 375px) {               
+            font-size: 2.5rem;               
         }
     }
 `
