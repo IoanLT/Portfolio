@@ -5,14 +5,14 @@ import musicDevices from '../assets/music-player-devices.png';
 
 // Animations
 import { motion } from 'framer-motion';
-import { pageAnimation, textFade, photoAnimation, lineAnimation } from '../animation';
+import { pageAnimation, textFade, photoAnimation, lineAnimation, contentAnimation, wrapAnimation } from '../animation';
 
 import arrowRight from '../assets/Arrow-right-black.svg';
 import backArrow from '../assets/backArrow.svg';
 import line from '../assets/Line 54.svg';
 // import custom scroll hook
 import { useScroll } from '../components/useScroll';
-// import Projects from '../components/Projects';
+
 
 const MusicPlayer = () => {
     const [element, controls] = useScroll();
@@ -36,22 +36,30 @@ const MusicPlayer = () => {
                 </Devices>           
             </Banner>
 
-            <Concept>
-                <div className="concept-heading">
+            <Concept>                
+                <motion.div 
+                    className="concept-heading"
+                    ref={element}                    
+                    variants={contentAnimation}
+                >
                     <img src={line} alt="line" />
                     <h3>Concept</h3>
-                </div>
-                <div className="concept-text">
-                    <p>
+                </motion.div>
+                <motion.div 
+                    className="concept-text"
+                    ref={element}
+                    variants={contentAnimation}
+                >
+                    <motion.p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                         when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                         when an unknown printer took a galley of type and scrambled it to make a type specimen book.                        
-                    </p>
-                </div>
-                <button variants={textFade}>
+                    </motion.p>
+                </motion.div>
+                <motion.button variants={textFade}>
                     <a
                         href="https://chillhop-music-app.netlify.app/"
                         target="_blank"
@@ -60,25 +68,33 @@ const MusicPlayer = () => {
                         Visit Site
                         <img src={arrowRight} alt="arrow-right" />                    
                     </a>
-                </button>
+                </motion.button>
             </Concept>
 
-            <Development>
-                <div className="development-heading">
+            <Development>                
+                <motion.div 
+                    className="development-heading"
+                    variants={contentAnimation}
+                    ref={element}
+                >
                     <img src={line} alt="line" />
                     <h3>Development</h3>
-                </div>
-                <div className="development-text">
-                    <p>
+                </motion.div>
+                <motion.div 
+                    className="development-text"
+                    variants={contentAnimation}
+                    ref={element}
+                >
+                    <motion.p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                         when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                         when an unknown printer took a galley of type and scrambled it to make a type specimen book.                        
-                    </p>
-                </div>
-                <button variants={textFade}>
+                    </motion.p>
+                </motion.div>
+                <motion.button variants={textFade}>
                     <a
                         href="https://github.com/IoanLT/Chillhop-music-player"
                         target="_blank"
@@ -87,16 +103,14 @@ const MusicPlayer = () => {
                         See on Github
                         <img src={arrowRight} alt="arrow-right" />                    
                     </a>
-                </button>
+                </motion.button>
             </Development>
 
-           <Link to="/#projects">
-            {/* <a href="/#projects"> */}
+           <Link to="/#projects">            
                 <Back>                  
                     <img src={backArrow} alt="arrow back" />
                     <h4>BACK</h4>                    
-                </Back>
-            {/* </a>              */}
+                </Back>           
             </Link>
         </MusicMain>        
     )
@@ -125,8 +139,8 @@ const MusicMain = styled(motion.section)`
     }
 `
 
-const Banner = styled.div`
-    padding-bottom: 10rem;
+const Banner = styled(motion.div)`
+    margin-bottom: 100px;
 
     h2 {
         font-family: 'Montserrat', sans-serif;
@@ -167,7 +181,8 @@ const Concept = styled(motion.div)`
     flex-direction: column;    
     margin-bottom: 100px;
     width: 100%;
-    flex-wrap: wrap;    
+    flex-wrap: wrap; 
+    overflow: hidden;   
 
     .concept-heading {
         display: flex;
@@ -283,18 +298,11 @@ export const Back = styled.div`
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         letter-spacing: 5px;
+
+        @media (max-width: 500px) {
+            font-size: 1.5rem;            
+        }
     }    
 `
-
-// Frame animations
-// const Frame1 = styled(motion.div)`
-//     position: fixed;
-//     left: 0;
-//     top: 80px;
-//     width: 100%;
-//     height: 100vh;
-//     background: #fffebf;
-//     z-index: 2;
-// `
 
 export default MusicPlayer;

@@ -29,7 +29,7 @@ export const titleAnimation = {
     show: {
         y: 0,
         transition: { 
-            duration: 0.75,             
+            duration: 1,             
             ease: "easeOut"
         }
     }
@@ -141,7 +141,7 @@ export const slider = {
     }
 }
 
-// Burger menu anuimations
+// Burger menu animations
 export const menuAnimation = {
     hidden: {
         opacity: 0,
@@ -254,7 +254,32 @@ export const imageAnimation = {
     }
 }
 
+// Project page animations
+export const contentAnimation = {
+    hidden: {  y: 300 },
+    show: {
+        y: 0,
+        transition: {             
+            duration: 1,             
+            ease: "easeOut"
+        }
+    }
+}
 
+export const wrapAnimation = {
+    hidden: {
+        opacity: 0,        
+    },
+    show: {
+        opacity: 1,        
+        transition: {
+            duration: 1,
+            ease: 'easeInOut',
+            when: "beforeChildren", 
+            staggerChildren: 0.25
+        }
+    }
+};
 
 
 
