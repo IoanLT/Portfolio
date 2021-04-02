@@ -12,6 +12,7 @@ import MusicPlayer from "./pages/MusicPlayer";
 import { Switch, Route, useLocation } from 'react-router-dom';
 // Animation
 import { AnimatePresence } from 'framer-motion';
+import Projects from "./components/Projects";
 
 
 
@@ -31,13 +32,13 @@ function App() {
         displayMenu={displayMenu}
         setDisplayMenu={setDisplayMenu}
       />
+      
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
           <Route exact path="/" render={(props) => <LandingPage {...props} />} />
           <Route exact path="/music-player" render={(props) => <MusicPlayer {...props} />} />
-          {/* <Route exact path="/work/:id" render={(props) => <MovieDetail {...props} />} /> */}
-          {/* <Route exact path="/contact-us" render={(props) => <ContactUs {...props} />} />  */}
-          <Route exact path="/music-player" render={(props) => <MusicPlayer {...props} />} /> 
+          {/* <Route exact path="/projects" render={(props) => <Projects {...props} />} /> */}
+         
             
           {/* <Route exact path="/">
             <AboutUs />

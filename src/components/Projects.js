@@ -10,13 +10,19 @@ import jobPortal from '../assets/job-portal-card.PNG';
 import authxrs from '../assets/authxrs-card.PNG';
 import janine from '../assets/janine-card.PNG';
 // import animations
-import { aboutAnimation, titleAnimation, menuAnimation, skills, skillsAnimation } from '../animation';
+import { menuAnimation } from '../animation';
 
 const Projects = () => {
     const [element, controls] = useScroll();
 
     return (
-        <ProjectsSection id="projects">
+        <ProjectsSection 
+            id="projects"
+            ref={element}            
+            variants={menuAnimation}
+            animate={controls}
+            initial="hidden"
+        >
             <ProjectHeader>
                 <h2>Projects</h2>
             </ProjectHeader> 
@@ -26,12 +32,7 @@ const Projects = () => {
             <p>
                 Some of these include group projects and some of them are personal projects that I have worked on after completing the bootcamp.
             </p>
-            <ProjectGrid
-                ref={element}            
-                variants={menuAnimation}
-                animate={controls}
-                initial="hidden"
-            >
+            <ProjectGrid>
                 <ProjectCard>
                     <Link
                         to="/music-player"
@@ -138,16 +139,14 @@ const ProjectsSection = styled(motion.section)`
     color: #fff; 
     margin-bottom: 100px; 
 
-    /* p {
-        width: 50%;
-    }    */
-
     @media (max-width: 1024px) {
         height: 100%;
+        padding: 0 18%;
     }   
-    @media (max-width: 500px) {
-        padding: 0 5%;
-    }       
+    @media (max-width: 768px) {        
+        padding: 0 10%;
+    }  
+    
 `;
 
 const ProjectHeader = styled(motion.div)` 
@@ -186,14 +185,13 @@ const ProjectGrid = styled(motion.div)`
 
 const ProjectCard = styled(motion.div)`    
     overflow: hidden;    
-    border: 1px solid #fff; 
-       
+    border: 1px solid #fff;        
 
     img {                     
         width: 100%;        
         object-fit: cover;        
         transition: transform 2s; 
-        opacity: 0.7;       
+        opacity: 0.8;       
 
         &:hover {
             cursor: pointer;
@@ -201,26 +199,7 @@ const ProjectCard = styled(motion.div)`
             transform-origin: 50% 50%;
             opacity: 1;
         }
-    }
-
-    /* h3 {        
-        font-size: 2rem;
-        padding: 20px 0;
-    }
-
-    button {        
-        width: 250px;
-
-        img {
-            width: auto;
-            height: auto;            
-        }
-    }
-
-    a {
-        text-decoration: none;
-        color: #fff;
-    } */
+    }   
 `
 
 export default Projects;

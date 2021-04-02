@@ -116,13 +116,13 @@ const AboutSection = styled(motion.section)`
     justify-content: center;    
     padding: 0 5%;
     color: #fff; 
-    position: relative;
-    margin-bottom: 100px;
+    position: relative;    
     /* background-color: #09070B;  */
 
     @media (max-width: 1024px) {
         height: 100%;
-    }   
+        margin-bottom: 100px;
+    }       
 `;
 
 const AboutWrapper = styled(motion.div)`
