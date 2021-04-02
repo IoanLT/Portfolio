@@ -7,12 +7,13 @@ import Header from "./components/Header";
 import LandingPage from "./pages/LandingPage";
 import MusicPlayer from "./pages/MusicPlayer";
 import Authors from "./pages/Authors";
+import JobPortal from "./pages/JobPortal";
 // Router
 import { Switch, Route, useLocation } from 'react-router-dom';
 // Animation
 import { AnimatePresence } from 'framer-motion';
+import Instabeauty from "./pages/Instabeauty";
 // import Projects from "./components/Projects";
-
 
 
 function App() {
@@ -52,14 +53,13 @@ function App() {
           </Route> 
 
           <Route path="/job-portal">
-            <MusicPlayer />
+            <JobPortal />
           </Route> 
 
           <Route path="/instabeauty">
-            <MusicPlayer />
+            <Instabeauty />
           </Route> 
-
-            
+          
         </Switch>
       </AnimatePresence>
       

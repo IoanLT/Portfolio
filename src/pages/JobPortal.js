@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { HashLink as Link } from 'react-router-hash-link';
-import authorsDevices from '../assets/authors-devices.png';
+import portalDevices from '../assets/job-portal-devices.png';
 // Animations
 import { motion } from 'framer-motion';
 import { pageAnimation, textFade, photoAnimation, lineAnimation, contentAnimation, wrapAnimation } from '../animation';
@@ -11,10 +11,10 @@ import arrowRight from '../assets/Arrow-right-black.svg';
 import backArrow from '../assets/backArrow.svg';
 import line from '../assets/Line 54.svg';
 
-const Authors = () => {
+const JobPortal = () => {
 
     return (     
-        <AuthorsMain                           
+        <JobMain                           
             variants={pageAnimation}
             initial="hidden"
             animate="show"
@@ -22,11 +22,11 @@ const Authors = () => {
         >           
             <Banner>
                 <motion.h2 variants={textFade}>
-                    Authxrs
+                    Job Portal
                 </motion.h2>
                 <motion.div variants={lineAnimation} className="line"></motion.div>                
                 <Devices>
-                    <motion.img variants={photoAnimation} src={authorsDevices} alt="mobile and desktop" />
+                    <motion.img variants={photoAnimation} src={portalDevices} alt="mobile and desktop" />
                 </Devices>           
             </Banner>
 
@@ -53,7 +53,7 @@ const Authors = () => {
                 </motion.div>
                 <motion.button variants={textFade}>
                     <a
-                        href="https://the-authors.netlify.app/"
+                        href="https://happy-bardeen-f72460.netlify.app/"
                         target="_blank"
                         rel="noreferrer"
                     >                    
@@ -86,7 +86,7 @@ const Authors = () => {
                 </motion.div>
                 <motion.button variants={textFade}>
                     <a
-                        href="https://github.com/yuryiva/authors-frontend"
+                        href="https://github.com/IoanLT/Job-portal"
                         target="_blank"
                         rel="noreferrer"
                     >                    
@@ -102,10 +102,10 @@ const Authors = () => {
                     <h4>BACK</h4>                    
                 </Back>           
             </Link>
-        </AuthorsMain>        
+        </JobMain>        
     )
 }
 
-const AuthorsMain = styled(MusicMain)``
+const JobMain = styled(MusicMain)``
 
-export default Authors;
+export default JobPortal;

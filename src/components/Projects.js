@@ -67,7 +67,7 @@ const Projects = () => {
                     variants={imageAnimation}                  
                 >
                     <Link
-                        to="/music-player"
+                        to="/job-portal"
                         onClick={() => window.scrollTo(0, 0)}
                     >
                         <img src={jobPortal} alt="job portal app" />
@@ -78,7 +78,7 @@ const Projects = () => {
                     variants={imageAnimation}                    
                 >
                     <Link
-                        to="/music-player"
+                        to="/instabeauty"
                         onClick={() => window.scrollTo(0, 0)}
                     >
                         <img src={janine} alt="janine" />

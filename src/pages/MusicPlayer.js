@@ -31,7 +31,7 @@ const MusicPlayer = () => {
                 </motion.h2>
                 <motion.div variants={lineAnimation} className="line"></motion.div>                
                 <Devices>
-                    <motion.img variants={photoAnimation} src={musicDevices} alt="music player" />
+                    <motion.img variants={photoAnimation} src={musicDevices} alt="mobile and desktop" />
                 </Devices>           
             </Banner>
 
