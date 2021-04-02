@@ -13,7 +13,10 @@ const About = () => {
     const [element, controls] = useScroll();
 
     return (
-        <AboutSection id="about" ref={element}>
+        <AboutSection 
+            id="about" 
+            ref={element}
+        >
             <div className="content-wrap">
                 <AboutWrapper>                                
                     <AboutDescription 

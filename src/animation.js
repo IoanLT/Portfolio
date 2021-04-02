@@ -205,6 +205,55 @@ export const portfolioAnimation = {
     }
 }
 
+// Animations for Project section
+export const sectionAnimation = {
+    hidden: {
+        opacity: 0,
+        y: 300        
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: 'easeInOut',
+            when: "beforeChildren", 
+            staggerChildren: 0.25
+        }
+    }
+}
+
+export const gridAnimation = {
+    hidden: {
+        opacity: 0,               
+    },
+    show: {
+        opacity: 1,        
+        transition: {  
+            delay: 1,          
+            duration: 0.5,
+            ease: 'easeInOut',
+            when: "beforeChildren", 
+            staggerChildren: 0.5
+        }
+    }
+}
+
+export const imageAnimation = {
+    hidden: {
+        opacity: 0, 
+        y: 300 
+    },
+    show: { 
+        opacity: 1, 
+        y: 0,
+        transition: {            
+            duration: 1,
+            ease: 'easeInOut'
+        } 
+    }
+}
+
 
 
 

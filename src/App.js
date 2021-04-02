@@ -6,13 +6,11 @@ import Header from "./components/Header";
 // Import pages
 import LandingPage from "./pages/LandingPage";
 import MusicPlayer from "./pages/MusicPlayer";
-// import ContactUs from "./pages/ContactUs";
-// import MovieDetail from "./pages/MovieDetail";
 // Router
 import { Switch, Route, useLocation } from 'react-router-dom';
 // Animation
 import { AnimatePresence } from 'framer-motion';
-import Projects from "./components/Projects";
+// import Projects from "./components/Projects";
 
 
 
@@ -35,26 +33,31 @@ function App() {
       
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
-          <Route exact path="/" render={(props) => <LandingPage {...props} />} />
-          <Route exact path="/music-player" render={(props) => <MusicPlayer {...props} />} />
+          {/* <Route exact path="/" render={(props) => <LandingPage {...props} />} /> */}
+          {/* <Route exact path="/music-player" render={(props) => <MusicPlayer {...props} />} /> */}
           {/* <Route exact path="/projects" render={(props) => <Projects {...props} />} /> */}
          
             
-          {/* <Route exact path="/">
-            <AboutUs />
+          <Route exact path="/">
+            <LandingPage />
           </Route> 
 
-          <Route path="/our-work">
+          <Route path="/music-player">
             <MusicPlayer />
           </Route> 
 
-          <Route path="/work/:id">
-            <MovieDetail />
-          </Route>
+          <Route path="/authors">
+            <MusicPlayer />
+          </Route> 
 
-          <Route path="/contact-us">
-            <ContactUs />
-          </Route>    */}
+          <Route path="/job-portal">
+            <MusicPlayer />
+          </Route> 
+
+          <Route path="/instabeauty">
+            <MusicPlayer />
+          </Route> 
+
             
         </Switch>
       </AnimatePresence>

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import { HashLink as Link } from 'react-router-hash-link';
 import musicDevices from '../assets/music-player-devices.png';
 
 // Animations
@@ -13,7 +12,7 @@ import backArrow from '../assets/backArrow.svg';
 import line from '../assets/Line 54.svg';
 // import custom scroll hook
 import { useScroll } from '../components/useScroll';
-import Projects from '../components/Projects';
+// import Projects from '../components/Projects';
 
 const MusicPlayer = () => {
     const [element, controls] = useScroll();
@@ -26,12 +25,7 @@ const MusicPlayer = () => {
             initial="hidden"
             animate="show"
             exit="exit"
-        >
-            {/* <Frame1 variants={slider}></Frame1>
-            <Frame2 variants={slider}></Frame2>
-            <Frame3 variants={slider}></Frame3>
-            <Frame4 variants={slider}></Frame4> */}
-
+        >           
             <Banner>
                 <motion.h2 variants={textFade}>
                     Chillhop Music Player
@@ -96,19 +90,14 @@ const MusicPlayer = () => {
                 </button>
             </Development>
 
-           {/* <Link
-                to={{
-                    pathname: "/",                    
-                    hash: "#projects"                    
-                }}
-            > */}
-            <a href="/#projects">
+           <Link to="/#projects">
+            {/* <a href="/#projects"> */}
                 <Back>                  
                     <img src={backArrow} alt="arrow back" />
                     <h4>BACK</h4>                    
                 </Back>
-            </a>             
-            {/* </Link> */}
+            {/* </a>              */}
+            </Link>
         </MusicMain>        
     )
 }

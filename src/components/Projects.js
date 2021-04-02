@@ -10,119 +10,79 @@ import jobPortal from '../assets/job-portal-card.PNG';
 import authxrs from '../assets/authxrs-card.PNG';
 import janine from '../assets/janine-card.PNG';
 // import animations
-import { menuAnimation } from '../animation';
+import { titleAnimation, sectionAnimation, gridAnimation, imageAnimation } from '../animation';
+
 
 const Projects = () => {
     const [element, controls] = useScroll();
 
     return (
-        <ProjectsSection 
-            id="projects"
-            ref={element}            
-            variants={menuAnimation}
-            animate={controls}
-            initial="hidden"
-        >
-            <ProjectHeader>
-                <h2>Projects</h2>
-            </ProjectHeader> 
-            <p>
-                Here is a selection of projects that I have worked on while studying web development at Wild Code School.
-            </p>
-            <p>
-                Some of these include group projects and some of them are personal projects that I have worked on after completing the bootcamp.
-            </p>
-            <ProjectGrid>
-                <ProjectCard>
+        <ProjectsSection id="projects" ref={element}>
+            <ProjectDescription                
+                ref={element}
+                variants={sectionAnimation}
+                animate={controls}
+                initial="hidden"
+            >
+                <ProjectHeader>
+                    <motion.h2>Projects</motion.h2>
+                </ProjectHeader> 
+                <motion.p variants={titleAnimation}>
+                    Here is a selection of projects that I have worked on while studying web development at Wild Code School.
+                </motion.p>
+                <motion.p variants={titleAnimation}>
+                    Some of these include group projects and some of them are personal projects that I have worked on after completing the bootcamp.
+                </motion.p>
+            </ProjectDescription>
+
+            <ProjectGrid
+                ref={element}
+                variants={gridAnimation}
+                animate={controls}
+                initial="hidden"
+            >
+                <ProjectCard 
+                    variants={imageAnimation}                    
+                >
                     <Link
                         to="/music-player"
                         onClick={() => window.scrollTo(0, 0)}
                     >
                         <img src={musicPlayer} alt="music app" />
-                    </Link>
-                    {/* <h3>Music Player</h3>
-                    <p>
-                        This is a personal project I really enjoyed working on.
-                        For this project I used React hooks, Sass and styled components.
-                    </p>   
-                    
-                    <button>    
-                        <Link 
-                            to="/music-player"
-                            onClick={() => window.scrollTo(0, 0)}
-                        >                    
-                            Find out more
-                            <img src={arrowRight} alt="arrow-right" />             
-                        </Link>
-                    </button>                     */}
+                    </Link>                    
                 </ProjectCard>
 
-                <ProjectCard>
+                <ProjectCard
+                    variants={imageAnimation}                    
+                >
                     <Link
                         to="/music-player"
                         onClick={() => window.scrollTo(0, 0)}
                     >
                         <img src={authxrs} alt="authors app" />
-                    </Link>
-                    
-                    {/* <h3>Authxrs</h3>
-                    <p>Authors is a socially aware and sustainable publishing house supporting suppressed voices worldwide.</p>                    
-                    <button>    
-                        <Link 
-                            to="/music-player"
-                            onClick={() => window.scrollTo(0, 0)}
-                        >                    
-                            Find out more
-                            <img src={arrowRight} alt="arrow-right" />             
-                        </Link>
-                    </button>                     */}
+                    </Link>                    
                 </ProjectCard>
 
-                <ProjectCard>
+                <ProjectCard
+                    variants={imageAnimation}                  
+                >
                     <Link
                         to="/music-player"
                         onClick={() => window.scrollTo(0, 0)}
                     >
                         <img src={jobPortal} alt="job portal app" />
-                    </Link>
-                    
-                    {/* <h3>Job portal</h3>
-                    <p>This was a group project created during the coding bootcamp. 
-                        Our task was to create a fully functional React app by using API calls.
-                    </p>                    
-                    <button>    
-                        <Link 
-                            to="/music-player"
-                            onClick={() => window.scrollTo(0, 0)}
-                        >                    
-                            Find out more
-                            <img src={arrowRight} alt="arrow-right" />             
-                        </Link>
-                    </button>                     */}
+                    </Link>                    
                 </ProjectCard>
 
-                <ProjectCard>
+                <ProjectCard
+                    variants={imageAnimation}                    
+                >
                     <Link
                         to="/music-player"
                         onClick={() => window.scrollTo(0, 0)}
                     >
                         <img src={janine} alt="janine" />
-                    </Link>
-                    
-                    {/* <h3>Instabeauty</h3>
-                    <p>
-                        Creation of a brand new website for Instabeauty Studio to inform 
-                        potential clients of the services offered in the studio.
-                    </p>                    
-                    <button>    
-                        <Link 
-                            to="/music-player"
-                            onClick={() => window.scrollTo(0, 0)}
-                        >                    
-                            Find out more
-                            <img src={arrowRight} alt="arrow-right" />             
-                        </Link>
-                    </button>                     */}
+                    </Link>                    
                 </ProjectCard>
             </ProjectGrid>
         </ProjectsSection>
@@ -148,6 +108,12 @@ const ProjectsSection = styled(motion.section)`
     }  
     
 `;
+
+const ProjectDescription = styled(motion.div)`
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+`
 
 const ProjectHeader = styled(motion.div)` 
     width: 100%;
