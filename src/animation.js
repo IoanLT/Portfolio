@@ -259,7 +259,8 @@ export const contentAnimation = {
     hidden: {  y: 300 },
     show: {
         y: 0,
-        transition: {             
+        transition: {    
+            // delay: 2,         
             duration: 1,             
             ease: "easeOut"
         }
@@ -276,7 +277,7 @@ export const wrapAnimation = {
             duration: 1,
             ease: 'easeInOut',
             when: "beforeChildren", 
-            staggerChildren: 0.25
+            staggerChildren: 0.5
         }
     }
 };

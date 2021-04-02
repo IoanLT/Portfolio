@@ -56,7 +56,7 @@ const Projects = () => {
                     variants={imageAnimation}                    
                 >
                     <Link
-                        to="/music-player"
+                        to="/authors"
                         onClick={() => window.scrollTo(0, 0)}
                     >
                         <img src={authxrs} alt="authors app" />

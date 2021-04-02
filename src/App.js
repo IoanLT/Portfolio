@@ -6,6 +6,7 @@ import Header from "./components/Header";
 // Import pages
 import LandingPage from "./pages/LandingPage";
 import MusicPlayer from "./pages/MusicPlayer";
+import Authors from "./pages/Authors";
 // Router
 import { Switch, Route, useLocation } from 'react-router-dom';
 // Animation
@@ -47,7 +48,7 @@ function App() {
           </Route> 
 
           <Route path="/authors">
-            <MusicPlayer />
+            <Authors />
           </Route> 
 
           <Route path="/job-portal">

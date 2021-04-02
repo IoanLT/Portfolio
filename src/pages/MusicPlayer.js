@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { HashLink as Link } from 'react-router-hash-link';
 import musicDevices from '../assets/music-player-devices.png';
-
 // Animations
 import { motion } from 'framer-motion';
 import { pageAnimation, textFade, photoAnimation, lineAnimation, contentAnimation, wrapAnimation } from '../animation';
@@ -11,15 +10,15 @@ import arrowRight from '../assets/Arrow-right-black.svg';
 import backArrow from '../assets/backArrow.svg';
 import line from '../assets/Line 54.svg';
 // import custom scroll hook
-import { useScroll } from '../components/useScroll';
+// import { useScroll } from '../components/useScroll';
 
 
 const MusicPlayer = () => {
-    const [element, controls] = useScroll();
+    // const [element, controls] = useScroll();
 
     return (     
         <MusicMain
-            ref={element}                    
+            // ref={element}                    
             // animate={controls}                    
             variants={pageAnimation}
             initial="hidden"
@@ -36,10 +35,10 @@ const MusicPlayer = () => {
                 </Devices>           
             </Banner>
 
-            <Concept>                
+            <Concept variants={wrapAnimation}>                
                 <motion.div 
                     className="concept-heading"
-                    ref={element}                    
+                    // ref={element}                    
                     variants={contentAnimation}
                 >
                     <img src={line} alt="line" />
@@ -47,7 +46,7 @@ const MusicPlayer = () => {
                 </motion.div>
                 <motion.div 
                     className="concept-text"
-                    ref={element}
+                    // ref={element}
                     variants={contentAnimation}
                 >
                     <motion.p>
@@ -71,11 +70,11 @@ const MusicPlayer = () => {
                 </motion.button>
             </Concept>
 
-            <Development>                
+            <Development variants={wrapAnimation}>                
                 <motion.div 
                     className="development-heading"
                     variants={contentAnimation}
-                    ref={element}
+                    // ref={element}
                 >
                     <img src={line} alt="line" />
                     <h3>Development</h3>
@@ -83,7 +82,7 @@ const MusicPlayer = () => {
                 <motion.div 
                     className="development-text"
                     variants={contentAnimation}
-                    ref={element}
+                    // ref={element}
                 >
                     <motion.p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -116,7 +115,7 @@ const MusicPlayer = () => {
     )
 }
 
-const MusicMain = styled(motion.section)`
+export const MusicMain = styled(motion.section)`
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -139,7 +138,7 @@ const MusicMain = styled(motion.section)`
     }
 `
 
-const Banner = styled(motion.div)`
+export const Banner = styled(motion.div)`
     margin-bottom: 100px;
 
     h2 {
@@ -170,12 +169,12 @@ const Banner = styled(motion.div)`
     }
 `
 
-const Devices = styled.div`
+export const Devices = styled.div`
     overflow: hidden;
     /* padding: 0 15%; */
 `
 
-const Concept = styled(motion.div)`
+export const Concept = styled(motion.div)`
     /* padding: 0 15%; */
     display: flex;
     flex-direction: column;    
@@ -235,7 +234,7 @@ const Concept = styled(motion.div)`
     }    
 `
 
-const Development = styled(Concept)`
+export const Development = styled(Concept)`
 
     .development-heading {
         display: flex;
