@@ -115,7 +115,7 @@ const ProjectDescription = styled(motion.div)`
     overflow: hidden;
 `
 
-const ProjectHeader = styled(motion.div)` 
+export const ProjectHeader = styled(motion.div)` 
     width: 100%;
     overflow: hidden;
     text-align: left;

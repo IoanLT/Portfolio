@@ -37,8 +37,7 @@ function App() {
         <Switch location={location} key={location.key}>
           {/* <Route exact path="/" render={(props) => <LandingPage {...props} />} /> */}
           {/* <Route exact path="/music-player" render={(props) => <MusicPlayer {...props} />} /> */}
-          {/* <Route exact path="/projects" render={(props) => <Projects {...props} />} /> */}
-         
+          {/* <Route exact path="/projects" render={(props) => <Projects {...props} />} /> */}         
             
           <Route exact path="/">
             <LandingPage />

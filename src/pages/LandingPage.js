@@ -7,6 +7,8 @@ import About from '../components/About';
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation';
 import Projects from '../components/Projects';
+import Contact from '../components/Contact';
+
 
 const LandingPage = () => {
     return (
@@ -20,7 +22,7 @@ const LandingPage = () => {
             <Hero />
             <About /> 
             <Projects />           
-            {/* <Faq /> */}
+            <Contact />
         </motion.main>
     )
 }
