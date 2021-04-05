@@ -2,8 +2,12 @@ import React from 'react';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { imageAnimation, gridAnimation } from '../animation';
+// import custom hook
+import { useScroll } from './useScroll';
 
 export default function ContactForm({ setShowModal }) {
+  const [element, controls] = useScroll();
 
   function sendEmail(e) {
     e.preventDefault();
@@ -31,16 +35,23 @@ export default function ContactForm({ setShowModal }) {
   };
 
   return (
-    <Form onSubmit={sendEmail}>       
-      <input type="text" name="name" placeholder="Name" />     
-      <input type="email" name="email" placeholder="Email" />     
-      <textarea name="message" placeholder="Message" />
-      <button 
+    <Form 
+      onSubmit={sendEmail} 
+      ref={element}
+      variants={gridAnimation} 
+      initial="hidden" 
+      animate={controls}
+    >       
+      <motion.input variants={imageAnimation} type="text" name="name" placeholder="Name" />     
+      <motion.input variants={imageAnimation} type="email" name="email" placeholder="Email" />     
+      <motion.textarea variants={imageAnimation} name="message" placeholder="Message" />
+      <motion.button
+        variants={imageAnimation} 
         type="submit" 
         onClick={handleModal}
       >
         Send message
-      </button>
+      </motion.button>
     </Form>
   );
 }
@@ -52,6 +63,7 @@ const Form = styled(motion.form)`
     display: flex;
     flex-direction: column;      
     margin-right: 50px;
+    overflow: hidden;
 
     @media (max-width: 1130px) {        
       width: 100%;
@@ -94,6 +106,9 @@ const Form = styled(motion.form)`
     font-weight: 400;
     margin: 0;
 
+    /* @media (max-width: 1130px) {        
+      align-self: center;
+    } */
     @media (max-width: 500px) {        
       width: 100%;
       margin-right: 0;

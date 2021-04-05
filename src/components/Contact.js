@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { ProjectHeader } from './Projects';
@@ -9,10 +9,9 @@ import ContactForm from './ContactForm';
 // Social media icons 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
-
-// import contactForm from '../components/contactForm';
 // import animations
-// import { titleAnimation, sectionAnimation, gridAnimation, imageAnimation } from '../animation';
+import { menuAnimation, titleAnimation } from '../animation';
+
 
 const Contact = ({ setShowModal }) => {
     const [element, controls] = useScroll();
@@ -23,13 +22,23 @@ const Contact = ({ setShowModal }) => {
                 <motion.h2>Get in touch</motion.h2>                
             </ContactHeader>
 
-            <ContentWrapper>        
+            <ContentWrapper
+                ref={element}
+                variants={menuAnimation}
+                animate={controls}
+                initial="hidden"
+            >        
                 <ContactForm setShowModal={setShowModal} />
                
-                <SocialMedia>
-                    <h4>Send me an email at</h4>
-                    <h5>ioan.tranole@gmail.com</h5>
-                    <h4>You can also find me on</h4>
+                <SocialMedia 
+                   ref={element}
+                    variants={menuAnimation}
+                    animate={controls}
+                    initial="hidden"
+                >
+                    <motion.h4 variants={titleAnimation}>Or send me an email at</motion.h4>
+                    <motion.h5 variants={titleAnimation}>ioan.tranole@gmail.com</motion.h5>
+                    <motion.h4 variants={titleAnimation}>You can also find me on</motion.h4>
                     <SocialMediaLinks>
                         <li>
                             <a
@@ -120,6 +129,7 @@ const SocialMedia = styled(motion.div)`
     text-align: left;  
     margin: 100px 0;  
     margin-left: 50px;
+    overflow: hidden;
 
     @media (max-width: 1130px) {        
         margin-left: 0;        
@@ -165,6 +175,7 @@ const SocialMediaLinks = styled(motion.ul)`
             padding: 0 5px;
             text-shadow: 0 2px 0 rgb(2,2,2);            
             transition: all .75s ease-in;
+            overflow: hidden;
 
             @media (max-width: 768px) {        
                 margin-right: 20px;
@@ -177,7 +188,7 @@ const SocialMediaLinks = styled(motion.ul)`
 
         :nth-child(1) {
             a {                
-                color: #A081D9;                
+                color: #fff;                
             }            
         }
 
@@ -190,7 +201,9 @@ const SocialMediaLinks = styled(motion.ul)`
         :nth-child(3) {
             a {                
                 color: #65D6AD;
-            }            
+                /* color: #0077B5;              */
+                
+            }                     
         }        
     }
 `

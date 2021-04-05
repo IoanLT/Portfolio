@@ -7,7 +7,7 @@ import BurgerMain from './BurgerMain';
 const Header = ({ openMenu, setOpenMenu, displayMenu, setDisplayMenu }) => {
 
 	const location = useLocation();
-	console.log(location);
+	// console.log(location);
 
     return (
         <HeaderNav> 
@@ -34,16 +34,14 @@ const Header = ({ openMenu, setOpenMenu, displayMenu, setDisplayMenu }) => {
     )
 }
 
-const HeaderNav = styled.header`
-	/* position: absolute; */
+const HeaderNav = styled.header`	
 	position: fixed;
 	top: 0;
 	width: 100%;
 	padding: 0 40px;
 	height: 100px;
 	display: flex;
-	flex-direction: row;
-	/* justify-content: space-between; */
+	flex-direction: row;	
 	justify-content: flex-end;
 	align-items: center;
     background: transparent;

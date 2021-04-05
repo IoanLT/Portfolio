@@ -9,17 +9,11 @@ import { pageAnimation, textFade, photoAnimation, lineAnimation, contentAnimatio
 import arrowRight from '../assets/Arrow-right-black.svg';
 import backArrow from '../assets/backArrow.svg';
 import line from '../assets/Line 54.svg';
-// import custom scroll hook
-// import { useScroll } from '../components/useScroll';
 
-
-const MusicPlayer = () => {
-    // const [element, controls] = useScroll();
+const MusicPlayer = () => {    
 
     return (     
-        <MusicMain
-            // ref={element}                    
-            // animate={controls}                    
+        <MusicMain                           
             variants={pageAnimation}
             initial="hidden"
             animate="show"
@@ -37,16 +31,14 @@ const MusicPlayer = () => {
 
             <Concept variants={wrapAnimation}>                
                 <motion.div 
-                    className="concept-heading"
-                    // ref={element}                    
+                    className="concept-heading"                                      
                     variants={contentAnimation}
                 >
                     <img src={line} alt="line" />
                     <h3>Concept</h3>
                 </motion.div>
                 <motion.div 
-                    className="concept-text"
-                    // ref={element}
+                    className="concept-text"                   
                     variants={contentAnimation}
                 >
                     <motion.p>
@@ -73,16 +65,14 @@ const MusicPlayer = () => {
             <Development variants={wrapAnimation}>                
                 <motion.div 
                     className="development-heading"
-                    variants={contentAnimation}
-                    // ref={element}
+                    variants={contentAnimation}                    
                 >
                     <img src={line} alt="line" />
                     <h3>Development</h3>
                 </motion.div>
                 <motion.div 
                     className="development-text"
-                    variants={contentAnimation}
-                    // ref={element}
+                    variants={contentAnimation}                    
                 >
                     <motion.p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -172,12 +162,10 @@ export const Banner = styled(motion.div)`
 `
 
 export const Devices = styled.div`
-    overflow: hidden;
-    /* padding: 0 15%; */
+    overflow: hidden;    
 `
 
-export const Concept = styled(motion.div)`
-    /* padding: 0 15%; */
+export const Concept = styled(motion.div)`   
     display: flex;
     flex-direction: column;    
     margin-bottom: 100px;
@@ -189,8 +177,7 @@ export const Concept = styled(motion.div)`
         display: flex;
         align-items: center;
         padding-right: 50px;
-        margin-bottom: 30px;
-        /* min-width: 450px; */
+        margin-bottom: 30px;        
         width: 40%;
 
         img {
@@ -242,8 +229,7 @@ export const Development = styled(Concept)`
         display: flex;
         align-items: center;
         padding-right: 50px;
-        margin-bottom: 30px;
-        /* min-width: 450px; */
+        margin-bottom: 30px;        
         width: 40%;
 
         img {
