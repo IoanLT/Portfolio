@@ -4,8 +4,7 @@ import Burger from './Burger';
 
 const Header = ({ openMenu, setOpenMenu, displayMenu, setDisplayMenu }) => {
     return (
-        <HeaderNav>	
-            
+        <HeaderNav>            
 			<Burger
 				openMenu={openMenu}
 				setOpenMenu={setOpenMenu}

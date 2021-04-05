@@ -7,23 +7,14 @@ import { useLocation } from 'react-router-dom';
 
 
 const Burger = ({ openMenu, setOpenMenu, displayMenu, setDisplayMenu }) => {
-	// const [navbar, setNavbar] = useState(false);
-	// const [element, controls] = useScroll();	
-
-	// This method will toggle the library to show or hide
+	
+	// This method will toggle the menu to show or hide
 	const toggleNavHandler = () => {		
 		setDisplayMenu(!displayMenu);
 		setOpenMenu(!openMenu);
 	};
 	
-	const location = useLocation();
-	// console.log(location);
-
-	// This method will change the colour of the burger on scroll
-	// const changeBackground = () =>
-	// 	window.scrollY >= 727 ? setNavbar(true) : setNavbar(false) || navbar;
-
-	// window.addEventListener("scroll", changeBackground);
+	const location = useLocation();	
 
     return (
 		<>

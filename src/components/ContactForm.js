@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-
 
 export default function ContactForm({ setShowModal }) {
 
