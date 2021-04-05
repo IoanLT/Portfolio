@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import { pageAnimation, textFade, photoAnimation, lineAnimation, contentAnimation, wrapAnimation } from '../animation';
 
 import { MusicMain, Banner, Devices, Concept, Development, Back } from '../pages/MusicPlayer';
-import arrowRight from '../assets/Arrow-right-black.svg';
+// import arrowRight from '../assets/Arrow-right-black.svg';
 import backArrow from '../assets/backArrow.svg';
 import line from '../assets/Line 54.svg';
 
@@ -52,15 +52,9 @@ const Instabeauty = () => {
                         when an unknown printer took a galley of type and scrambled it to make a type specimen book.                        
                     </motion.p>
                 </motion.div>
-                <InProgress variants={textFade}>
-                    {/* <a
-                        href=" "
-                        target="_blank"
-                        rel="noreferrer"
-                    >                     */}
-                        <p>In progress</p>                        
-                        <FontAwesomeIcon icon={faTimesCircle} size="2x" />                    
-                    {/* </a> */}
+                <InProgress variants={textFade}>                   
+                    <p>In progress</p>                        
+                    <FontAwesomeIcon icon={faTimesCircle} size="2x" />                   
                 </InProgress>
             </Concept>
 
@@ -85,15 +79,9 @@ const Instabeauty = () => {
                         when an unknown printer took a galley of type and scrambled it to make a type specimen book.                        
                     </motion.p>
                 </motion.div>
-                <InProgress variants={textFade}>
-                    {/* <a
-                        href=" "
-                        target="_blank"
-                        rel="noreferrer"
-                    >                     */}
+                <InProgress variants={textFade}>                    
                         <p>In progress</p>                        
                         <FontAwesomeIcon icon={faTimesCircle} size="2x" />                    
-                    {/* </a> */}
                 </InProgress>
             </Development>
 
@@ -107,7 +95,12 @@ const Instabeauty = () => {
     )
 }
 
-const MainWrapper = styled(MusicMain)``
+const MainWrapper = styled(MusicMain)`
+    a {
+        width: 250px;
+        align-self: center;
+    }
+`
 
 const InProgress = styled(motion.button)`
         display: flex;

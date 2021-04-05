@@ -18,7 +18,7 @@ const Contact = () => {
     const [element, controls] = useScroll();
 
     return (
-        <ContactSection id="projects" ref={element}>
+        <ContactSection id="contact" ref={element}>
             <ContactHeader>
                 <motion.h2>Get in touch</motion.h2>
             </ContactHeader>

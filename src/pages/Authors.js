@@ -106,6 +106,11 @@ const Authors = () => {
     )
 }
 
-const AuthorsMain = styled(MusicMain)``
+const AuthorsMain = styled(MusicMain)`
+    a {
+        width: 250px;
+        align-self: center;
+    }
+`
 
 export default Authors;

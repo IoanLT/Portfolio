@@ -76,10 +76,19 @@ const BurgerMenu = ({ displayMenu, setDisplayMenu, openMenu, setOpenMenu }) => {
                         duration={1000}
                     >
                         <ListItem variants={itemAnimation}>Projects</ListItem>
-                    </ScrollLink>                   
-                                       
-                                                          
-                    <ListItem variants={itemAnimation}>Contact</ListItem>                 
+                    </ScrollLink> 
+
+                    <ScrollLink
+                        onClick={handleMenu}
+                        to="contact"
+                        activeClass="active"                        
+                        spy={true}
+                        smooth={true}                        
+                        duration={1000}
+                    >
+                        <ListItem variants={itemAnimation}>Contact</ListItem>
+                    </ScrollLink>           
+                                     
                 </MenuItems>
 
                 <Contact variants={contactAnimation} >

@@ -106,6 +106,11 @@ const JobPortal = () => {
     )
 }
 
-const JobMain = styled(MusicMain)``
+const JobMain = styled(MusicMain)`
+    a {
+        width: 250px;
+        align-self: center;
+    }
+`
 
 export default JobPortal;

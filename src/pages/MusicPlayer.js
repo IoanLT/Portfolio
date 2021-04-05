@@ -127,7 +127,9 @@ export const MusicMain = styled(motion.section)`
     a { 
         width: 100%;
         text-decoration: none;
-        color: #09070B;         
+        color: #09070B; 
+        width: 250px;
+        align-self: center;
     } 
 
     @media (max-width: 1024px) {
