@@ -13,19 +13,22 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 // Animation
 import { AnimatePresence } from 'framer-motion';
 import Instabeauty from "./pages/Instabeauty";
-// import Projects from "./components/Projects";
+// Import modal
+import ConfirmationModal from "./components/ConfirmationModal";
 
 
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
   const [displayMenu, setDisplayMenu] = useState(false);  
+  const [showModal, setShowModal] = useState(false);  
 
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
 
   return (
     <div className="App">
       <GlobalStyle />
+      <ConfirmationModal showModal={showModal} setShowModal={setShowModal} />
       <Header 
         openMenu={openMenu} 
         setOpenMenu={setOpenMenu}
@@ -33,14 +36,11 @@ function App() {
         setDisplayMenu={setDisplayMenu}
       />
       
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence exitBeforeEnter onExitComplete={() => setShowModal(false)}>
         <Switch location={location} key={location.key}>
-          {/* <Route exact path="/" render={(props) => <LandingPage {...props} />} /> */}
-          {/* <Route exact path="/music-player" render={(props) => <MusicPlayer {...props} />} /> */}
-          {/* <Route exact path="/projects" render={(props) => <Projects {...props} />} /> */}         
-            
+          
           <Route exact path="/">
-            <LandingPage />
+            <LandingPage setShowModal={setShowModal} />
           </Route> 
 
           <Route path="/music-player">
@@ -58,7 +58,7 @@ function App() {
           <Route path="/instabeauty">
             <Instabeauty />
           </Route> 
-          
+
         </Switch>
       </AnimatePresence>
       

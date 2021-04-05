@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 
-export default function ContactForm() {
+export default function ContactForm({ setShowModal }) {
 
   function sendEmail(e) {
     e.preventDefault();
@@ -18,12 +18,30 @@ export default function ContactForm() {
       e.target.reset();
   }
 
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShowModal(true);
+  //   }, 1000)
+  // }, [setShowModal]);
+
+
+  const handleModal = () => {
+    setTimeout(() => {
+      setShowModal(true);
+    }, 1000)    
+  };
+
   return (
     <Form onSubmit={sendEmail}>       
       <input type="text" name="name" placeholder="Name" />     
       <input type="email" name="email" placeholder="Email" />     
       <textarea name="message" placeholder="Message" />
-      <button type="submit" value="Send Message">Send message</button>
+      <button 
+        type="submit" 
+        onClick={handleModal}
+      >
+        Send message
+      </button>
     </Form>
   );
 }
@@ -51,8 +69,7 @@ const Form = styled(motion.form)`
       height: 42px;
       margin-bottom: 30px;
       border-radius: 5px;      
-      padding: 0 10px;
-      box-shadow: inset 0 2px 2px hsla(0, 0%, 0%, 0.1);
+      padding: 0 10px;      
       font-size: 1rem;     
    } 
 

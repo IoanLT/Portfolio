@@ -14,7 +14,7 @@ import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-ic
 // import animations
 // import { titleAnimation, sectionAnimation, gridAnimation, imageAnimation } from '../animation';
 
-const Contact = () => {
+const Contact = ({ setShowModal }) => {
     const [element, controls] = useScroll();
 
     return (
@@ -24,7 +24,7 @@ const Contact = () => {
             </ContactHeader>
 
             <ContentWrapper>        
-                <ContactForm />
+                <ContactForm setShowModal={setShowModal} />
                
                 <SocialMedia>
                     <h4>Send me an email at</h4>
@@ -91,7 +91,7 @@ const ContactSection = styled(motion.section)`
 `
 
 const ContactHeader = styled(ProjectHeader)`
-    margin-bottom: 100px;  
+    /* margin-bottom: 100px;   */
 
     h2 {
         @media (max-width: 768px) {
@@ -132,9 +132,6 @@ const SocialMedia = styled(motion.div)`
         font-size: 1.5rem;
         margin-bottom: 20px;
 
-        /* @media (max-width: 768px) {
-            font-size: 1.3rem;
-        } */
         @media (max-width: 500px) {
             font-size: 1.2rem;
         }

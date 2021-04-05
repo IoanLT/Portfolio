@@ -10,7 +10,7 @@ import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 
 
-const LandingPage = () => {
+const LandingPage = ({ setShowModal }) => {
     return (
         <motion.main 
             className="main-wrapper"
@@ -22,7 +22,7 @@ const LandingPage = () => {
             <Hero />
             <About /> 
             <Projects />           
-            <Contact />
+            <Contact setShowModal={setShowModal} />
         </motion.main>
     )
 }
