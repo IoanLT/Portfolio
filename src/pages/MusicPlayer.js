@@ -277,6 +277,8 @@ export const Back = styled.div`
     display: flex;  
     margin: 0 auto;  
     margin-bottom: 100px;
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
     
 
     &:hover {        
@@ -288,6 +290,8 @@ export const Back = styled.div`
     img {
         width: 80px;
         padding-right: 30px;
+        transform: translateX(0);
+        transition: all 0.3s ease-in-out;
 
         &:hover {        
             transform: translateX(-10px);
