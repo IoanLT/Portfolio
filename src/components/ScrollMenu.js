@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+// import { Link } from "react-router-dom";
+import { Link as ScrollLink } from 'react-scroll';
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
@@ -10,7 +11,8 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { menuAnimation, itemAnimation, contactAnimation } from '../animation';
 
 
-const BurgerMenu = ({ displayMenu, setDisplayMenu, openMenu, setOpenMenu }) => {
+const ScrollMenu = ({ displayMenu, setDisplayMenu, openMenu, setOpenMenu }) => {
+    
     const controls = useAnimation();
     const [ ref, inView ] = useInView({ threshold: 0.5 });
 
@@ -33,7 +35,10 @@ const BurgerMenu = ({ displayMenu, setDisplayMenu, openMenu, setOpenMenu }) => {
     const handleHomeMenu = () => {
         setDisplayMenu(false);
         setOpenMenu(false);
-        window.scrollTo(0, 0);
+        window.scrollTo({
+            top: 0,           
+            behavior: 'smooth'
+        });
     }
 
     return (
@@ -47,33 +52,49 @@ const BurgerMenu = ({ displayMenu, setDisplayMenu, openMenu, setOpenMenu }) => {
                 exit="exit"
             >
                 <MenuItems> 
-                    <Link                  
+                    <ScrollLink                         
+                        onClick={handleHomeMenu}
                         to="/"
-                        onClick={handleHomeMenu}        
+                        activeClass="active"                        
+                        spy={true}
+                        smooth={true}                        
+                        duration={1000}                     
                     >
                         <ListItem variants={itemAnimation}>Home</ListItem>      
-                    </Link>                   
+                    </ScrollLink>                   
 
-                    <Link                        
-                        to="/#about"
+                    <ScrollLink
                         onClick={handleMenu}
+                        to="about"
+                        activeClass="active"                        
+                        spy={true}
+                        smooth={true}                        
+                        duration={1000}
                     >
                         <ListItem variants={itemAnimation}>About</ListItem>
-                    </Link>  
+                    </ScrollLink>  
 
-                    <Link
+                    <ScrollLink
                         onClick={handleMenu}
-                        to="/#projects"                        
+                        to="projects"
+                        activeClass="active"                        
+                        spy={true}
+                        smooth={true}                        
+                        duration={1000}
                     >
                         <ListItem variants={itemAnimation}>Projects</ListItem>
-                    </Link> 
+                    </ScrollLink> 
 
-                    <Link
+                    <ScrollLink
                         onClick={handleMenu}
-                        to="/#contact"                        
+                        to="contact"
+                        activeClass="active"                        
+                        spy={true}
+                        smooth={true}                        
+                        duration={1000}
                     >
                         <ListItem variants={itemAnimation}>Contact</ListItem>
-                    </Link>           
+                    </ScrollLink>           
                                      
                 </MenuItems>
 
@@ -130,7 +151,8 @@ const ListItem = styled(motion.li)`
     padding: 20px 0;
     font-size: 1.8rem;
     font-weight: 700;
-    cursor: pointer;    
+    cursor: pointer;
+    /* color: hsl(209, 61%, 16%); */
     color: hsl(360, 64%, 55%);
 
    
@@ -177,4 +199,4 @@ const Contact = styled(motion.div)`
     }
 `
 
-export default BurgerMenu;
+export default ScrollMenu;
