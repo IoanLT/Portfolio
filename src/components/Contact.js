@@ -20,17 +20,17 @@ const Contact = () => {
     return (
         <ContactSection id="contact" ref={element}>
             <ContactHeader>
-                <motion.h2>Get in touch</motion.h2>
+                <motion.h2>Get in touch</motion.h2>                
             </ContactHeader>
 
-            <ContentWrapper>           
-
-                {/* <FormWrapper> */}
-                    <ContactForm />
-                {/* </FormWrapper>                 */}
+            <ContentWrapper>        
+                <ContactForm />
+               
                 <SocialMedia>
-                    <h4>You can find me on</h4>
-                    <SocialMediaLinks id="social-media-links">
+                    <h4>Send me an email at</h4>
+                    <h5>ioan.tranole@gmail.com</h5>
+                    <h4>You can also find me on</h4>
+                    <SocialMediaLinks>
                         <li>
                             <a
                                 href="https://github.com/IoanLT"
@@ -68,104 +68,133 @@ const Contact = () => {
 
 const ContactSection = styled(motion.section)`
     min-height: 100vh;
-    width: 100%;    
+    width: 100%;      
     display: flex;
     flex-direction: column;    
     justify-content: center;    
-    padding: 0 20%;
-    color: #fff; 
-    /* margin-bottom: 100px;  */
+    padding: 0 15%;
+    color: #fff;     
 
-    @media (max-width: 1024px) {
-        height: 100%;
+    @media (max-width: 1450px) {        
+        padding: 0 10%;
+    }   
+    @media (max-width: 1270px) {        
+        padding: 0 5%;
+    }   
+    @media (max-width: 1130px) {         
         padding: 0 18%;
     }   
-    @media (max-width: 768px) {        
+    @media (max-width: 768px) {         
         padding: 0 10%;
-    }  
+    }   
+    
 `
 
 const ContactHeader = styled(ProjectHeader)`
-    margin-bottom: 100px;
+    margin-bottom: 100px;  
+
+    h2 {
+        @media (max-width: 768px) {
+            font-size: 2.5rem;
+        }
+        @media (max-width: 500px) {
+            font-size: 2rem;
+        }
+    }     
 `
 
 const ContentWrapper = styled(motion.div)`
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    /* justify-content: space-around; */
-    width: 100%;
+    justify-content: space-between;  
+    align-items: flex-end; 
+
+    @media (max-width: 1130px) {        
+        align-items: center;
+        justify-content: flex-start;        
+    }
 `
 
-// const FormWrapper = styled(motion.div)`
-//     width: 50%; 
-//     display: flex;   
-//     padding: 10px;
-//     border: 1px solid #fff;
-// `
+const SocialMedia = styled(motion.div)`    
+    width: 400px;    
+    text-align: left;  
+    margin: 100px 0;  
+    margin-left: 50px;
 
-const SocialMedia = styled(motion.div)`
-    margin-left: auto;
-    width: 400px;
-    text-align: center;
+    @media (max-width: 1130px) {        
+        margin-left: 0;        
+        width: 100%;
+        text-align: center; 
+        align-self: center;
+    }
 
     h4 {
         font-size: 1.5rem;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
+
+        /* @media (max-width: 768px) {
+            font-size: 1.3rem;
+        } */
+        @media (max-width: 500px) {
+            font-size: 1.2rem;
+        }
+    }
+
+    h5 {
+        font-size: 1.3rem;
+        margin-bottom: 70px;
+        font-weight: 400;
+        color: hsl(360, 64%, 55%);        
     }
 `
 
 const SocialMediaLinks = styled(motion.ul)`
     display: flex;
-    justify-content: space-around;    
+    
+    @media (max-width: 1130px) {        
+        justify-content: center;
+    }
 
     li {
-        display: flex;
-        width: 100px;
-        height: 100px;    
-        border-radius: 50%;
+        display: flex;       
         position: relative;
-        font-size: 50px;
-
-        /* Rotate 45 deg and scale down */
-        /* transform: rotate(45deg) scale(0.8); */
+        font-size: 40px;
         overflow: hidden;
-        transition: all .5s ease-in;
-
-        ::before {
-            content:'';
-            display: block;
-            width: 50%;
-            height: 100%;
-            position: absolute;
-            z-index: -2;
-        }
-
-        ::after {
-            content:'';
-            display: block;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            position: absolute;
-            top: 0;
-            right: 50%;
-            z-index: -3;
-            transition: all .5s ease-in-out;
-            opacity: .5;
-        }
-
+        transition: all 1s ease-in;
+        
         a {
-            color: white;
-            margin: auto;
-            text-shadow: 0 2px 0 rgb(2,2,2);
-            /* transform: rotate(-45deg); */
-            transition: all .5s ease-in;
+            color: #fff;            
+            margin-right: 40px;
+            padding: 0 5px;
+            text-shadow: 0 2px 0 rgb(2,2,2);            
+            transition: all .75s ease-in;
+
+            @media (max-width: 768px) {        
+                margin-right: 20px;
+            }
 
             &:hover {
                 transform: rotate(360deg);
-            }
+            }            
         }
+
+        :nth-child(1) {
+            a {                
+                color: #6e40c9;                
+            }            
+        }
+
+        :nth-child(2) {
+            a {                
+                color: #1A91DA;
+            }            
+        }
+
+        :nth-child(3) {
+            a {                
+                color: #65D6AD;
+            }            
+        }        
     }
 `
 

@@ -131,6 +131,12 @@ export const ProjectHeader = styled(motion.div)`
         @media (max-width: 1024px) {
             padding-left: 10%;
         }
+        @media (max-width: 768px) {
+            font-size: 2.5rem;
+        }
+        @media (max-width: 500px) {
+            font-size: 2rem;
+        }
     }    
 `
 

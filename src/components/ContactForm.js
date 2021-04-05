@@ -33,13 +33,17 @@ export default function ContactForm() {
 }
 
 const Form = styled(motion.form)` 
-    width: 400px;
+    width: 500px;
     height: 100%;
     text-align: left;
     display: flex;
-    flex-direction: column;
-    /* align-items: center;  */   
-    margin-right: auto;
+    flex-direction: column;      
+    margin-right: 50px;
+
+    @media (max-width: 1130px) {        
+        width: 100%;
+        margin-right: 0;
+    }
     
     h4 {
       margin-bottom: 30px;     
@@ -50,24 +54,20 @@ const Form = styled(motion.form)`
       width: 100%;
       height: 42px;
       margin-bottom: 30px;
-      border-radius: 5px;
-      /* border: 1px solid hsl(360, 64%, 55%); */
+      border-radius: 5px;      
       padding: 0 10px;
       box-shadow: inset 0 2px 2px hsla(0, 0%, 0%, 0.1);
-      font-size: 1rem;
-      font-weight: 600;
+      font-size: 1rem;     
    } 
 
    textarea {
     width: 100%;
     height: 150px;
     margin-bottom: 30px;
-    border-radius: 5px;
-    /* border: 1px solid hsl(360, 64%, 55%); */
+    border-radius: 5px;    
     padding: 10px;
     font-size: 1rem;
-    font-weight: 600;
-
+    
     overflow: scroll;
     ::-webkit-scrollbar {
       display: none;
@@ -80,7 +80,7 @@ const Form = styled(motion.form)`
     width: 250px;
     font-size: 1rem;
     font-weight: 400;
-    /* border-radius: 10px; */
+    margin: 0;
   }
 `
 
