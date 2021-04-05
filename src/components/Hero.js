@@ -33,18 +33,18 @@ const Hero = () => {
                     </Hide>
                 </motion.div>
                
-                <motion.button variants={textFade}>
-                    <ScrollLink                    
+               <ScrollLink                    
                         to="about"
                         activeClass="active"                        
                         spy={true}
                         smooth={true}                        
                         duration={1000}
-                    >                    
+                    >
+                    <motion.button variants={textFade}>                                           
                         Find out more
-                        <img src={arrowRight} alt="arrow-right" />                    
-                    </ScrollLink>
-                </motion.button>
+                        <img src={arrowRight} alt="arrow-right" />                      
+                    </motion.button>
+                </ScrollLink>
             </Description>
 
             <Portfolio 
@@ -118,9 +118,12 @@ const Description = styled.div`
         width: 250px;
 
         @media (max-width: 500px) {               
-           margin-top: 50px;
-           /* align-self: center;               */
+           margin-top: 50px;          
         }
+    }
+
+    a {
+        width: 250px;        
     }
 `
 
