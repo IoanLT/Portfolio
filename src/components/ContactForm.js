@@ -19,11 +19,7 @@ export default function ContactForm() {
   }
 
   return (
-    <Form 
-        // className="contact-form" 
-        onSubmit={sendEmail}
-    > 
-      {/* <h4>Drop me a line.</h4>    */}
+    <Form onSubmit={sendEmail}>       
       <input type="text" name="name" placeholder="Name" />     
       <input type="email" name="email" placeholder="Email" />     
       <textarea name="message" placeholder="Message" />
@@ -41,8 +37,8 @@ const Form = styled(motion.form)`
     margin-right: 50px;
 
     @media (max-width: 1130px) {        
-        width: 100%;
-        margin-right: 0;
+      width: 100%;
+      margin-right: 0;
     }
     
     h4 {
@@ -81,6 +77,11 @@ const Form = styled(motion.form)`
     font-size: 1rem;
     font-weight: 400;
     margin: 0;
+
+    @media (max-width: 500px) {        
+      width: 100%;
+      margin-right: 0;
+    }
   }
 `
 

@@ -153,6 +153,10 @@ const AboutDescription = styled(motion.div)`
         margin-top: 100px;      
         width: 90%;
     }
+    @media (max-width: 768px) {  
+        margin-top: 0;
+        
+    }
     
 `
 

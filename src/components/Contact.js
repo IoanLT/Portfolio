@@ -180,7 +180,7 @@ const SocialMediaLinks = styled(motion.ul)`
 
         :nth-child(1) {
             a {                
-                color: #6e40c9;                
+                color: #A081D9;                
             }            
         }
 
