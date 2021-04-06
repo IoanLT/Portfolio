@@ -5,14 +5,13 @@ import authorsDevices from '../assets/authors-devices.png';
 // Animations
 import { motion } from 'framer-motion';
 import { pageAnimation, textFade, photoAnimation, lineAnimation, contentAnimation, wrapAnimation } from '../animation';
-
+// Import components 
 import { MusicMain, Banner, Devices, Concept, Development, Back } from '../pages/MusicPlayer';
 import arrowRight from '../assets/Arrow-right-black.svg';
 import backArrow from '../assets/backArrow.svg';
 import line from '../assets/Line 54.svg';
 
 const Authors = () => {
-
     return (     
         <AuthorsMain                           
             variants={pageAnimation}

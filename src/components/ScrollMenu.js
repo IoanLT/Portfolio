@@ -150,8 +150,7 @@ const ListItem = styled(motion.li)`
     padding: 20px 0;
     font-size: 1.8rem;
     font-weight: 700;
-    cursor: pointer;
-    /* color: hsl(209, 61%, 16%); */
+    cursor: pointer;    
     color: hsl(360, 64%, 55%);
 
    

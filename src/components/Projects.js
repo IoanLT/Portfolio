@@ -12,7 +12,6 @@ import janine from '../assets/janine-card.PNG';
 // import animations
 import { titleAnimation, sectionAnimation, gridAnimation, imageAnimation } from '../animation';
 
-
 const Projects = () => {
     const [element, controls] = useScroll();
 

@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-
 const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
@@ -34,26 +33,17 @@ const GlobalStyle = createGlobalStyle`
 
         img {           
             padding-left: 20px; 
-
-            /* &:hover {
-                transform: translateX(10px);
-                transition: all 0.3s ease-in-out;
-            }            */
         }        
     }
-
 
     h1, h2 {
         font-weight: lighter;
         font-size: 3rem;
-        font-family: 'Open Sans', sans-serif;
-        /* color: hsl(238, 94%, 81%); */
+        font-family: 'Open Sans', sans-serif;        
     }
 
-    h1 {
-        /* font-size: 3rem; */
-        margin-bottom: 30px;
-        /* color: #fff; */
+    h1 {        
+        margin-bottom: 30px;        
     }
 
     h3 {
@@ -76,11 +66,6 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
-    /* span {
-        font-weight: bold;
-        color: #23d997;
-    } */
-
     /* Styles for the open / hidden navigation menu */
     .open-menu,
     .hidden-menu {
@@ -92,15 +77,12 @@ const GlobalStyle = createGlobalStyle`
         top: 0;             
         right: 0; 
         height: 100%;    
-        overflow: hidden;   
-        /* max-height: 100vh;      */
+        overflow: hidden;    
         transition: all 0.7s ease;
         transform: translateX(0);     
         background: #fff;   
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7), 0 5px 15px rgba(0, 0, 0, 0.1);
-        /* background: #f2f4f5; */
-        /* background: linear-gradient(to top, hsl(48, 100%, 88%), hsl(44, 92%, 63%));    */
-
+        
         @media (max-width: 500px) {        
             width: 100%;
         }

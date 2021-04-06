@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Variants
+// Modal Variants
 const backdrop = {
     hidden: { opacity: 0 },
     show: { 

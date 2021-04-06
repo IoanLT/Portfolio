@@ -11,7 +11,6 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 // import animations
 import { menuAnimation, titleAnimation } from '../animation';
 
-
 const Contact = ({ setShowModal }) => {
     const [element, controls] = useScroll();
 

@@ -10,7 +10,7 @@ import arrowRight from '../assets/Arrow-right-black.svg';
 import backArrow from '../assets/backArrow.svg';
 import line from '../assets/Line 54.svg';
 
-const MusicPlayer = () => {    
+const MusicPlayer = () => {  
 
     return (     
         <MusicMain                           

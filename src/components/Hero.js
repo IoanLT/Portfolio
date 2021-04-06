@@ -1,17 +1,14 @@
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-// import home1 from '../assets/home1.png';
 import styled from 'styled-components';
-import { Hide } from '../styles';
 import { motion } from 'framer-motion';
+// Import animations
 import { titleAnimation, textFade, portfolioAnimation } from '../animation';
-// import Wave from './Wave';
+
 import arrowRight from '../assets/Arrow-right-white.svg';
 import bannerImage from '../assets/background2.png';
-// import bannerImage from '../assets/background3.jpg';
 
 const Hero = () => {
-
     return (
         <HeroWrapper id="home">
             <Description>
@@ -53,8 +50,8 @@ const Hero = () => {
                 animate="show"
             >               
                 <motion.h1>Portfolio</motion.h1>
-            </Portfolio>           
-            {/* <Wave /> */}
+            </Portfolio>          
+           
         </HeroWrapper>
     )
 }
@@ -163,6 +160,10 @@ export const Portfolio = styled(motion.div)`
             font-size: 2.5rem;               
         }
     }
+`
+
+export const Hide = styled.div`    
+    overflow: hidden; 
 `
 
 export default Hero;

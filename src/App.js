@@ -22,8 +22,7 @@ function App() {
   const [displayMenu, setDisplayMenu] = useState(false);  
   const [showModal, setShowModal] = useState(false);  
 
-  const location = useLocation();
-  // console.log(location);
+  const location = useLocation();  
 
   return (
     <div className="App">

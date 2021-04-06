@@ -5,7 +5,7 @@ import portalDevices from '../assets/job-portal-devices.png';
 // Animations
 import { motion } from 'framer-motion';
 import { pageAnimation, textFade, photoAnimation, lineAnimation, contentAnimation, wrapAnimation } from '../animation';
-
+// Import components
 import { MusicMain, Banner, Devices, Concept, Development, Back } from '../pages/MusicPlayer';
 import arrowRight from '../assets/Arrow-right-black.svg';
 import backArrow from '../assets/backArrow.svg';

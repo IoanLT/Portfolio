@@ -36,8 +36,7 @@ const BurgerMenu = ({ displayMenu, setDisplayMenu, openMenu, setOpenMenu }) => {
         window.scrollTo(0, 0);
     }
 
-    return (
-        
+    return (        
         <div className={displayMenu ? 'open-menu' : 'hidden-menu'}>
             <MenuWrapper 
                 ref={ref}

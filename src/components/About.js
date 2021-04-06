@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { aboutAnimation, titleAnimation, menuAnimation, skills, skillsAnimation } from '../animation';
 import line from '../assets/Line 54.svg';
 import scrolldown from '../assets/scrolldown.png';
-
 // import custom scroll hook
 import { useScroll } from './useScroll';
 
@@ -23,8 +22,7 @@ const About = () => {
                         ref={element}
                         variants={menuAnimation}
                         animate={controls}
-                        initial="hidden"
-                        // exit="exit"
+                        initial="hidden"                        
                     >
                         <AboutHeader variants={titleAnimation}>                              
                             <h2>About me</h2>
@@ -119,8 +117,7 @@ const AboutSection = styled(motion.section)`
     justify-content: center;    
     padding: 0 5%;
     color: #fff; 
-    position: relative;    
-    /* background-color: #09070B;  */
+    position: relative;   
 
     @media (max-width: 1024px) {
         height: 100%;
@@ -156,8 +153,7 @@ const AboutDescription = styled(motion.div)`
     @media (max-width: 768px) {  
         margin-top: 0;
         
-    }
-    
+    }    
 `
 
 const AboutHeader = styled(motion.div)`      
@@ -248,8 +244,7 @@ const ScrollDown = styled.div`
         color: hsl(360, 64%, 55%);
     }
 
-    @media (max-width: 1024px) {
-        /* margin-bottom: 50px; */
+    @media (max-width: 1024px) {        
         margin-left: 15%;
     }
     @media (max-width: 768px) {        

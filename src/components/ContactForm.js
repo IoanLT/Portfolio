@@ -21,13 +21,6 @@ export default function ContactForm({ setShowModal }) {
       e.target.reset();
   }
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setShowModal(true);
-  //   }, 1000)
-  // }, [setShowModal]);
-
-
   const handleModal = () => {
     setTimeout(() => {
       setShowModal(true);
@@ -106,9 +99,6 @@ const Form = styled(motion.form)`
     font-weight: 400;
     margin: 0;
 
-    /* @media (max-width: 1130px) {        
-      align-self: center;
-    } */
     @media (max-width: 500px) {        
       width: 100%;
       margin-right: 0;
