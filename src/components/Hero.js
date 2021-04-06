@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { titleAnimation, textFade, portfolioAnimation } from '../animation';
 
 import arrowRight from '../assets/Arrow-right-white.svg';
-import bannerImage from '../assets/background2.png';
+import bannerImage from '../assets/background-hero.png';
 
 const Hero = () => {
     return (
