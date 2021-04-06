@@ -239,7 +239,7 @@ export const imageAnimation = {
 
 // Project page animations
 export const contentAnimation = {
-    hidden: {  y: 300 },
+    hidden: {  y: 500 },
     show: {
         y: 0,
         transition: {    

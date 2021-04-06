@@ -44,11 +44,16 @@ const Instabeauty = () => {
                     variants={contentAnimation}
                 >
                     <motion.p>
-                        Instabeauty by Janine is a business that offers various cosmetic treatments, located in central Bucharest. <br/>
-                        The aim was to create a website that will inform potential clients of the services offered in the studio 
-                        and how to book a treatment. <br/>  
-                        The priority is to give Janine’s customers all the information they need to feel confident to pick 
-                        up the phone and make a booking.                  
+                        Instabeauty by Janine is a business that offers various cosmetic treatments, located in 
+                        central Bucharest.                 
+                    </motion.p>
+                    <motion.p>
+                        The aim was to create a website that will inform potential clients of
+                        the services offered in the studio and how to book a treatment.                                
+                    </motion.p>
+                    <motion.p>                                           
+                        The main objective  is to give Janine’s customers all the information they need to feel 
+                        confident to pick up the phone and make a booking.                  
                     </motion.p>
                 </motion.div>
                 <InProgress variants={textFade}>                   
@@ -70,26 +75,25 @@ const Instabeauty = () => {
                     variants={contentAnimation}                    
                 >
                     <motion.p>
-                        Creating a brand new website for Instabeauty by Janine, using React hooks, styled components 
-                        and framer-motion. <br/>
-                        The aim is to build and launch a 4 page website which will contain the following pages:
+                        The project involved creating a brand new 4 page website for Instabeauty by Janine, using 
+                        React hooks, styled components and framer-motion containing the following pages:
                     </motion.p>
 
                     <List>
                         <ListItem>
-                            Landing page/about me: this will cover Janine’s experience and qualifications and well 
-                            as customer testimonials to build trust in the service that she offers.
+                            Landing page/about me: this will cover Janine’s experience and qualifications and well as 
+                            customer testimonials to build trust in the service that she offers.
                         </ListItem>
                         <ListItem>
-                            Services offered: Information on the 6 different services that she offers alongside a 
-                            gallery of before and after images so that customers can visualise how it will look on them.
+                            Services offered: this will contain information on the 6 different services that she offers 
+                            alongside a gallery of before and after images so that customers can visualise how it will look on them.
                         </ListItem>
                         <ListItem>
-                            Prices: A full list of prices for the services as well as touch ups, easy to locate, 
+                            Prices: this will contain a full list of prices for the services as well as touch ups, easy to locate, 
                             compare and update in the future.
                         </ListItem>
                         <ListItem>
-                            FAQ: To save Janine time we’ll list the top ten (or more) questions that she answers on a regular basis.
+                            FAQ: To save Janine time we’ll list the top ten  questions that she answers on a regular basis.
                         </ListItem>                        
                     </List>
                 </motion.div>

@@ -43,11 +43,14 @@ const Authors = () => {
                     variants={contentAnimation}
                 >
                     <motion.p>
-                        Authxrs is a socially aware and sustainable publishing house supporting suppressed voices worldwide. 
-                        The project is devoted to people who would like to share their stories who otherwise would not have 
-                        the opportunity. <br/>
-                        The goal was to give non Western voices a platform to be heard from, that is not edited or censored in 
-                        any way by the Western world. These stories are told from real people from all over the globe.                       
+                        Authxrs is a socially aware and sustainable publishing house which supports suppressed voices worldwide. 
+                        The platform is devoted to people who would like to share their stories who otherwise would not have had 
+                        the opportunity, giving them a place where their voices can be heard and not edited or censored in any 
+                        way by the Western world. 
+                    </motion.p>
+                    <motion.p>
+                        This was a group project where we worked with the founders over the course of 6 weeks to create the 
+                        platform leaving them with the foundation to build upon as they collect new stories over time.                       
                     </motion.p>
                 </motion.div>
                 <motion.button variants={textFade}>
@@ -76,7 +79,8 @@ const Authors = () => {
                 >
                     <motion.p>
                         The project has been built with React using both class and functional components. 
-                        The frontend environment consists of several areas: <br/>                                                
+                        Using Figma we created wireframes to discuss design and content with the founders.
+                        The frontend environment consists of several areas:                                                
                     </motion.p>
 
                     <List>
@@ -84,16 +88,15 @@ const Authors = () => {
                             Tell your story form: Which allows a user to send messages directly to the Authxrs gmail account.
                         </ListItem>
                         <ListItem>
-                            Contact form: For those who would like to become a part of the authors community 
-                            and just lend a hand or may have questions.
+                            Contact form: For those who would like to become a part of the Authxrs community, volunteer 
+                            their support or ask questions.
                         </ListItem>
                         <ListItem>
-                            Storybook pre-order form: Directly connects to payment form based on stripe payment system.
+                            Storybook pre-order form: Directly connects to a payment form based on the Stripe payment system.
                         </ListItem>
                         <ListItem>
-                            Stripe payment checkout: Allows the user to make a purchase and enter their credit 
-                            card credentials, accepts credit card online payments and sends this information 
-                            back to the Stripe system.
+                            Stripe payment checkout: Allows the user to make a purchase and enter their credit card details, 
+                            accepts credit card online payments and sends this information back to the Stripe system.
                         </ListItem>
                     </List>
                 </motion.div>

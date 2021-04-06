@@ -43,12 +43,17 @@ const JobPortal = () => {
                     variants={contentAnimation}
                 >
                     <motion.p>
-                        This is a group project created by 4 students while studying web development at Wild Code School. <br/>                         
-                        Our goal was to create a fully functional job portal application that would allow anyone to find
-                        their favourite job in the tech industry, whether it is remote or not.                        
-                        A job platform seemed like the perfect project for us, because we wanted to build something that would 
-                        potentially help us or our colleagues find a job after completing the bootcamp.                        
-                    </motion.p>
+                        This was a group project created while studying web development at Wild Code School. 
+                    </motion.p>                
+                    <motion.p>
+                        Our goal was to create a fully functional job portal application that would allow anyone 
+                        to find a new role in the tech industry, either remotely or in a specific location. 
+                    </motion.p>                
+                    <motion.p>
+                        This platform was the perfect project for us, we wanted to  build something that would 
+                        potentially help us or our colleagues find a role after completing the bootcamp which 
+                        meant we had lots of users to test on.
+                    </motion.p>             
                 </motion.div>
                 <motion.button variants={textFade}>
                     <a
@@ -75,9 +80,10 @@ const JobPortal = () => {
                     variants={contentAnimation}                    
                 >
                     <motion.p>
-                        The project has been built with React, using functional and class components, API calls and 
-                        npm packages. <br/>
-                        The main features of this project are: <br/>
+                        The project has been built with React, using functional and class components, API calls and npm packages.                        
+                    </motion.p>
+                    <motion.p>                       
+                        The main features of this project are:
                     </motion.p>
 
                     <List>
@@ -85,12 +91,12 @@ const JobPortal = () => {
                             Search feature with several filters such as job type, job category, location and keywords.
                         </ListItem>
                         <ListItem>
-                            Jobs data fetched from Remotive API, styled and displayed in a responsive job list.
+                            Jobs data fetched via the Remotive API, styled and displayed in a responsive job list.
                         </ListItem>
                         <ListItem>
-                            Sign in functionality: after the user is signed in, he has access to some extra features, 
-                            a personal dashboard, a calendar that keeps track of the jobs the user has saved or applied to 
-                            and a cover letter builder that can be personalized dynamically according to user input.
+                            Sign in functionality: after the user is signed in, they have access to some extra features, 
+                            a personal dashboard, a calendar that keeps track of the jobs the user has saved or applied 
+                            to and a cover letter builder that can be personalised dynamically according to user input.
                         </ListItem>
                         <ListItem>
                             A map with the candidate's required location.
