@@ -162,7 +162,7 @@ export const itemAnimation = {
 };
 
 export const contactAnimation = {
-    hidden: {  x: 300 },
+    hidden: {  x: 500 },
     show: {
         x: 0,
         transition: { 
