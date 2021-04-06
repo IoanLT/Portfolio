@@ -43,12 +43,11 @@ const JobPortal = () => {
                     variants={contentAnimation}
                 >
                     <motion.p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.                        
+                        This is a group project created by 4 students while studying web development at Wild Code School. <br/>                         
+                        Our goal was to create a fully functional job portal application that would allow anyone to find
+                        their favourite job in the tech industry, whether it is remote or not.                        
+                        A job platform seemed like the perfect project for us, because we wanted to build something that would 
+                        potentially help us or our colleagues find a job in the future.                        
                     </motion.p>
                 </motion.div>
                 <motion.button variants={textFade}>
@@ -76,13 +75,27 @@ const JobPortal = () => {
                     variants={contentAnimation}                    
                 >
                     <motion.p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.                        
+                        The project has been built with React, using functional and class components, API calls and 
+                        npm packages. <br/>
+                        The main features of this project are: <br/>
                     </motion.p>
+                        <List>
+                            <ListItem>
+                                Search feature with several filters such as job type, job category, location and keywords.
+                            </ListItem>
+                            <ListItem>
+                                Jobs data fetched from Remotive API, styled and displayed in a responsive job list.
+                            </ListItem>
+                            <ListItem>
+                                Sign in functionality: after the user is signed in, he has access to some extra features, 
+                                a personal dashboard, a calendar that keeps track of the jobs the user has saved or applied to 
+                                and a cover letter builder that can be personalized dynamically according to user input.
+                            </ListItem>
+                            <ListItem>
+                                A map with the candidate's required location.
+                            </ListItem>
+                        </List>                        
+                    
                 </motion.div>
                 <motion.button variants={textFade}>
                     <a
@@ -110,6 +123,21 @@ const JobMain = styled(MusicMain)`
     a {
         width: 250px;
         align-self: center;
+    }
+`
+
+export const List = styled(motion.ul)``
+
+export const ListItem = styled(motion.li)`
+    line-height: 2;
+    list-style: inside;
+
+    @media (max-width: 500px) {
+        font-size: 14px;                
+    }
+    
+    ::marker {
+        color: hsl(360, 64%, 55%);            
     }
 `
 

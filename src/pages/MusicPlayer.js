@@ -171,7 +171,11 @@ export const Concept = styled(motion.div)`
     margin-bottom: 100px;
     width: 100%;
     flex-wrap: wrap; 
-    overflow: hidden;   
+    overflow: hidden; 
+
+    p {
+        margin-bottom: 0;
+    }  
 
     .concept-heading {
         display: flex;
@@ -198,7 +202,7 @@ export const Concept = styled(motion.div)`
                 font-size: 1.3rem;
                 padding-left: 20px;
             }           
-        }        
+        }             
     }
 
     button {

@@ -58,7 +58,8 @@ const GlobalStyle = createGlobalStyle`
 
     p {        
         font-size: 1rem;
-        line-height: 150%;
+        /* line-height: 150%; */
+        line-height: 2;
         margin-bottom: 20px;
 
         @media (max-width: 500px) {
