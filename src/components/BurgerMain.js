@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import ScrollMenu from "./ScrollMenu";
-// import { useScroll } from './useScroll';
-// import { Link } from "react-router-dom";
-// import { useLocation } from 'react-router-dom';
 
 
 const BurgerMain = ({ openMenu, setOpenMenu, displayMenu, setDisplayMenu }) => {
@@ -14,13 +11,9 @@ const BurgerMain = ({ openMenu, setOpenMenu, displayMenu, setDisplayMenu }) => {
 		setOpenMenu(!openMenu);
 	};
 	
-	// const location = useLocation();	
-
     return (
 		<>
-			<StyledBurger 
-				// location={location} 
-				// key={location.key} 
+			<StyledBurger 				
 				openMenu={openMenu} 
 				onClick={toggleNavHandler}
 			>
@@ -58,8 +51,7 @@ const StyledBurger = styled.div`
 
 	div {
 		width: 2rem;
-		height: 0.25rem;
-		/* background: ${({ openMenu }) => (openMenu ? "#0D0C1D" : "#EFFFFA")}; */
+		height: 0.25rem;		
 		border-radius: 10px;
 		transition: all 0.3s linear;
 		position: relative;
@@ -69,23 +61,20 @@ const StyledBurger = styled.div`
 		:first-child {			
 			width: ${({ openMenu }) =>	openMenu ? "33px" : "20px"};
 			transform: ${({ openMenu }) => openMenu ? "rotate(45deg)" : "rotate(0)"};
-			background: ${({ openMenu }) => openMenu ? "#000" : "#fff"};
-			/* background: ${({ openMenu }) => window.scrollY >= 727 || openMenu ? "#000" : "#fff"}; */
+			background: ${({ openMenu }) => openMenu ? "#000" : "#fff"};			
 		}
 
 		:nth-child(2) {
 			width: 30px;
 			opacity: ${({ openMenu }) => (openMenu ? "0" : "1")};
 			transform: ${({ openMenu }) =>	openMenu ? "translateX(20px)" : "translateX(0)"};
-			background: ${({ openMenu }) => openMenu ? "#000" : "#fff"};
-			/* background: ${({ openMenu }) => window.scrollY >= 727 || openMenu ? "#000" : "#fff"}; */
+			background: ${({ openMenu }) => openMenu ? "#000" : "#fff"};			
 		}
 
 		:nth-child(3) {
 			width: ${({ openMenu }) =>	openMenu ? "33px" : "40px"};
 			transform: ${({ openMenu }) =>	openMenu ? "rotate(-45deg)" : "rotate(0)"};
-			background: ${({ openMenu }) => openMenu ? "#000" : "#fff"};
-			/* background: ${({ openMenu }) => window.scrollY >= 727 || openMenu ? "#000" : "#fff"}; */
+			background: ${({ openMenu }) => openMenu ? "#000" : "#fff"};			
 		}
 	}
 `;

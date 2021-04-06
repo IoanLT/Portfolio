@@ -212,10 +212,6 @@ export const Concept = styled(motion.div)`
             text-decoration: none;
             color: #09070B;
         }
-
-        @media (max-width: 500px) {               
-           margin-top: 50px;          
-        }
     }
 
     .concept-text {

@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { ProjectHeader } from './Projects';
@@ -8,7 +7,7 @@ import { useScroll } from './useScroll';
 import ContactForm from './ContactForm';
 // Social media icons 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 // import animations
 import { menuAnimation, titleAnimation } from '../animation';
 
@@ -36,9 +35,10 @@ const Contact = ({ setShowModal }) => {
                     animate={controls}
                     initial="hidden"
                 >
-                    <motion.h4 variants={titleAnimation}>Or send me an email at</motion.h4>
+                    <motion.h4 variants={titleAnimation}>Or contact me at</motion.h4>
                     <motion.h5 variants={titleAnimation}>ioan.tranole@gmail.com</motion.h5>
-                    <motion.h4 variants={titleAnimation}>You can also find me on</motion.h4>
+                    <motion.h5 variants={titleAnimation}>+44 7551 454843</motion.h5>
+                    <motion.h4 variants={titleAnimation}>You can also find me at</motion.h4>
                     <SocialMediaLinks>
                         <li>
                             <a
@@ -49,15 +49,7 @@ const Contact = ({ setShowModal }) => {
                                 <FontAwesomeIcon icon={faGithub} />
                             </a>
                         </li>
-                        <li>
-                            <a
-                                href="https://twitter.com/LtIoan"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faTwitter} />
-                            </a>
-                        </li>
+                       
                         <li>
                             <a
                                 href="https://www.linkedin.com/in/ioantranole/"
@@ -99,8 +91,7 @@ const ContactSection = styled(motion.section)`
     
 `
 
-const ContactHeader = styled(ProjectHeader)`
-    /* margin-bottom: 100px;   */
+const ContactHeader = styled(ProjectHeader)`    
 
     h2 {
         @media (max-width: 768px) {
@@ -127,12 +118,13 @@ const ContentWrapper = styled(motion.div)`
 const SocialMedia = styled(motion.div)`    
     width: 400px;    
     text-align: left;  
-    margin: 100px 0;  
+    margin: 80px 0;  
     margin-left: 50px;
     overflow: hidden;
 
     @media (max-width: 1130px) {        
-        margin-left: 0;        
+        margin-left: 0;
+        margin: 150px 0;        
         width: 100%;
         text-align: center; 
         align-self: center;
@@ -140,18 +132,32 @@ const SocialMedia = styled(motion.div)`
 
     h4 {
         font-size: 1.5rem;
-        margin-bottom: 20px;
+        margin-bottom: 20px;               
 
         @media (max-width: 500px) {
             font-size: 1.2rem;
+        }
+        @media (max-width: 350px) {
+            font-size: 1rem;
         }
     }
 
     h5 {
         font-size: 1.3rem;
-        margin-bottom: 70px;
+        margin-bottom: 20px;
         font-weight: 400;
-        color: hsl(360, 64%, 55%);        
+        color: hsl(360, 64%, 55%);    
+
+        :nth-child(3) {
+             margin-bottom: 50px;
+        }  
+
+        @media (max-width: 500px) {
+            font-size: 1.2rem;
+        }
+        @media (max-width: 350px) {
+            font-size: 1rem;
+        }  
     }
 `
 
@@ -194,17 +200,9 @@ const SocialMediaLinks = styled(motion.ul)`
 
         :nth-child(2) {
             a {                
-                color: #1A91DA;
+                color: #0077B5; 
             }            
         }
-
-        :nth-child(3) {
-            a {                
-                color: #65D6AD;
-                /* color: #0077B5;              */
-                
-            }                     
-        }        
     }
 `
 

@@ -80,7 +80,7 @@ const BurgerMenu = ({ displayMenu, setDisplayMenu, openMenu, setOpenMenu }) => {
                 <Contact variants={contactAnimation} >
                     <div className="contact-mobile">
                         <FontAwesomeIcon icon={faMobile} size="2x" />
-                        <p>07551 454 843</p> 
+                        <p>+44 7551 454843</p> 
                     </div>
                     <div className="social-media">
                         <a                       
@@ -147,7 +147,7 @@ const Contact = styled(motion.div)`
     align-items: center;    
 
     .contact-mobile {
-        width: 200px;
+        width: 250px;
         display: flex;  
         justify-content: space-around;
         align-items: center; 
@@ -173,6 +173,10 @@ const Contact = styled(motion.div)`
 
         a {
             color: #000;
+
+            :nth-child(2) {
+                color: #0077B5;
+            }
         }       
     }
 `

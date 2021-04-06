@@ -125,28 +125,11 @@ export const lineAnimation = {
     }    
 }
 
-// Frame animations
-export const slider = {
-    hidden: { 
-        x: '-130%', 
-        skew: '45deg'
-    },
-    show: {
-        x: '100%',
-        skew: '0deg',
-        transition: {
-            ease: 'easeOut',
-            duration: 1
-        }
-    }
-}
-
 // Burger menu animations
 export const menuAnimation = {
     hidden: {
         opacity: 0,
-        y: 300
-        // y: "100%"
+        y: 300        
     },
     show: {
         opacity: 1,

@@ -30,7 +30,7 @@ const About = () => {
                             <h2>About me</h2>
                         </AboutHeader>
                         <motion.p variants={titleAnimation}>I’m a London based web developer who loves communicating ideas through code 
-                            to create beautiful layouts for an enjoyable user experience.                    
+                            and create beautiful layouts for an enjoyable user experience.                    
                         </motion.p>
                         <motion.p variants={titleAnimation}>
                             I'm passionate about UX/UI design, creating user interactions and creative animations.
@@ -198,12 +198,10 @@ const Skills = styled(motion.div)`
 
 const SkillSet = styled(motion.ul)`
     display: flex;
-    justify-content: space-between;
-    /* flex-wrap: wrap; */
+    justify-content: space-between;    
 
     @media (max-width: 500px) {        
-        flex-direction: column;
-        /* margin-bottom: 100px; */
+        flex-direction: column;        
     }
 
     div {
@@ -216,7 +214,11 @@ const SkillSet = styled(motion.ul)`
         padding: 10px 0;
         overflow: hidden;
         display: flex; 
-        align-items: center;        
+        align-items: center;  
+
+        @media (max-width: 500px) {        
+            padding: 0;        
+        }      
 
         img {
             width: 50px;

@@ -11,8 +11,7 @@ const Accordion = ({ children, title }) => {
                 className="question" 
                 onClick={() => setAccordion(!accordion)}
             >
-                <motion.h4 layout>{title}</motion.h4>
-                {/* {accordion ? children : ""} */}
+                <motion.h4 layout>{title}</motion.h4>                
                 {accordion && children }
                 <div className="faq-line"></div>
             </motion.div>

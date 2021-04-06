@@ -147,7 +147,7 @@ const ProjectGrid = styled(motion.div)`
     grid-template-rows: 46% 46%;    
     gap: 30px 30px;
     grid-auto-flow: dense;
-    margin-top: 50px;
+    margin-top: 50px;    
 
     @media (max-width: 1024px) {
         grid-template-columns: 1fr;
