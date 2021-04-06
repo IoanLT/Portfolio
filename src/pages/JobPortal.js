@@ -47,7 +47,7 @@ const JobPortal = () => {
                         Our goal was to create a fully functional job portal application that would allow anyone to find
                         their favourite job in the tech industry, whether it is remote or not.                        
                         A job platform seemed like the perfect project for us, because we wanted to build something that would 
-                        potentially help us or our colleagues find a job in the future.                        
+                        potentially help us or our colleagues find a job after completing the bootcamp.                        
                     </motion.p>
                 </motion.div>
                 <motion.button variants={textFade}>
@@ -79,23 +79,23 @@ const JobPortal = () => {
                         npm packages. <br/>
                         The main features of this project are: <br/>
                     </motion.p>
-                        <List>
-                            <ListItem>
-                                Search feature with several filters such as job type, job category, location and keywords.
-                            </ListItem>
-                            <ListItem>
-                                Jobs data fetched from Remotive API, styled and displayed in a responsive job list.
-                            </ListItem>
-                            <ListItem>
-                                Sign in functionality: after the user is signed in, he has access to some extra features, 
-                                a personal dashboard, a calendar that keeps track of the jobs the user has saved or applied to 
-                                and a cover letter builder that can be personalized dynamically according to user input.
-                            </ListItem>
-                            <ListItem>
-                                A map with the candidate's required location.
-                            </ListItem>
-                        </List>                        
-                    
+
+                    <List>
+                        <ListItem>
+                            Search feature with several filters such as job type, job category, location and keywords.
+                        </ListItem>
+                        <ListItem>
+                            Jobs data fetched from Remotive API, styled and displayed in a responsive job list.
+                        </ListItem>
+                        <ListItem>
+                            Sign in functionality: after the user is signed in, he has access to some extra features, 
+                            a personal dashboard, a calendar that keeps track of the jobs the user has saved or applied to 
+                            and a cover letter builder that can be personalized dynamically according to user input.
+                        </ListItem>
+                        <ListItem>
+                            A map with the candidate's required location.
+                        </ListItem>
+                    </List>                   
                 </motion.div>
                 <motion.button variants={textFade}>
                     <a

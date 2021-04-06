@@ -42,12 +42,12 @@ const MusicPlayer = () => {
                     variants={contentAnimation}
                 >
                     <motion.p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.                        
+                        This was a fun project that I have enjoyed working on. The inspiration came from one
+                        of my favourite content creators on YouTube (DevEd), so I decided to try new things and experiment
+                        as much as possible while working on this project. <br/>
+                        One of the main reasons for building this application was to have my own playlist of open access music, 
+                        uninterrupted by advertisements. This allows for a more convenient listening experience as an end user, 
+                        while discovering new artists that I wouldn't normally find on big music streaming platforms.                      
                     </motion.p>
                 </motion.div>
                 <motion.button variants={textFade}>
@@ -75,12 +75,11 @@ const MusicPlayer = () => {
                     variants={contentAnimation}                    
                 >
                     <motion.p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.                        
+                        This project has been built using React hooks, SASS and Styled components. <br/>
+                        The application features a library allowing users to select which song they would like to play 
+                        and also includes play, pause and skip functionality. Each song has its own colours that 
+                        change the background dynamically based on the album/track we are currently on. <br/>
+                        The application is also responsive and adapted for smaller screens.                        
                     </motion.p>
                 </motion.div>
                 <motion.button variants={textFade}>

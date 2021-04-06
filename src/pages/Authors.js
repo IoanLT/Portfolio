@@ -76,25 +76,26 @@ const Authors = () => {
                 >
                     <motion.p>
                         The project has been built with React using both class and functional components. 
-                        The frontend environment consists of several areas: <br/>
-                        <List>
-                            <ListItem>
-                                Tell story form: Which allows a user send messages directly to the authors gmail account.
-                            </ListItem>
-                            <ListItem>
-                                Contact form: For those who would like to become a part of the authors community 
-                                and just lend a hand or may have questions.
-                            </ListItem>
-                            <ListItem>
-                                Storybook preorder form: Directly connects to payment form based on stripe payment system.
-                            </ListItem>
-                            <ListItem>
-                                Stripe payment checkout: Allows the user to make a purchase and enter their credit 
-                                card credentials, accepts credit card online payments and sends this information 
-                                back to the Stripe system.
-                            </ListItem>
-                        </List>                        
+                        The frontend environment consists of several areas: <br/>                                                
                     </motion.p>
+
+                    <List>
+                        <ListItem>
+                            Tell your story form: Which allows a user to send messages directly to the Authxrs gmail account.
+                        </ListItem>
+                        <ListItem>
+                            Contact form: For those who would like to become a part of the authors community 
+                            and just lend a hand or may have questions.
+                        </ListItem>
+                        <ListItem>
+                            Storybook pre-order form: Directly connects to payment form based on stripe payment system.
+                        </ListItem>
+                        <ListItem>
+                            Stripe payment checkout: Allows the user to make a purchase and enter their credit 
+                            card credentials, accepts credit card online payments and sends this information 
+                            back to the Stripe system.
+                        </ListItem>
+                    </List>
                 </motion.div>
                 <motion.button variants={textFade}>
                     <a
