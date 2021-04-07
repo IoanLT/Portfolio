@@ -238,6 +238,13 @@ const ScrollDown = styled.div`
     align-items: center;    
     margin-top: 50px;
 
+    @media (max-width: 1024px) {        
+        margin-left: 15%;
+    }
+    @media (max-width: 768px) {        
+        margin-left: 5%;
+    }
+
     p {
         letter-spacing: 4px;
         padding-left: 50px;
@@ -248,14 +255,7 @@ const ScrollDown = styled.div`
     img {
         height: 50px;
         width: 8px;
-    }
-
-    @media (max-width: 1024px) {        
-        margin-left: 15%;
-    }
-    @media (max-width: 768px) {        
-        margin-left: 5%;
-    }
+    }   
 `
 
 export default About;

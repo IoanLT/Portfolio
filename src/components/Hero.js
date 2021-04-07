@@ -121,6 +121,7 @@ const Description = styled.div`
 
         img {
             width: 50px;
+            height: 9;
         }
     }
 

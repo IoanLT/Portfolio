@@ -137,13 +137,14 @@ export const List = styled(motion.ul)``
 export const ListItem = styled(motion.li)`
     line-height: 2;
     list-style: inside;
+    margin-left: 1px; 
 
     @media (max-width: 500px) {
         font-size: 14px;                
     }
     
     ::marker {
-        color: hsl(360, 64%, 55%);            
+        color: hsl(360, 64%, 55%);                   
     }
 `
 
