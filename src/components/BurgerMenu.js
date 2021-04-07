@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMobile } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 // Animation imports
 import { menuAnimation, itemAnimation, contactAnimation } from '../animation';
@@ -77,8 +76,10 @@ const BurgerMenu = ({ displayMenu, setDisplayMenu, setOpenMenu }) => {
                 </MenuItems>
 
                 <Contact variants={contactAnimation} >
-                    <div className="contact-mobile">
-                        <FontAwesomeIcon icon={faMobile} size="2x" />
+                    <div className="contact">                        
+                        <p>ioan.tranole@gmail.com</p> 
+                    </div>
+                    <div className="contact">                        
                         <p>+44 7551 454843</p> 
                     </div>
                     <div className="social-media">
@@ -145,12 +146,12 @@ const Contact = styled(motion.div)`
     justify-content: center;
     align-items: center;    
 
-    .contact-mobile {
+    .contact {
         width: 250px;
         display: flex;  
         justify-content: space-around;
         align-items: center; 
-        padding: 20px 0; 
+        padding: 10px 0; 
 
         :first-child {            
             color: #000;
@@ -166,16 +167,12 @@ const Contact = styled(motion.div)`
     }
     .social-media {
         width: 100px;
-        padding: 20px 0;
+        padding: 15px 0;
         display: flex;
         justify-content: space-around; 
 
         a {
             color: #000;
-
-            :nth-child(2) {
-                color: #0077B5;
-            }
         }       
     }
 `

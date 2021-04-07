@@ -196,12 +196,6 @@ const SocialMediaLinks = styled(motion.ul)`
                 color: #fff;                
             }            
         }
-
-        :nth-child(2) {
-            a {                
-                color: #0077B5; 
-            }            
-        }
     }
 `
 
