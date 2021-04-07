@@ -104,10 +104,10 @@ const Description = styled.div`
         font-weight: lighter;
 
         @media (max-width: 520px) {               
-            font-size: 2.5rem;               
+            font-size: 2.2rem;               
         }
         @media (max-width: 375px) {               
-            font-size: 2rem;               
+            font-size: 1.7rem;               
         }
     }
 
@@ -115,7 +115,12 @@ const Description = styled.div`
         width: 250px;
 
         @media (max-width: 500px) {               
-           margin-top: 50px;          
+           margin-top: 50px; 
+           font-size: 14px;         
+        }
+
+        img {
+            width: 50px;
         }
     }
 
@@ -154,10 +159,10 @@ export const Portfolio = styled(motion.div)`
             font-size: 3.5rem;                        
         }
         @media (max-width: 520px) {               
-            font-size: 3rem;               
+            font-size: 2.8rem;               
         }
         @media (max-width: 375px) {               
-            font-size: 2.5rem;               
+            font-size: 2.3rem;               
         }
     }
 `

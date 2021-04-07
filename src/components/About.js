@@ -169,6 +169,7 @@ const AboutHeader = styled(motion.div)`
         color: hsl(360, 64%, 55%);
         padding-left: 10%;
         margin: 0;
+        width: 100%;
 
         @media (max-width: 768px) {  
             font-size: 2.5rem;
@@ -242,6 +243,11 @@ const ScrollDown = styled.div`
         padding-left: 50px;
         margin: 0;
         color: hsl(360, 64%, 55%);
+    }
+
+    img {
+        height: 50px;
+        width: 8px;
     }
 
     @media (max-width: 1024px) {        

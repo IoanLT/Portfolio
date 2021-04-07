@@ -159,7 +159,8 @@ const ProjectCard = styled(motion.div)`
     border: 1px solid #fff;        
 
     img {                     
-        width: 100%;        
+        width: 100%; 
+        height: 100%;       
         object-fit: cover;        
         transition: transform 2s; 
         opacity: 0.8;       

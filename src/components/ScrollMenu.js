@@ -10,7 +10,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { menuAnimation, itemAnimation, contactAnimation } from '../animation';
 
 
-const ScrollMenu = ({ displayMenu, setDisplayMenu, openMenu, setOpenMenu }) => {
+const ScrollMenu = ({ displayMenu, setDisplayMenu, setOpenMenu }) => {
     
     const controls = useAnimation();
     const [ ref, inView ] = useInView({ threshold: 0.5 });

@@ -6,8 +6,7 @@ import BurgerMain from './BurgerMain';
 
 const Header = ({ openMenu, setOpenMenu, displayMenu, setDisplayMenu }) => {
 
-	const location = useLocation();
-	// console.log(location);
+	const location = useLocation();	
 
     return (
         <HeaderNav> 
