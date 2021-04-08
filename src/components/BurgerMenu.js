@@ -137,6 +137,9 @@ const ListItem = styled(motion.li)`
     @media (max-width: 500px) {
         font-size: 1.4rem;
     }
+    @media (max-width: 350px) {
+        padding: 15px 0;
+    }
 `
 
 const Contact = styled(motion.div)`
