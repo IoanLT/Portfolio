@@ -4,7 +4,10 @@ import { useInView } from 'react-intersection-observer';
 
 export const useScroll = () => {
     const controls = useAnimation();
-    const [ element, inView ] = useInView({ threshold: 0.5, triggerOnce: true });
+    const [ element, inView ] = useInView({ 
+        threshold: 0.2, 
+        triggerOnce: true 
+    });
 
     useEffect(() => {
         if(inView) {
