@@ -9,60 +9,59 @@ import MusicPlayer from "./pages/MusicPlayer";
 import Authors from "./pages/Authors";
 import JobPortal from "./pages/JobPortal";
 // Router
-import { Switch, Route, useLocation } from 'react-router-dom';
+import { Switch, Route, useLocation } from "react-router-dom";
 // Animation
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from "framer-motion";
 import Instabeauty from "./pages/Instabeauty";
 // Import modal
 import ConfirmationModal from "./components/ConfirmationModal";
 
-
 function App() {
-  const [openMenu, setOpenMenu] = useState(false);
-  const [displayMenu, setDisplayMenu] = useState(false);  
-  const [showModal, setShowModal] = useState(false);  
+	const [openMenu, setOpenMenu] = useState(false);
+	const [displayMenu, setDisplayMenu] = useState(false);
+	const [showModal, setShowModal] = useState(false);
 
-  const location = useLocation();  
+	const location = useLocation();
 
-  return (
-    <div className="App">
-      <GlobalStyle />
-      <ConfirmationModal showModal={showModal} setShowModal={setShowModal} />
-      <Header 
-        openMenu={openMenu} 
-        setOpenMenu={setOpenMenu}
-        displayMenu={displayMenu}
-        setDisplayMenu={setDisplayMenu}
-      />
-      
-      <AnimatePresence exitBeforeEnter onExitComplete={() => setShowModal(false)}>
-        <Switch location={location} key={location.key}>
-          
-          <Route exact path="/">
-            <LandingPage setShowModal={setShowModal} />
-          </Route> 
+	return (
+		<div className="App">
+			<GlobalStyle />
+			<ConfirmationModal showModal={showModal} setShowModal={setShowModal} />
+			<Header
+				openMenu={openMenu}
+				setOpenMenu={setOpenMenu}
+				displayMenu={displayMenu}
+				setDisplayMenu={setDisplayMenu}
+			/>
 
-          <Route path="/music-player">
-            <MusicPlayer />
-          </Route> 
+			<AnimatePresence
+				exitBeforeEnter
+				onExitComplete={() => setShowModal(false)}
+			>
+				<Switch location={location} key={location.key}>
+					<Route exact path="/">
+						<LandingPage setShowModal={setShowModal} />
+					</Route>
 
-          <Route path="/authors">
-            <Authors />
-          </Route> 
+					<Route path="/music-player">
+						<MusicPlayer />
+					</Route>
 
-          <Route path="/job-portal">
-            <JobPortal />
-          </Route> 
+					<Route path="/authors">
+						<Authors />
+					</Route>
 
-          <Route path="/instabeauty">
-            <Instabeauty />
-          </Route> 
+					<Route path="/job-portal">
+						<JobPortal />
+					</Route>
 
-        </Switch>
-      </AnimatePresence>
-      
-    </div>
-  )
+					<Route path="/instabeauty">
+						<Instabeauty />
+					</Route>
+				</Switch>
+			</AnimatePresence>
+		</div>
+	);
 }
 
 export default App;
