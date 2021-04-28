@@ -52,50 +52,33 @@ const Projects = () => {
 					<Link to="/music-player" onClick={() => window.scrollTo(0, 0)}>
 						<img src={musicPlayer} alt="music app" />
 					</Link>
-					<ImageSlider
-						variants={imgSlider}
-						// initial="hidden"
-						// animate="show"
-					/>
+					<ImageSlider variants={imgSlider} />
 				</ProjectCard>
 
 				<ProjectCard variants={imageAnimation}>
 					<Link to="/authors" onClick={() => window.scrollTo(0, 0)}>
 						<img src={authxrs} alt="authors app" />
 					</Link>
-					<ImageSlider
-						variants={imgSlider}
-						// initial="hidden"
-						// animate={controls}
-					/>
+					<ImageSlider variants={imgSlider} />
 				</ProjectCard>
 
 				<ProjectCard variants={imageAnimation}>
 					<Link to="/job-portal" onClick={() => window.scrollTo(0, 0)}>
 						<img src={jobPortal} alt="job portal app" />
 					</Link>
-					<ImageSlider
-						variants={imgSlider}
-						// initial="hidden"
-						// animate={controls}
-					/>
+					<ImageSlider variants={imgSlider} />
 				</ProjectCard>
 
 				<ProjectCard variants={imageAnimation}>
 					<Link to="/instabeauty" onClick={() => window.scrollTo(0, 0)}>
 						<img src={janine} alt="janine" />
 					</Link>
-					<ImageSlider
-						variants={imgSlider}
-						// initial="hidden"
-						// animate={controls}
-					/>
+					<ImageSlider variants={imgSlider} />
 				</ProjectCard>
 			</ProjectGrid>
 		</ProjectsSection>
 	);
 };
-
 
 const ProjectsSection = styled(motion.section)`
 	min-height: 100vh;
@@ -194,6 +177,5 @@ const ImageSlider = styled(motion.div)`
 	bottom: 0;
 	right: 0;
 `;
-
 
 export default Projects;
