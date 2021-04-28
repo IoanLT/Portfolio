@@ -232,6 +232,8 @@ export const imageAnimation = {
 		transition: {
 			duration: 1,
 			ease: "easeInOut",
+			when: "beforeChildren",
+			staggerChildren: 0.9,
 		},
 	},
 };
@@ -263,3 +265,20 @@ export const wrapAnimation = {
 		},
 	},
 };
+
+// Image slider animation
+export const imgSlider = {
+	hidden: {
+		display: "block",
+		width: "100%",
+	},
+	show: {
+		width: 0,
+		transition: {
+			delay: 0.9,
+			duration: 0.8,
+			ease: "easeInOut",
+		},
+	},
+};
+

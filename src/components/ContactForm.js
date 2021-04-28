@@ -22,7 +22,7 @@ export default function ContactForm({ setShowModal }) {
 			.then(
 				(result) => {
 					console.log(result.text);
-					setShowModal(true)
+					setShowModal(true);
 				},
 				(error) => {
 					console.log(error.text);

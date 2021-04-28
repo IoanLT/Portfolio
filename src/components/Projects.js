@@ -15,6 +15,7 @@ import {
 	sectionAnimation,
 	gridAnimation,
 	imageAnimation,
+	imgSlider,
 } from "../animation";
 
 const Projects = () => {
@@ -51,29 +52,50 @@ const Projects = () => {
 					<Link to="/music-player" onClick={() => window.scrollTo(0, 0)}>
 						<img src={musicPlayer} alt="music app" />
 					</Link>
+					<ImageSlider
+						variants={imgSlider}
+						// initial="hidden"
+						// animate="show"
+					/>
 				</ProjectCard>
 
 				<ProjectCard variants={imageAnimation}>
 					<Link to="/authors" onClick={() => window.scrollTo(0, 0)}>
 						<img src={authxrs} alt="authors app" />
 					</Link>
+					<ImageSlider
+						variants={imgSlider}
+						// initial="hidden"
+						// animate={controls}
+					/>
 				</ProjectCard>
 
 				<ProjectCard variants={imageAnimation}>
 					<Link to="/job-portal" onClick={() => window.scrollTo(0, 0)}>
 						<img src={jobPortal} alt="job portal app" />
 					</Link>
+					<ImageSlider
+						variants={imgSlider}
+						// initial="hidden"
+						// animate={controls}
+					/>
 				</ProjectCard>
 
 				<ProjectCard variants={imageAnimation}>
 					<Link to="/instabeauty" onClick={() => window.scrollTo(0, 0)}>
 						<img src={janine} alt="janine" />
 					</Link>
+					<ImageSlider
+						variants={imgSlider}
+						// initial="hidden"
+						// animate={controls}
+					/>
 				</ProjectCard>
 			</ProjectGrid>
 		</ProjectsSection>
 	);
 };
+
 
 const ProjectsSection = styled(motion.section)`
 	min-height: 100vh;
@@ -141,6 +163,7 @@ const ProjectGrid = styled(motion.div)`
 `;
 
 const ProjectCard = styled(motion.div)`
+	position: relative;
 	overflow: hidden;
 	border: 1px solid #fff;
 
@@ -159,5 +182,18 @@ const ProjectCard = styled(motion.div)`
 		}
 	}
 `;
+
+const ImageSlider = styled(motion.div)`
+	width: 100%;
+	height: 100%;
+	background: #09070b;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+`;
+
 
 export default Projects;
