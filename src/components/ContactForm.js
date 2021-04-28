@@ -22,6 +22,7 @@ export default function ContactForm({ setShowModal }) {
 			.then(
 				(result) => {
 					console.log(result.text);
+					setShowModal(true)
 				},
 				(error) => {
 					console.log(error.text);
@@ -29,12 +30,6 @@ export default function ContactForm({ setShowModal }) {
 			);
 		e.target.reset();
 	}
-
-	const handleModal = () => {
-		setTimeout(() => {
-			setShowModal(true);
-		}, 1000);
-	};
 
 	return (
 		<Form
@@ -49,22 +44,24 @@ export default function ContactForm({ setShowModal }) {
 				type="text"
 				name="name"
 				placeholder="Name"
+				required
 			/>
 			<motion.input
 				variants={imageAnimation}
 				type="email"
 				name="email"
 				placeholder="Email"
+				required
 			/>
 			<motion.textarea
 				variants={imageAnimation}
 				name="message"
 				placeholder="Message"
+				required
 			/>
 			<motion.button
 				variants={imageAnimation}
-				type="submit"
-				onClick={handleModal}
+				type="submit"				
 			>
 				Send message
 			</motion.button>
