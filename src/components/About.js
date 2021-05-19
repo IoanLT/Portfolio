@@ -78,6 +78,10 @@ const About = () => {
 									<img src={line} alt="line" />
 									<p>Animations</p>
 								</motion.li>
+								<motion.li variants={skillsAnimation}>
+									<img src={line} alt="line" />
+									<p>Express</p>
+								</motion.li>
 							</motion.div>
 
 							<motion.div
@@ -101,6 +105,10 @@ const About = () => {
 								<motion.li variants={skillsAnimation}>
 									<img src={line} alt="line" />
 									<p>Responsive Design</p>
+								</motion.li>
+								<motion.li variants={skillsAnimation}>
+									<img src={line} alt="line" />
+									<p>MongoDB</p>
 								</motion.li>
 							</motion.div>
 						</SkillSet>
